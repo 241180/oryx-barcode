@@ -5,7 +5,7 @@ android {
     buildToolsVersion "27.0.3"
 
     defaultConfig {
-        applicationId "com.javacodegeeks.androidqrcodeexample"
+        applicationId "com.javacodegeeks.OryxBarcodeReader"
         minSdkVersion 8
         targetSdkVersion 19
     }

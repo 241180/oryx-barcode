@@ -8,7 +8,7 @@ INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-26:12
 INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-26:12
 INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:3:5-53
+		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:3:5-50
 		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
 		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -43,12 +43,12 @@ ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:11:5-24:19
 		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:13:9-45
 	android:allowBackup
 		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:12:9-35
-activity#com.javacodegeeks.androidqrcodeexample.AndroidBarcodeQrExample
+activity#com.javacodegeeks.OryxBarcodeReader.OryxBarcodeReader
 ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:15:9-23:20
 	android:label
 		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:17:13-45
 	android:name
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:16:13-90
+		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:16:13-81
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN

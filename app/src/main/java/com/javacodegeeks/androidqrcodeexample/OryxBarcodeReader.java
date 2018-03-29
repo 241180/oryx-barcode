@@ -1,8 +1,7 @@
-package com.javacodegeeks.androidqrcodeexample;
+package com.javacodegeeks.OryxBarcodeReader;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.SearchManager;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,10 +11,14 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class AndroidBarcodeQrExample extends Activity {
+public class OryxBarcodeReader extends Activity {
 	/** Called when the activity is first created. */
 
 	static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
+
+    public static String contents;
+	public static String format;
+	public static byte[] rawBytes;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,25 @@ public class AndroidBarcodeQrExample extends Activity {
 		setContentView(R.layout.activity_main);
 	}
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+	    if(contents != null) {
+            TextView contentTextView = (TextView) findViewById(R.id.content);
+            contentTextView.setText(contents);
+        }
+
+        if(format != null) {
+            TextView formatTextView = (TextView) findViewById(R.id.format);
+            formatTextView.setText(format);
+        }
+
+        super.onResume();
+    }
 
 	public void scanBar(View v) {
 		try {
@@ -30,7 +52,7 @@ public class AndroidBarcodeQrExample extends Activity {
 			//intent.putExtra("SCAN_MODE", "PRODUCT_MODE");
 			startActivityForResult(intent, 0);
 		} catch (ActivityNotFoundException anfe) {
-			showDialog(AndroidBarcodeQrExample.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
+			showDialog(OryxBarcodeReader.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
 		}
 	}
 
@@ -40,9 +62,10 @@ public class AndroidBarcodeQrExample extends Activity {
 			//intent.putExtra("SCAN_MODE", "QR_CODE_MODE");
 			startActivityForResult(intent, 0);
 		} catch (ActivityNotFoundException anfe) {
-			showDialog(AndroidBarcodeQrExample.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
+			showDialog(OryxBarcodeReader.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
 		}
 	}
+
 
 	private static AlertDialog showDialog(final Activity act, CharSequence title, CharSequence message, CharSequence buttonYes, CharSequence buttonNo) {
 		AlertDialog.Builder downloadDialog = new AlertDialog.Builder(act);
@@ -66,16 +89,16 @@ public class AndroidBarcodeQrExample extends Activity {
 		return downloadDialog.show();
 	}
 
+	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
 		if (requestCode == 0) {
 			if (resultCode == RESULT_OK) {
-				String contents = intent.getStringExtra("SCAN_RESULT");
-				String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
-				byte[] rawBytes = intent.getByteArrayExtra("SCAN_RESULT_BYTES");
+				contents = intent.getStringExtra("SCAN_RESULT");
+				format = intent.getStringExtra("SCAN_RESULT_FORMAT");
+				rawBytes = intent.getByteArrayExtra("SCAN_RESULT_BYTES");
 
 				TextView contentTextView = (TextView) findViewById(R.id.content);
 				contentTextView.setText(contents);
-
 
 				TextView formatTextView = (TextView) findViewById(R.id.format);
 				formatTextView.setText(format);
