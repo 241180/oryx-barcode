@@ -81,7 +81,13 @@ public class OryxBarcodeReader extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_item1) {
+            return true;
+        } else if (id == R.id.action_settings) {
+            return true;
+        } else if (id == R.id.action_logout) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
             return true;
         }
 
