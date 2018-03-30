@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical"
-    tools:context="com.javacodegeeks.OryxBarcodeReader.OryxBarcodeReader">
+    tools:context="com.javacodegeeks.oryx.OryxBarcodeReader">
     <!--tools:context="com.javacodegeeks.androidstartactivityforresultexample.ActivityOne" -->
     <ScrollView
         android:layout_width="match_parent"
@@ -15,42 +15,43 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <TextView
-                android:id="@+id/textView1"
+
+            <EditText
+                android:id="@+id/hostField"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|top"
                 android:layout_margin="20dp"
-                android:text="Scan"
+                android:text="localhost"
                 android:textColor="#000000"
                 android:textSize="30dp" />
 
             <Button
-                android:id="@+id/scanner"
+                android:id="@+id/restButton"
                 android:layout_width="250dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:onClick="scanQR"
-                android:text="QR Code"
+                android:onClick="rest"
+                android:text="Test Rest"
                 android:textSize="18dp" >
             </Button>
 
             <Button
-                android:id="@+id/scanner2"
+                android:id="@+id/scanButton"
                 android:layout_width="250dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:gravity="center"
                 android:onClick="scanBar"
-                android:text="Bar Code"
+                android:text="Scan"
                 android:textSize="18dp" >
             </Button>
 
             <TextView
-                android:id="@+id/content"
+                android:id="@+id/barCodeField"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|top"
@@ -60,7 +61,7 @@
                 android:textSize="30dp" />
 
             <TextView
-                android:id="@+id/format"
+                android:id="@+id/formatField"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|top"
@@ -70,7 +71,7 @@
                 android:textSize="30dp" />
 
             <TextView
-                android:id="@+id/result"
+                android:id="@+id/descriptionField"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|top"
