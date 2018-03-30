@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+
 public class OryxBarcodeReader extends AppCompatActivity {
     /**
      * Called when the activity is first created.
@@ -26,6 +28,15 @@ public class OryxBarcodeReader extends AppCompatActivity {
     public static String format;
     public static String description;
     public static byte[] rawBytes;
+
+    @BindView(R.id.barCodeField)
+    TextView _barCodeField;
+    @BindView(R.id.formatField)
+    TextView _formatField;
+    @BindView(R.id.description)
+    TextView _descriptionField;
+    @BindView(R.id.hostField)
+    EditText hostField;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,18 +55,15 @@ public class OryxBarcodeReader extends AppCompatActivity {
     @Override
     protected void onResume() {
         if (barCode != null) {
-            TextView barCodeField = (TextView) findViewById(R.id.barCodeField);
-            barCodeField.setText(barCode);
+            _barCodeField.setText(barCode);
         }
 
         if (format != null) {
-            TextView formatField = (TextView) findViewById(R.id.formatField);
-            formatField.setText(format);
+            _formatField.setText(format);
         }
 
         if (description != null) {
-            TextView descriptionField = (TextView) findViewById(R.id.descriptionField);
-            descriptionField.setText(description);
+            _descriptionField.setText(description);
         }
 
         super.onResume();
@@ -138,11 +146,9 @@ public class OryxBarcodeReader extends AppCompatActivity {
                 format = intent.getStringExtra("SCAN_RESULT_FORMAT");
                 rawBytes = intent.getByteArrayExtra("SCAN_RESULT_BYTES");
 
-                TextView barCodeField = (TextView) findViewById(R.id.barCodeField);
-                barCodeField.setText(barCode);
+                _barCodeField.setText(barCode);
 
-                TextView formatField = (TextView) findViewById(R.id.formatField);
-                formatField.setText(format);
+                _formatField.setText(format);
 
 				/*int intentOrientation = intent.getIntExtra("SCAN_RESULT_ORIENTATION", Integer.MIN_VALUE);
 				Integer orientation = intentOrientation == Integer.MIN_VALUE ? null : intentOrientation;
@@ -155,10 +161,9 @@ public class OryxBarcodeReader extends AppCompatActivity {
                     @Override
                     public void run() {
                         EditText hostField = (EditText) findViewById(R.id.hostField);
-                        TextView descriptionField = (TextView) findViewById(R.id.descriptionField);
 
                         try {
-                            HttpUtils.callGetDescriptionRest(hostField.getText().toString(), barCode, format, descriptionField);
+                            HttpUtils.callGetDescriptionRest(hostField.getText().toString(), barCode, format, _descriptionField);
                         } catch (Exception e) {
                             showDialog(OryxBarcodeReader.this, "callGetDescriptionRest", "Failed", "Yes", "No").show();
                         }
