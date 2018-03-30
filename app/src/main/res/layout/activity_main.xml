@@ -27,18 +27,6 @@
                 android:textSize="30dp" />
 
             <Button
-                android:id="@+id/restButton"
-                android:layout_width="250dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:gravity="center"
-                android:onClick="rest"
-                android:text="Test Rest"
-                android:textSize="18dp" >
-            </Button>
-
-            <Button
                 android:id="@+id/scanButton"
                 android:layout_width="250dp"
                 android:layout_height="80dp"

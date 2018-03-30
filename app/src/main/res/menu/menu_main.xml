@@ -1,14 +1,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.javacodegeeks.oryx.OryxBarcodeReader">
+    tools:context="com.sdfsdf.OryxBarcodeReader">
     <item android:id="@+id/action_item1"
         android:title="@string/action_item1"
-        app:showAsAction="always"></item>
+        android:icon="@drawable/ic_launcher"
+        app:showAsAction="always"/>
+    <item android:id="@+id/action_new_product"
+        android:title="@string/action_new_product"
+        android:icon="@drawable/settings"
+        app:showAsAction="never"/>
+
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
-        app:showAsAction="never"></item>
+        android:icon="@drawable/settings"
+        app:showAsAction="never"/>
+
     <item android:id="@+id/action_logout"
         android:title="@string/action_logout"
-        app:showAsAction="never"></item>
+        android:icon="@drawable/logout"
+        app:showAsAction="never"/>
 </menu>

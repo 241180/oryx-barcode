@@ -12,11 +12,12 @@
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <ImageView android:src="@drawable/logo"
+        <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="72dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="24dp"
-            android:layout_gravity="center_horizontal" />
+            android:src="@drawable/logo" />
 
         <!--  Email Label -->
         <android.support.design.widget.TextInputLayout
@@ -48,10 +49,58 @@
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
             android:padding="12dp"
             android:text="Login"/>
+
+        <CheckBox
+            android:id="@+id/remember_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember me."
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"/>
+
+        <Button
+            android:id="@+id/btnGplus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="10dp"
+            android:text="Sign in with Google+"
+            android:background="#DD4B39"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/btnFb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="10dp"
+            android:text="Sign in with Twitter"
+            android:background="#39A6CE"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/btnTwitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="10dp"
+            android:text="Sign in with Faceboook"
+            android:background="#46629E"
+            android:textColor="#FFFFFF" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/darker_gray"/>
 
         <TextView android:id="@+id/link_signup"
             android:layout_width="fill_parent"

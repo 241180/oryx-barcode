@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
 MERGED from [com.android.support:design:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\a1428bad0ac41e72d4c8de1cdb28a5be\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\51fa219b7febc6c6fad4bcc1ce3f3588\AndroidManifest.xml:17:1-22:12
 MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\5168188d12558fd1d36681bb4c8a8af9\AndroidManifest.xml:2:1-7:12
@@ -21,9 +21,9 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\smbarki\.gradl
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\5158426821ab883ce1e3c1b450e2e17a\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0edc51957d992d7744ef5f7cdc4a0870\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\06e7f7ce16dceb20b713fb00fb647641\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
@@ -91,7 +91,7 @@ INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
 		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
 		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:14:5-30:19
+ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:14:5-31:19
 	android:label
 		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:17:9-41
 	android:icon
@@ -128,3 +128,9 @@ ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:29:9-111
 		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:29:72-108
 	android:name
 		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:29:19-71
+activity#com.javacodegeeks.oryx.ProductActivity
+ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:30:9-112
+	android:theme
+		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:30:73-109
+	android:name
+		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:30:19-72

@@ -16,8 +16,9 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 public class HttpUtils {
-    private static final String BASE_URL = "http://localhost:8680/oryx-server/protected/";
-    private static String GET_PRODUCT_DESCRIPTION = BASE_URL + "products";
+    private static final String BASE_URL = "http://localhost:8680/oryx-server/";
+    private static String PRODUCT_URL = BASE_URL + "protected/products";
+    private static String LOGIN_URL = BASE_URL + "login";
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 
@@ -46,10 +47,9 @@ public class HttpUtils {
         rp.add("code", code);
         rp.add("format", format);
 
-        GET_PRODUCT_DESCRIPTION = GET_PRODUCT_DESCRIPTION.replace("localhost", host);
+        PRODUCT_URL = PRODUCT_URL.replace("localhost", host);
 
-
-        HttpUtils.post(GET_PRODUCT_DESCRIPTION, rp, new JsonHttpResponseHandler() {
+        HttpUtils.post(PRODUCT_URL, rp, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 // If the response is JSONObject instead of expected JSONArray
@@ -58,7 +58,6 @@ public class HttpUtils {
                     JSONObject serverResp = new JSONObject(response.toString());
                     descriptionField.setText(serverResp.getString("description"));
                 } catch (JSONException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
             }

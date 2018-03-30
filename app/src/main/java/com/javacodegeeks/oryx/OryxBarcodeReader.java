@@ -83,7 +83,11 @@ public class OryxBarcodeReader extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_item1) {
             return true;
-        } else if (id == R.id.action_settings) {
+        } else if (id == R.id.action_new_product) {
+            Intent intent = new Intent(this, ProductActivity.class);
+            startActivity(intent);
+            return true;
+        }else if (id == R.id.action_settings) {
             return true;
         } else if (id == R.id.action_logout) {
             Intent intent = new Intent(this, LoginActivity.class);
@@ -102,23 +106,6 @@ public class OryxBarcodeReader extends AppCompatActivity {
         } catch (ActivityNotFoundException anfe) {
             showDialog(OryxBarcodeReader.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
         }
-    }
-
-    public void rest(View v) {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                EditText hostField = (EditText) findViewById(R.id.hostField);
-                TextView descriptionField = (TextView) findViewById(R.id.descriptionField);
-
-                try {
-                    HttpUtils.callGetDescriptionRest(hostField.getText().toString(), barCode, format, descriptionField);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        thread.start();
     }
 
     private static AlertDialog showDialog(final Activity act, CharSequence title, CharSequence message, CharSequence buttonYes, CharSequence buttonNo) {
