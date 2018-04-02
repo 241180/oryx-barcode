@@ -27,7 +27,7 @@ public class HttpUtils {
     }
 
     private static void post(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
-        client.post(getAbsoluteUrl(url), params, responseHandler);
+        client.post(url, params, responseHandler);
     }
 
     private static void getByUrl(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {

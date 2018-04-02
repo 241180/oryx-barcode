@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class OryxBarcodeReader extends AppCompatActivity {
     /**
@@ -28,20 +29,22 @@ public class OryxBarcodeReader extends AppCompatActivity {
     public static String format;
     public static String description;
     public static byte[] rawBytes;
+    public static String host;
 
     @BindView(R.id.barCodeField)
     TextView _barCodeField;
     @BindView(R.id.formatField)
     TextView _formatField;
-    @BindView(R.id.description)
+    @BindView(R.id.descriptionField)
     TextView _descriptionField;
     @BindView(R.id.hostField)
-    EditText hostField;
+    EditText _hostField;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
@@ -107,13 +110,27 @@ public class OryxBarcodeReader extends AppCompatActivity {
     }
 
     public void scanBar(View v) {
-        try {
+        this.host = _hostField.getText().toString();
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    HttpUtils.callGetDescriptionRest(host, "123456", "TST", _descriptionField);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        thread.start();
+
+        /*try {
             Intent intent = new Intent(ACTION_SCAN);
             //intent.putExtra("SCAN_MODE", "PRODUCT_MODE");
             startActivityForResult(intent, 0);
         } catch (ActivityNotFoundException anfe) {
             showDialog(OryxBarcodeReader.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
-        }
+        }*/
     }
 
     private static AlertDialog showDialog(final Activity act, CharSequence title, CharSequence message, CharSequence buttonYes, CharSequence buttonNo) {
@@ -160,12 +177,10 @@ public class OryxBarcodeReader extends AppCompatActivity {
                 Thread thread = new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        EditText hostField = (EditText) findViewById(R.id.hostField);
-
                         try {
-                            HttpUtils.callGetDescriptionRest(hostField.getText().toString(), barCode, format, _descriptionField);
+                            HttpUtils.callGetDescriptionRest(host, barCode, format, _descriptionField);
                         } catch (Exception e) {
-                            showDialog(OryxBarcodeReader.this, "callGetDescriptionRest", "Failed", "Yes", "No").show();
+                            e.printStackTrace();
                         }
                     }
                 });
