@@ -1,29 +1,37 @@
-package com.javacodegeeks.oryx;
+package com.oryx.activity.bu;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.oryx.R;
+import com.oryx.activity.core.AbstractActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
-public class ProductActivity extends AppCompatActivity {
+public class ProductActivity extends AbstractActivity {
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
 
     private static final String TAG = "ProductActivity";
     private static final int REQUEST_SIGNUP = 0;
+
+    @BindView(R.id.codeField)
+    EditText _codeField;
+    @BindView(R.id.nameField)
+    EditText _nameField;
+    @BindView(R.id.descriptionField)
+    EditText _descriptionField;
+    @BindView(R.id.brandField)
+    EditText _brandField;
+    @BindView(R.id.categoryField)
+    EditText _categoryField;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

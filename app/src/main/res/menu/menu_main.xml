@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.sdfsdf.OryxBarcodeReader">
+    tools:context="com.oryx.activity.main.OryxBarcodeReader">
     <item android:id="@+id/action_item1"
         android:title="@string/action_item1"
         android:icon="@drawable/ic_launcher"

@@ -69,11 +69,11 @@
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="notification_material_background_media_default_color">#ff424242</color>
     <color name="oil">#333333</color>
-    <color name="primary">#6583b5</color>
-    <color name="primary_dark">#4a6084</color>
+    <color name="primary">#47a3b7</color>
+    <color name="primary_dark">#4b8693</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
-    <color name="primary_darker">#283447</color>
+    <color name="primary_darker">#40636b</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
     <color name="primary_material_light">@color/material_grey_100</color>
     <color name="primary_text_default_material_dark">#ffffffff</color>

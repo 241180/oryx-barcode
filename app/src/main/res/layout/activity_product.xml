@@ -21,7 +21,7 @@
             />
 
         <EditText
-            android:id="@+id/code"
+            android:id="@+id/codeField"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="Code"
@@ -53,7 +53,7 @@
             />
 
         <EditText
-            android:id="@+id/name"
+            android:id="@+id/nameField"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="Name"
@@ -75,7 +75,7 @@
             />
 
         <EditText
-            android:id="@+id/description"
+            android:id="@+id/descriptionField"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="Description"
@@ -97,7 +97,7 @@
             />
 
         <EditText
-            android:id="@+id/marque"
+            android:id="@+id/brandField"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="Marque"
@@ -120,6 +120,7 @@
             />
 
         <Spinner
+            android:id="@+id/categoryField"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center"

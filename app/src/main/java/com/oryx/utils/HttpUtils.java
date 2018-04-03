@@ -1,7 +1,6 @@
-package com.javacodegeeks.oryx;
+package com.oryx.utils;
 
 import android.util.Log;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.loopj.android.http.AsyncHttpClient;

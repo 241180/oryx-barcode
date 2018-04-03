@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="primary">#6583b5</color>
-  <color name="primary_dark">#4a6084</color>
-  <color name="primary_darker">#283447</color>
-  <color name="accent">#FFFFFF</color>
+  <color name="primary">#47a3b7</color>
+  <color name="primary_dark">#4b8693</color>
+  <color name="primary_darker">#40636b</color>
 
+  <color name="accent">#FFFFFF</color>
   <color name="black">#000000</color>
   <color name="jet">#222222</color>
   <color name="oil">#333333</color>

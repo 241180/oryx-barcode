@@ -1,9 +1,8 @@
-package com.javacodegeeks.oryx;
+package com.oryx.activity.login;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,10 +10,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.oryx.R;
+import com.oryx.activity.core.AbstractActivity;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SignupActivity extends AppCompatActivity {
+public class SignupActivity extends AbstractActivity {
   private static final String TAG = "SignupActivity";
 
   @BindView(R.id.input_name) EditText _nameText;

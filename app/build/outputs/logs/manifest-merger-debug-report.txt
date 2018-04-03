@@ -25,7 +25,7 @@ INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
 INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
 INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:3:5-37
+		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:3:5-23
 		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
 		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -98,7 +98,7 @@ ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:14:5-31:19
 		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:16:9-45
 	android:allowBackup
 		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:15:9-35
-activity#com.javacodegeeks.oryx.OryxBarcodeReader
+activity#com.oryx.activity.main.OryxBarcodeReader
 ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:18:9-27:20
 	android:label
 		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:20:13-45
@@ -116,21 +116,21 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
 		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:25:27-74
-activity#com.javacodegeeks.oryx.LoginActivity
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:28:9-110
+activity#com.oryx.activity.login.LoginActivity
+ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:28:9-111
 	android:theme
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:28:71-107
+		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:28:72-108
 	android:name
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:28:19-70
-activity#com.javacodegeeks.oryx.SignupActivity
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:29:9-111
+		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:28:19-71
+activity#com.oryx.activity.login.SignupActivity
+ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:29:9-112
 	android:theme
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:29:72-108
+		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:29:73-109
 	android:name
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:29:19-71
-activity#com.javacodegeeks.oryx.ProductActivity
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:30:9-112
+		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:29:19-72
+activity#com.oryx.activity.bu.ProductActivity
+ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:30:9-110
 	android:theme
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:30:73-109
+		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:30:71-107
 	android:name
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:30:19-72
+		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:30:19-70

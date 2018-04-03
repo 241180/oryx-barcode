@@ -1,4 +1,4 @@
-package com.javacodegeeks.oryx;
+package com.oryx.activity.main;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -7,7 +7,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,10 +14,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.oryx.R;
+import com.oryx.activity.core.AbstractActivity;
+import com.oryx.activity.bu.ProductActivity;
+import com.oryx.activity.login.LoginActivity;
+import com.oryx.utils.HttpUtils;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class OryxBarcodeReader extends AppCompatActivity {
+public class OryxBarcodeReader extends AbstractActivity {
     /**
      * Called when the activity is first created.
      */
