@@ -2,11 +2,13 @@ package com.oryx.utils;
 
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.oryx.context.IServer;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,7 +17,7 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 public class HttpUtils {
-    private static final String BASE_URL = "http://localhost:8680/oryx-server/";
+    private static String BASE_URL = IServer.getBaseUrl();
     private static String PRODUCT_URL = BASE_URL + "protected/products";
     private static String LOGIN_URL = BASE_URL + "login";
 
@@ -47,6 +49,7 @@ public class HttpUtils {
         rp.add("format", format);
 
         PRODUCT_URL = PRODUCT_URL.replace("localhost", host);
+
 
         HttpUtils.post(PRODUCT_URL, rp, new JsonHttpResponseHandler() {
             @Override

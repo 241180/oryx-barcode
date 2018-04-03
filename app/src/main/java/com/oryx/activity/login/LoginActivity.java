@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.oryx.R;
 import com.oryx.activity.core.AbstractActivity;
 import com.oryx.context.IUser;
-import com.oryx.prefs.IUserSettings;
+import com.oryx.prefs.IUserPrefs;
 import com.oryx.utils.PrefUtils;
 
 import butterknife.BindView;
@@ -154,9 +154,9 @@ public class LoginActivity extends AbstractActivity {
         if(_remember_me.isChecked()) {
             SharedPreferences settings = PrefUtils.loadSettingsPreferences(this);
             SharedPreferences.Editor editor = settings.edit();
-            editor.putString(IUserSettings.PREF_EMAIL, _emailField.getText().toString());
-            editor.putString(IUserSettings.PREF_PASSWORD, _passwordField.getText().toString());
-            editor.putBoolean(IUserSettings.PREF_REMEMBER, _remember_me.isChecked());
+            editor.putString(IUserPrefs.PREF_EMAIL, _emailField.getText().toString());
+            editor.putString(IUserPrefs.PREF_PASSWORD, _passwordField.getText().toString());
+            editor.putBoolean(IUserPrefs.PREF_REMEMBER, _remember_me.isChecked());
             editor.commit();
         }
     }
@@ -164,8 +164,8 @@ public class LoginActivity extends AbstractActivity {
     @Override
     protected void loadPreferences() {
         SharedPreferences settings = PrefUtils.loadSettingsPreferences(this);
-        _emailField.setText(settings.getString(IUserSettings.PREF_EMAIL, ""));
-        _passwordField.setText(settings.getString(IUserSettings.PREF_PASSWORD, ""));
-        _remember_me.setChecked(settings.getBoolean(IUserSettings.PREF_REMEMBER, false));
+        _emailField.setText(settings.getString(IUserPrefs.PREF_EMAIL, ""));
+        _passwordField.setText(settings.getString(IUserPrefs.PREF_PASSWORD, ""));
+        _remember_me.setChecked(settings.getBoolean(IUserPrefs.PREF_REMEMBER, false));
     }
 }

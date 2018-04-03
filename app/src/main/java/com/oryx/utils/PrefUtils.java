@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.oryx.activity.core.AbstractActivity;
-import com.oryx.prefs.IUserSettings;
+import com.oryx.prefs.IUserPrefs;
 
 public class PrefUtils {
 
@@ -13,7 +13,7 @@ public class PrefUtils {
 
     public static SharedPreferences loadSettingsPreferences(AbstractActivity activity){
         if(settings == null){
-            settings = activity.getSharedPreferences(IUserSettings.PREF_SETTINGS,
+            settings = activity.getSharedPreferences(IUserPrefs.PREF_SETTINGS,
                     Context.MODE_PRIVATE);
         }
 
