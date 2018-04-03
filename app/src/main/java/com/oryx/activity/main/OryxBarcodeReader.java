@@ -123,8 +123,7 @@ public class OryxBarcodeReader extends AbstractActivity {
                 try {
                     HttpUtils.callGetDescriptionRest(host, "123456", "TST", _descriptionField);
                 }catch (Exception e){
-                    Toast toast = Toast.makeText(OryxBarcodeReader.this, "Service not available on host: " + host, Toast.LENGTH_LONG);
-                    toast.show();
+                    e.printStackTrace();
                 }
             }
         });
