@@ -1,136 +1,136 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
-MERGED from [com.android.support:design:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\a1428bad0ac41e72d4c8de1cdb28a5be\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\51fa219b7febc6c6fad4bcc1ce3f3588\AndroidManifest.xml:17:1-22:12
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\5168188d12558fd1d36681bb4c8a8af9\AndroidManifest.xml:2:1-7:12
-MERGED from [com.android.support:support-v4:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\98a13280d7a73880d22ff2ecb25b9d2e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\be012365c9c625d2f10f074b4aba67c8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\4e8ef9dde0c302d1786ed003bde4631a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\37405ca27d569def95b09ce63476017d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\687dc108cd760e16a8fb4186e5c51da3\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\86cd4c63e22f0fa5940576cf39d557d2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\fd58463e78115efecc2444f926367bb8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\08b9ebe5235a978892da55760f54cbcf\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\e9198866e987acb6a6fc548617c139e6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\3cc84bacde48bdcbdb298d501d4736f7\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\9937a79467cc64cc812e30a85b324e7d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\5158426821ab883ce1e3c1b450e2e17a\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0edc51957d992d7744ef5f7cdc4a0870\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\06e7f7ce16dceb20b713fb00fb647641\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\0b7d174488fec33954687184f6836697\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\84556c7ebfdd40007d3837795a6067b9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\faa1d69bf9920339c668b4a15a8e4e8a\AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\532ae36e1c5d98e6753de11a81b11997\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\b8fb9ca3d458f33df9b1d41eb358cfc1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\289c1b078d969751fdbbfc074655f09c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\20c4a4b8ba68bd453be2a523f199ae83\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\015f8ca9ac93030694e27958fe30abb2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\b37947b59e36e97a60c6b1306e479388\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\a32bda40070283e38cb09721028b33e8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\6edf44795de46dafc84d35f7478ff805\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\530d3576e5450bf62187bd25d7e4bb8f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\24f78e1c5ae787d27b48179d0e52fdfe\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\d1935e3a76ce446e349a6f35e6983db1\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e52600c983c9f40675e80d7cbf068389\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\de2dc8643d1b207ea48f3a514e5c296a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b05884441e1bfab5d51652bca6600979\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:3:5-23
-		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
-		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:3:5-23
+		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
+		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:5:5-30
-		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
-		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
+		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:4:5-28
-		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
-		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
+		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:7:5-8:54
+ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:7:5-8:54
 	android:name
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:8:9-51
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:8:9-51
 uses-sdk
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
-MERGED from [com.android.support:design:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\a1428bad0ac41e72d4c8de1cdb28a5be\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\a1428bad0ac41e72d4c8de1cdb28a5be\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\51fa219b7febc6c6fad4bcc1ce3f3588\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\51fa219b7febc6c6fad4bcc1ce3f3588\AndroidManifest.xml:20:5-44
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\5168188d12558fd1d36681bb4c8a8af9\AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\5168188d12558fd1d36681bb4c8a8af9\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\98a13280d7a73880d22ff2ecb25b9d2e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\98a13280d7a73880d22ff2ecb25b9d2e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\be012365c9c625d2f10f074b4aba67c8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\be012365c9c625d2f10f074b4aba67c8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\4e8ef9dde0c302d1786ed003bde4631a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\4e8ef9dde0c302d1786ed003bde4631a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\37405ca27d569def95b09ce63476017d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\37405ca27d569def95b09ce63476017d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\687dc108cd760e16a8fb4186e5c51da3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\687dc108cd760e16a8fb4186e5c51da3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\86cd4c63e22f0fa5940576cf39d557d2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\86cd4c63e22f0fa5940576cf39d557d2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\fd58463e78115efecc2444f926367bb8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\fd58463e78115efecc2444f926367bb8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\08b9ebe5235a978892da55760f54cbcf\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\08b9ebe5235a978892da55760f54cbcf\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\e9198866e987acb6a6fc548617c139e6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\e9198866e987acb6a6fc548617c139e6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\3cc84bacde48bdcbdb298d501d4736f7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\3cc84bacde48bdcbdb298d501d4736f7\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\9937a79467cc64cc812e30a85b324e7d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\9937a79467cc64cc812e30a85b324e7d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\5158426821ab883ce1e3c1b450e2e17a\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\5158426821ab883ce1e3c1b450e2e17a\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0edc51957d992d7744ef5f7cdc4a0870\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0edc51957d992d7744ef5f7cdc4a0870\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\06e7f7ce16dceb20b713fb00fb647641\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\smbarki\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\06e7f7ce16dceb20b713fb00fb647641\AndroidManifest.xml:20:5-44
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
-INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
+ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
+INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
+INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
+MERGED from [com.android.support:design:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\0b7d174488fec33954687184f6836697\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\0b7d174488fec33954687184f6836697\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\84556c7ebfdd40007d3837795a6067b9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\84556c7ebfdd40007d3837795a6067b9\AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\faa1d69bf9920339c668b4a15a8e4e8a\AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\faa1d69bf9920339c668b4a15a8e4e8a\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\532ae36e1c5d98e6753de11a81b11997\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\532ae36e1c5d98e6753de11a81b11997\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\b8fb9ca3d458f33df9b1d41eb358cfc1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\b8fb9ca3d458f33df9b1d41eb358cfc1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\289c1b078d969751fdbbfc074655f09c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\289c1b078d969751fdbbfc074655f09c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\20c4a4b8ba68bd453be2a523f199ae83\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\20c4a4b8ba68bd453be2a523f199ae83\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\015f8ca9ac93030694e27958fe30abb2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\015f8ca9ac93030694e27958fe30abb2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\b37947b59e36e97a60c6b1306e479388\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\b37947b59e36e97a60c6b1306e479388\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\a32bda40070283e38cb09721028b33e8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\a32bda40070283e38cb09721028b33e8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\6edf44795de46dafc84d35f7478ff805\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\6edf44795de46dafc84d35f7478ff805\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\530d3576e5450bf62187bd25d7e4bb8f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\530d3576e5450bf62187bd25d7e4bb8f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\24f78e1c5ae787d27b48179d0e52fdfe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\24f78e1c5ae787d27b48179d0e52fdfe\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\d1935e3a76ce446e349a6f35e6983db1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\d1935e3a76ce446e349a6f35e6983db1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e52600c983c9f40675e80d7cbf068389\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\e52600c983c9f40675e80d7cbf068389\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\de2dc8643d1b207ea48f3a514e5c296a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\de2dc8643d1b207ea48f3a514e5c296a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b05884441e1bfab5d51652bca6600979\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b05884441e1bfab5d51652bca6600979\AndroidManifest.xml:20:5-44
+INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
+INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
 	android:targetSdkVersion
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:12:9-38
-		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
-		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:12:9-38
+		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
+		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:11:9-34
-		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
-		INJECTED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:11:9-34
+		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
+		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:14:5-31:19
+ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:14:5-31:19
 	android:label
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:17:9-41
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:17:9-41
 	android:icon
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:16:9-45
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:16:9-45
 	android:allowBackup
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:15:9-35
 activity#com.oryx.activity.main.OryxBarcodeReader
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:18:9-27:20
+ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:18:9-27:20
 	android:label
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:20:13-45
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:20:13-45
 	android:theme
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:21:13-44
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:21:13-44
 	android:name
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:19:13-68
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:19:13-68
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:22:13-26:29
+ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:23:17-69
+ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:25:17-77
+ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:25:27-74
 activity#com.oryx.activity.login.LoginActivity
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:28:9-111
+ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:28:9-111
 	android:theme
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:28:72-108
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:28:72-108
 	android:name
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:28:19-71
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:28:19-71
 activity#com.oryx.activity.login.SignupActivity
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:29:9-112
+ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:29:9-112
 	android:theme
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:29:73-109
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:29:73-109
 	android:name
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:29:19-72
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:29:19-72
 activity#com.oryx.activity.bu.ProductActivity
-ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:30:9-110
+ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:30:9-110
 	android:theme
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:30:71-107
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:30:71-107
 	android:name
-		ADDED from C:\oryx\oryx-barcode\app\src\main\AndroidManifest.xml:30:19-70
+		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:30:19-70

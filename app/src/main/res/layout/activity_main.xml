@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|top"
                 android:layout_margin="20dp"
-                android:text="localhost"
+                android:text="10.0.2.2"
                 android:textColor="#000000"
                 android:textSize="30dp" />
 

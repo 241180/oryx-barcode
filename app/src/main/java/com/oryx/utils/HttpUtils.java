@@ -8,6 +8,7 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.loopj.android.http.SyncHttpClient;
 import com.oryx.context.IServer;
 
 import org.json.JSONArray;
@@ -21,7 +22,7 @@ public class HttpUtils {
     private static String PRODUCT_URL = BASE_URL + "protected/products";
     private static String LOGIN_URL = BASE_URL + "login";
 
-    private static AsyncHttpClient client = new AsyncHttpClient();
+    private static SyncHttpClient client = new SyncHttpClient();
 
     private static void get(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
         client.get(getAbsoluteUrl(url), params, responseHandler);
@@ -48,10 +49,9 @@ public class HttpUtils {
         rp.add("code", code);
         rp.add("format", format);
 
-        PRODUCT_URL = PRODUCT_URL.replace("localhost", host);
+        String targetUrl = PRODUCT_URL.replace("localhost", host);
 
-
-        HttpUtils.post(PRODUCT_URL, rp, new JsonHttpResponseHandler() {
+        HttpUtils.post(targetUrl, rp, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 // If the response is JSONObject instead of expected JSONArray
