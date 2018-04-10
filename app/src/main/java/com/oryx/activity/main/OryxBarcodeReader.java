@@ -18,6 +18,7 @@ import com.oryx.R;
 import com.oryx.activity.core.AbstractActivity;
 import com.oryx.activity.bu.ProductActivity;
 import com.oryx.activity.login.LoginActivity;
+import com.oryx.service.ProductService;
 import com.oryx.utils.HttpUtils;
 
 import butterknife.BindView;
@@ -121,7 +122,7 @@ public class OryxBarcodeReader extends AbstractActivity {
             @Override
             public void run() {
                 try {
-                    HttpUtils.callGetDescriptionRest(host, "123456", "TST", _descriptionField);
+                    ProductService.callGetDescriptionRest(host, "123456", "TST", _descriptionField);
                 }catch (Exception e){
                     e.printStackTrace();
                 }
@@ -184,7 +185,7 @@ public class OryxBarcodeReader extends AbstractActivity {
                     @Override
                     public void run() {
                         try {
-                            HttpUtils.callGetDescriptionRest(host, barCode, format, _descriptionField);
+                            ProductService.callGetDescriptionRest(host, barCode, format, _descriptionField);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }

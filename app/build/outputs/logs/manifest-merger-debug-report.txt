@@ -4,9 +4,9 @@ ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:
 INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
 INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
 INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\faa1d69bf9920339c668b4a15a8e4e8a\AndroidManifest.xml:2:1-7:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\0b7d174488fec33954687184f6836697\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\84556c7ebfdd40007d3837795a6067b9\AndroidManifest.xml:17:1-22:12
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\faa1d69bf9920339c668b4a15a8e4e8a\AndroidManifest.xml:2:1-7:12
 MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\532ae36e1c5d98e6753de11a81b11997\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\b8fb9ca3d458f33df9b1d41eb358cfc1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\289c1b078d969751fdbbfc074655f09c\AndroidManifest.xml:17:1-22:12
@@ -46,12 +46,12 @@ uses-sdk
 ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
 INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
 INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\faa1d69bf9920339c668b4a15a8e4e8a\AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\faa1d69bf9920339c668b4a15a8e4e8a\AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:design:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\0b7d174488fec33954687184f6836697\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\0b7d174488fec33954687184f6836697\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\84556c7ebfdd40007d3837795a6067b9\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\84556c7ebfdd40007d3837795a6067b9\AndroidManifest.xml:20:5-44
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\faa1d69bf9920339c668b4a15a8e4e8a\AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\faa1d69bf9920339c668b4a15a8e4e8a\AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\532ae36e1c5d98e6753de11a81b11997\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\532ae36e1c5d98e6753de11a81b11997\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\b8fb9ca3d458f33df9b1d41eb358cfc1\AndroidManifest.xml:20:5-44
