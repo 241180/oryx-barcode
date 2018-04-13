@@ -18,6 +18,7 @@ import com.oryx.R;
 import com.oryx.activity.core.AbstractActivity;
 import com.oryx.activity.bu.ProductActivity;
 import com.oryx.activity.login.LoginActivity;
+import com.oryx.model.ProductVO;
 import com.oryx.service.ProductService;
 import com.oryx.utils.HttpUtils;
 
@@ -118,11 +119,27 @@ public class OryxBarcodeReader extends AbstractActivity {
     public void scanBar(View v) {
         this.host = _hostField.getText().toString();
 
+        /*Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    ProductService.getProduct(host, "123456", "TST", _descriptionField);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        });
+        thread.start();*/
+
+
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    ProductService.callGetDescriptionRest(host, "123456", "TST", _descriptionField);
+                    ProductVO productVO = new ProductVO();
+                    productVO.setProductCode("444444");
+                    productVO.setDescription("createProduct");
+                    ProductService.createProduct(host, productVO);
                 }catch (Exception e){
                     e.printStackTrace();
                 }
@@ -185,7 +202,7 @@ public class OryxBarcodeReader extends AbstractActivity {
                     @Override
                     public void run() {
                         try {
-                            ProductService.callGetDescriptionRest(host, barCode, format, _descriptionField);
+                            ProductService.getProduct(host, barCode, format, _descriptionField);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }

@@ -19,5 +19,8 @@ public class IServer {
 
     //products
     public static String PRODUCT_BASE_URL = IServer.BASE_URL + "protected/products";
-    public static String PRODUCT_DESCRIPTION_URL = IServer.PRODUCT_BASE_URL + "/description";
+    public static String PRODUCT_GET_URL = IServer.PRODUCT_BASE_URL + "/getProduct";
+    public static String PRODUCT_CREATE_URL = IServer.PRODUCT_BASE_URL + "/createProduct";
+    public static String PRODUCT_UPDATE_URL = IServer.PRODUCT_BASE_URL + "/updateProduct";
+    public static String PRODUCT_DELETE_URL = IServer.PRODUCT_BASE_URL + "/deleteProduct";
 }
