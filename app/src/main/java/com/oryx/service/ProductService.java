@@ -48,15 +48,8 @@ public class ProductService {
         Gson gson = new Gson();
         String jsonStringProduct = gson.toJson(productVO);
 
-        JSONObject jsonObject = null;
-        try {
-            jsonObject = new JSONObject(jsonStringProduct);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
         RequestParams rp = new RequestParams();
-        rp.add("product", jsonObject.toString());
+        rp.add("product", jsonStringProduct);
 
         String targetUrl = IServer.PRODUCT_CREATE_URL.replace("localhost", host);
 

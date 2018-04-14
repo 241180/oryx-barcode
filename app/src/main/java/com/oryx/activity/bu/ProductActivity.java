@@ -9,11 +9,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.oryx.R;
 import com.oryx.activity.core.AbstractActivity;
+import com.oryx.context.IServer;
+import com.oryx.model.ProductVO;
+import com.oryx.service.ProductService;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class ProductActivity extends AbstractActivity {
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
@@ -30,24 +35,23 @@ public class ProductActivity extends AbstractActivity {
     @BindView(R.id.brandField)
     EditText _brandField;
     @BindView(R.id.categoryField)
-    EditText _categoryField;
+    Spinner _categoryField;
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
+        ButterKnife.bind(this);
     }
 
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
-
-                // TODO: Implement successful signup logic here
-                // By default we just finish the Activity and log them in automatically
-                this.finish();
+                _codeField.setText(intent.getStringExtra("SCAN_RESULT"));
+                //this.finish();
             }
         }
     }
@@ -65,6 +69,24 @@ public class ProductActivity extends AbstractActivity {
         } catch (ActivityNotFoundException anfe) {
             showDialog(ProductActivity.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
         }
+    }
+
+    public void addProduct(View v) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    ProductVO productVO = new ProductVO();
+                    productVO.setProductCode(_codeField.getText().toString());
+                    productVO.setProductName(_nameField.getText().toString());
+                    productVO.setDescription(_descriptionField.getText().toString());
+                    ProductService.createProduct(IServer.host, productVO);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        });
+        thread.start();
     }
 
     private static AlertDialog showDialog(final Activity act, CharSequence title, CharSequence message, CharSequence buttonYes, CharSequence buttonNo) {

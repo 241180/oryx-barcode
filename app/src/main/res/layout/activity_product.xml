@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -11,14 +12,15 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="right"
+            android:width="100dp"
             android:text="Code : "
-            android:textStyle="bold"
             android:textColor="#FF0000"
-            android:gravity="center"
-            />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/codeField"
@@ -32,7 +34,6 @@
             android:id="@+id/scanButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:gravity="center"
             android:onClick="scanBar"
             android:text="Scan"
@@ -49,8 +50,8 @@
             android:text="Name : "
             android:textStyle="bold"
             android:textColor="#FF0000"
-            android:gravity="center"
-            />
+            android:gravity="right"
+            android:width="100dp"/>
 
         <EditText
             android:id="@+id/nameField"
@@ -65,14 +66,15 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="right"
+            android:width="100dp"
             android:text="Description : "
-            android:textStyle="bold"
             android:textColor="#FF0000"
-            android:gravity="center"
-            />
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/descriptionField"
@@ -93,8 +95,8 @@
             android:text="Marque : "
             android:textStyle="bold"
             android:textColor="#FF0000"
-            android:gravity="center"
-            />
+            android:gravity="right"
+            android:width="100dp"/>
 
         <EditText
             android:id="@+id/brandField"
@@ -116,14 +118,13 @@
             android:text="Catégorie : "
             android:textStyle="bold"
             android:textColor="#FF0000"
-            android:gravity="center"
-            />
+            android:gravity="right"
+            android:width="100dp"/>
 
         <Spinner
             android:id="@+id/categoryField"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:textColor="#FF0000"
             android:textStyle="bold" />
     </LinearLayout>
@@ -135,65 +136,29 @@
         android:layout_marginBottom="20dp"
         android:background="@android:color/darker_gray"/>
 
-    <RadioGroup
-        android:id="@+id/group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checkedButton="@+id/radio2"
-        android:orientation="horizontal"
-        >
-        <RadioButton
-            android:id="@+id/radio1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mètre"
-            />
-        <RadioButton
-            android:id="@+id/radio2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Centimètre"
-            />
-    </RadioGroup>
-    <CheckBox
-        android:id="@+id/mega"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mega fonction !"
-        />
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:gravity="right"
+        android:orientation="horizontal">
+
         <Button
-            android:id="@+id/calcul"
+            android:id="@+id/clearBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calculer l'IMC"
-            android:layout_weight="1"
-            android:layout_marginLeft="25dip"
-            android:layout_marginRight="25dip"
-            />
+            android:gravity="center"
+            android:onClick="scanBar"
+            android:text="Clear"
+            android:textSize="18dp"></Button>
+
         <Button
-            android:id="@+id/raz"
+            android:id="@+id/addProductBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RAZ"
-            android:layout_weight="1"
-            android:layout_marginLeft="25dip"
-            android:layout_marginRight="25dip"
-            />
+            android:gravity="center"
+            android:onClick="addProduct"
+            android:text="Ok"
+            android:textSize="18dp"></Button>
+
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Résultat:"
-        />
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text="Vous devez cliquer sur le bouton « Calculer l'IMC » pour obtenir un résultat."
-        />
 </LinearLayout>
