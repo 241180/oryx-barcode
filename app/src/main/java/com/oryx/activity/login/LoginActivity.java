@@ -3,6 +3,7 @@ package com.oryx.activity.login;
 import android.app.ProgressDialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 
 import android.content.Intent;
@@ -15,8 +16,10 @@ import android.widget.Toast;
 
 import com.oryx.R;
 import com.oryx.activity.core.AbstractActivity;
+import com.oryx.context.IServer;
 import com.oryx.context.IUser;
 import com.oryx.prefs.IUserPrefs;
+import com.oryx.service.AuthService;
 import com.oryx.utils.PrefUtils;
 
 import butterknife.BindView;
@@ -40,6 +43,10 @@ public class LoginActivity extends AbstractActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
@@ -80,7 +87,8 @@ public class LoginActivity extends AbstractActivity {
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
-        IUser.userEmail = _emailField.getText().toString();
+        IUser user = new IUser();
+        AuthService.connect(IServer.host, _emailField.getText().toString(), _passwordField.getText().toString());
 
         // TODO: Implement your own authentication logic here.
 
