@@ -2,6 +2,7 @@ package com.oryx.activity.bu;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,17 +14,19 @@ import android.widget.Spinner;
 
 import com.oryx.R;
 import com.oryx.activity.core.AbstractActivity;
+import com.oryx.activity.login.LoginActivity;
 import com.oryx.context.IServer;
 import com.oryx.model.ProductVO;
 import com.oryx.service.ProductService;
+import com.oryx.utils.GuiUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ProductActivity extends AbstractActivity {
+public class ProductDetailsActivity extends AbstractActivity {
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
 
-    private static final String TAG = "ProductActivity";
+    private static final String TAG = "ProductDetailsActivity";
     private static final int REQUEST_SIGNUP = 0;
 
     @BindView(R.id.codeField)
@@ -43,7 +46,7 @@ public class ProductActivity extends AbstractActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product);
+        setContentView(R.layout.activity_product_dtails);
         ButterKnife.bind(this);
     }
 
@@ -70,26 +73,46 @@ public class ProductActivity extends AbstractActivity {
             Intent intent = new Intent(ACTION_SCAN);
             startActivityForResult(intent, 0);
         } catch (ActivityNotFoundException anfe) {
-            showDialog(ProductActivity.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
+            showDialog(ProductDetailsActivity.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
         }
     }
 
     public void addProduct(View v) {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    ProductVO productVO = new ProductVO();
-                    productVO.setCode(_codeField.getText().toString());
-                    productVO.setName(_nameField.getText().toString());
-                    productVO.setDescription(_descriptionField.getText().toString());
-                    ProductService.createProduct(IServer.host, xformat!=null?xformat:"ETA", productVO);
-                }catch (Exception e){
-                    e.printStackTrace();
+        if(!_codeField.getText().toString().isEmpty()) {
+            final ProgressDialog progressDialog = new ProgressDialog(ProductDetailsActivity.this,
+                    R.style.AppTheme_Dark_Dialog);
+            progressDialog.setIndeterminate(true);
+            progressDialog.setMessage("Saving...");
+            progressDialog.show();
+            GuiUtils.showWorker(
+                    new Runnable() {
+                        public void run() {
+                            // On complete call either onLoginSuccess or onLoginFailed
+                            progressDialog.dismiss();
+                            ProductDetailsActivity.this.finish();
+                        }
+                    }, 3000);
+
+            Runnable addProduct = new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        ProductVO productVO = new ProductVO();
+                        productVO.setCode(_codeField.getText().toString());
+                        productVO.setName(_nameField.getText().toString());
+                        productVO.setDescription(_descriptionField.getText().toString());
+                        ProductService.createProduct(IServer.host, xformat != null ? xformat : "ETA", productVO);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
-            }
-        });
-        thread.start();
+            };
+            addProduct.run();
+        }
+    }
+
+    public void cancel(View v) {
+        this.finish();
     }
 
     private static AlertDialog showDialog(final Activity act, CharSequence title, CharSequence message, CharSequence buttonYes, CharSequence buttonNo) {

@@ -16,10 +16,11 @@ import android.widget.Toast;
 
 import com.oryx.R;
 import com.oryx.activity.core.AbstractActivity;
-import com.oryx.activity.bu.ProductActivity;
+import com.oryx.activity.bu.ProductDetailsActivity;
 import com.oryx.activity.login.LoginActivity;
 import com.oryx.context.IServer;
 import com.oryx.model.ProductVO;
+import com.oryx.service.AuthService;
 import com.oryx.service.ProductService;
 
 import butterknife.BindView;
@@ -51,7 +52,6 @@ public class OryxBarcodeReader extends AbstractActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
@@ -101,12 +101,13 @@ public class OryxBarcodeReader extends AbstractActivity {
         if (id == R.id.action_item1) {
             return true;
         } else if (id == R.id.action_new_product) {
-            Intent intent = new Intent(this, ProductActivity.class);
+            Intent intent = new Intent(this, ProductDetailsActivity.class);
             startActivity(intent);
             return true;
         }else if (id == R.id.action_settings) {
             return true;
         } else if (id == R.id.action_logout) {
+            AuthService.disConnect(IServer.host, IServer.currentUser.getId());
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
             return true;
@@ -131,7 +132,7 @@ public class OryxBarcodeReader extends AbstractActivity {
         thread.start();*/
 
 
-        Thread thread = new Thread(new Runnable() {
+        Runnable createProduct = new Runnable() {
             @Override
             public void run() {
                 try {
@@ -143,8 +144,8 @@ public class OryxBarcodeReader extends AbstractActivity {
                     e.printStackTrace();
                 }
             }
-        });
-        thread.start();
+        };
+        createProduct.run();
 
 
         /*try {
@@ -197,7 +198,7 @@ public class OryxBarcodeReader extends AbstractActivity {
                 Toast toast = Toast.makeText(this, "Code:" + barCode + " Format:" + format, Toast.LENGTH_LONG);
                 toast.show();
 
-                Thread thread = new Thread(new Runnable() {
+                Runnable getProduct = new Runnable() {
                     @Override
                     public void run() {
                         try {
@@ -206,8 +207,8 @@ public class OryxBarcodeReader extends AbstractActivity {
                             e.printStackTrace();
                         }
                     }
-                });
-                thread.start();
+                };
+                getProduct.run();
             }
         }
     }

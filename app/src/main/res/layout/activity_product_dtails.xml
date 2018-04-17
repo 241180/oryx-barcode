@@ -30,14 +30,17 @@
             android:inputType="numberDecimal"
             android:layout_weight="1"/>
 
-        <Button
-            android:id="@+id/scanButton"
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/scanBtn"
+            android:text="Scan"
+            android:onClick="scanBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:onClick="scanBar"
-            android:text="Scan"
-            android:textSize="18dp"></Button>
+            android:padding="12dp"
+            android:textSize="18dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -142,23 +145,28 @@
         android:gravity="right"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/clearBtn"
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/cancelBtn"
+            android:text="Cancel"
+            android:onClick="cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:onClick="scanBar"
-            android:text="Clear"
-            android:textSize="18dp"></Button>
+            android:padding="12dp"
+            android:textSize="18dp"/>
 
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/addProductBtn"
+            android:text="Add"
+            android:onClick="addProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:onClick="addProduct"
-            android:text="Ok"
-            android:textSize="18dp"></Button>
-
+            android:padding="12dp"
+            android:textSize="18dp"/>
     </LinearLayout>
 </LinearLayout>

@@ -27,7 +27,7 @@
         </activity>
         <activity android:name="com.oryx.activity.login.LoginActivity" android:theme="@style/AppTheme.Dark" />
         <activity android:name="com.oryx.activity.login.SignupActivity" android:theme="@style/AppTheme.Dark" />
-        <activity android:name="com.oryx.activity.bu.ProductActivity" android:theme="@style/AppTheme.Dark" />
+        <activity android:name="com.oryx.activity.bu.ProductDetailsActivity" android:theme="@style/AppTheme.Dark" />
     </application>
 
 </manifest>

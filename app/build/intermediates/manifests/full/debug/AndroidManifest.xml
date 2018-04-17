@@ -14,7 +14,8 @@
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:label="@string/app_name"
+        android:testOnly="true" >
         <activity
             android:name="com.oryx.activity.main.OryxBarcodeReader"
             android:label="@string/app_name"
@@ -32,7 +33,7 @@
             android:name="com.oryx.activity.login.SignupActivity"
             android:theme="@style/AppTheme.Dark" />
         <activity
-            android:name="com.oryx.activity.bu.ProductActivity"
+            android:name="com.oryx.activity.bu.ProductDetailsActivity"
             android:theme="@style/AppTheme.Dark" />
     </application>
 

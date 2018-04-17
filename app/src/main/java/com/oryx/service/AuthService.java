@@ -23,7 +23,7 @@ public class AuthService {
         rp.add("login", login);
         rp.add("password", password);
 
-        String targetUrl = IServer.LOGIN_CONNECT_URL.replace("localhost", host);
+        String targetUrl = IServer.AUTH_CONNECT_URL.replace("localhost", host);
 
         HttpUtils.post(targetUrl, rp, new JsonHttpResponseHandler() {
             @Override
@@ -54,15 +54,68 @@ public class AuthService {
         return null;
     }
 
-    public static boolean isConnected(String login, String password){
+    public static boolean isConnected(String host, UUID userId){
+        RequestParams rp = new RequestParams();
+        rp.add("userId", userId.toString());
+
+        String targetUrl = IServer.AUTH_IS_CONNECTED_URL.replace("localhost", host);
+
+        HttpUtils.post(targetUrl, rp, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                // If the response is JSONObject instead of expected JSONArray
+                Log.d("asd", "---------------- this is response : " + response);
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
+                // Pull out the first event on the public timeline
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                super.onFailure(statusCode, headers, throwable, errorResponse);
+            }
+
+            @Override
+            protected Object parseResponse(byte[] responseBody) throws JSONException {
+                return super.parseResponse(responseBody);
+            }
+        });
+
         return true;
     }
 
-    public static boolean isConnected(UUID userId){
-        return true;
-    }
+    public static boolean disConnect(String host, UUID userId){
+        RequestParams rp = new RequestParams();
+        rp.add("userId", userId.toString());
 
-    public static boolean disConnect(UUID userId){
+        String targetUrl = IServer.AUTH_DISCONNECT_URL.replace("localhost", host);
+
+        HttpUtils.post(targetUrl, rp, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                // If the response is JSONObject instead of expected JSONArray
+                Log.d("asd", "---------------- this is response : " + response);
+                IServer.currentUser = null;
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
+                // Pull out the first event on the public timeline
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                super.onFailure(statusCode, headers, throwable, errorResponse);
+            }
+
+            @Override
+            protected Object parseResponse(byte[] responseBody) throws JSONException {
+                return super.parseResponse(responseBody);
+            }
+        });
+
         return true;
     }
 }

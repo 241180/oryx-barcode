@@ -15,12 +15,12 @@ public class IServer {
     }
 
     public static String BASE_URL = IServer.getBaseUrl();
-    //authentification
-    public static String LOGIN_URL = IServer.BASE_URL + "login";
-    public static String LOGIN_CONNECT_URL = LOGIN_URL + "/connect";
 
-    public static String LOGOUT_URL = IServer.BASE_URL + "logout";
-    public static String SIGNIN_URL = IServer.BASE_URL + "signin";
+    //authentification
+    public static String AUTH_URL = IServer.BASE_URL + "protected/authentication";
+    public static String AUTH_CONNECT_URL = AUTH_URL + "/connect";
+    public static String AUTH_IS_CONNECTED_URL = AUTH_URL + "/isconnected";
+    public static String AUTH_DISCONNECT_URL = AUTH_URL + "/disconnect";
 
     //products
     public static String PRODUCT_BASE_URL = IServer.BASE_URL + "protected/products";

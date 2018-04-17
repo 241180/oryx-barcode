@@ -20,6 +20,7 @@ import com.oryx.context.IServer;
 import com.oryx.context.IUser;
 import com.oryx.prefs.IUserPrefs;
 import com.oryx.service.AuthService;
+import com.oryx.utils.GuiUtils;
 import com.oryx.utils.PrefUtils;
 
 import butterknife.BindView;
@@ -86,12 +87,7 @@ public class LoginActivity extends AbstractActivity {
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
-
-        // TODO: Implement your own authentication logic here.
-        IUser user = new IUser();
-        AuthService.connect(IServer.host, _emailField.getText().toString(), _passwordField.getText().toString());
-
-        new android.os.Handler().postDelayed(
+        GuiUtils.showWorker(
                 new Runnable() {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
@@ -102,7 +98,11 @@ public class LoginActivity extends AbstractActivity {
                         }
                         progressDialog.dismiss();
                     }
-                }, 5000);
+                }, 3000);
+
+        // TODO: Implement your own authentication logic here.
+        IUser user = new IUser();
+        AuthService.connect(IServer.host, _emailField.getText().toString(), _passwordField.getText().toString());
     }
 
 
