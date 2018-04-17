@@ -1,8 +1,11 @@
 package com.oryx.context;
 
+import android.location.Location;
+
 import java.util.UUID;
 
 public class IServer {
+    public static Location location;
     public static IUser currentUser;
     public static String host = "10.0.2.2";
 

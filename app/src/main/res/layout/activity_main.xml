@@ -27,7 +27,7 @@
                 android:textSize="30dp" />
 
             <android.support.v7.widget.AppCompatButton
-                android:id="@+id/scanButton"
+                android:id="@+id/scanBtn"
                 android:layout_width="250dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
@@ -35,38 +35,29 @@
                 android:gravity="center"
                 android:onClick="scanBar"
                 android:text="Scan"
-                android:textSize="18dp" >
-            </android.support.v7.widget.AppCompatButton>
+                android:textSize="18dp" />
 
-            <TextView
-                android:id="@+id/barCodeField"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|top"
-                android:layout_margin="20dp"
-                android:text=""
-                android:textColor="#000000"
-                android:textSize="30dp" />
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/configBtn"
+                android:layout_width="250dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="GPS"
+                android:onClick="requestLocationUpdates"
+                android:textSize="18dp" />
 
-            <TextView
-                android:id="@+id/formatField"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|top"
-                android:layout_margin="20dp"
-                android:text=""
-                android:textColor="#000000"
-                android:textSize="30dp" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="177dp"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/descriptionField"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|top"
-                android:layout_margin="20dp"
-                android:text=""
-                android:textColor="#000000"
-                android:textSize="30dp" />
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/mapView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

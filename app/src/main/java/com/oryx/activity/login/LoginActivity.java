@@ -87,22 +87,23 @@ public class LoginActivity extends AbstractActivity {
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
+
+        // TODO: Implement your own authentication logic here.
+        //IUser user = new IUser();
+        //AuthService.connect(IServer.host, _emailField.getText().toString(), _passwordField.getText().toString());
+
         GuiUtils.showWorker(
                 new Runnable() {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
-                        if(IServer.currentUser != null) {
+                        //if(IServer.currentUser != null) {
                             onLoginSuccess();
-                        } else {
-                            onLoginFailed();
-                        }
+                        //} else {
+                        //    onLoginFailed();
+                        //}
                         progressDialog.dismiss();
                     }
                 }, 3000);
-
-        // TODO: Implement your own authentication logic here.
-        IUser user = new IUser();
-        AuthService.connect(IServer.host, _emailField.getText().toString(), _passwordField.getText().toString());
     }
 
 
