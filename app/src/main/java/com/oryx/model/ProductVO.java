@@ -3,8 +3,8 @@ package com.oryx.model;
 public class ProductVO extends TracableCancelableEntityVO
 {
 
-    protected String productCode;
-    protected String productName;
+    protected String code;
+    protected String name;
     protected String description;
     protected ProductCategoryVO category;
     protected String categoryId;
@@ -12,51 +12,51 @@ public class ProductVO extends TracableCancelableEntityVO
     protected String brandId;
 
     /**
-     * Obtient la valeur de la propriété productCode.
+     * Obtient la valeur de la propriété code.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getProductCode() {
-        return productCode;
+    public String getCode() {
+        return code;
     }
 
     /**
-     * Définit la valeur de la propriété productCode.
+     * Définit la valeur de la propriété code.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setProductCode(String value) {
-        this.productCode = value;
+    public void setCode(String value) {
+        this.code = value;
     }
 
     /**
-     * Obtient la valeur de la propriété productName.
+     * Obtient la valeur de la propriété name.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getProductName() {
-        return productName;
+    public String getName() {
+        return name;
     }
 
     /**
-     * Définit la valeur de la propriété productName.
+     * Définit la valeur de la propriété name.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setProductName(String value) {
-        this.productName = value;
+    public void setName(String value) {
+        this.name = value;
     }
 
     /**

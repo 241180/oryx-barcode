@@ -87,20 +87,22 @@ public class LoginActivity extends AbstractActivity {
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
+        // TODO: Implement your own authentication logic here.
         IUser user = new IUser();
         AuthService.connect(IServer.host, _emailField.getText().toString(), _passwordField.getText().toString());
-
-        // TODO: Implement your own authentication logic here.
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
-                        onLoginSuccess();
-                        // onLoginFailed();
+                        if(IServer.currentUser != null) {
+                            onLoginSuccess();
+                        } else {
+                            onLoginFailed();
+                        }
                         progressDialog.dismiss();
                     }
-                }, 3000);
+                }, 5000);
     }
 
 
@@ -130,7 +132,6 @@ public class LoginActivity extends AbstractActivity {
 
     public void onLoginFailed() {
         Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
-
         _loginButton.setEnabled(true);
     }
 

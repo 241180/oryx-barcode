@@ -44,11 +44,12 @@ public class ProductService {
         });
     }
 
-    public static void createProduct(String host, ProductVO productVO) {
+    public static void createProduct(String host, String format, ProductVO productVO) {
         Gson gson = new Gson();
         String jsonStringProduct = gson.toJson(productVO);
 
         RequestParams rp = new RequestParams();
+        rp.add("xformat", format);
         rp.add("product", jsonStringProduct);
 
         String targetUrl = IServer.PRODUCT_CREATE_URL.replace("localhost", host);

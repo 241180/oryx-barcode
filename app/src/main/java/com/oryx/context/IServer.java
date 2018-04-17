@@ -3,6 +3,7 @@ package com.oryx.context;
 import java.util.UUID;
 
 public class IServer {
+    public static IUser currentUser;
     public static String host = "10.0.2.2";
 
     public static String serverName = "Oryx";

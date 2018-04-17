@@ -21,7 +21,6 @@ import com.oryx.activity.login.LoginActivity;
 import com.oryx.context.IServer;
 import com.oryx.model.ProductVO;
 import com.oryx.service.ProductService;
-import com.oryx.utils.HttpUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -137,9 +136,9 @@ public class OryxBarcodeReader extends AbstractActivity {
             public void run() {
                 try {
                     ProductVO productVO = new ProductVO();
-                    productVO.setProductCode("444444");
+                    productVO.setCode("444444");
                     productVO.setDescription("createProduct");
-                    ProductService.createProduct(IServer.host, productVO);
+                    ProductService.createProduct(IServer.host, "ETA", productVO);
                 }catch (Exception e){
                     e.printStackTrace();
                 }

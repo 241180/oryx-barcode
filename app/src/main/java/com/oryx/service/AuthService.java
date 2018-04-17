@@ -31,12 +31,23 @@ public class AuthService {
                 // If the response is JSONObject instead of expected JSONArray
                 Log.d("asd", "---------------- this is response : " + response);
                 Gson gson = new Gson();
-                IUser user = gson.fromJson(response.toString(), IUser.class);
+                IServer.currentUser = gson.fromJson(response.toString(), IUser.class);
             }
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
                 // Pull out the first event on the public timeline
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                super.onFailure(statusCode, headers, throwable, errorResponse);
+                IServer.currentUser = null;
+            }
+
+            @Override
+            protected Object parseResponse(byte[] responseBody) throws JSONException {
+                return super.parseResponse(responseBody);
             }
         });
 

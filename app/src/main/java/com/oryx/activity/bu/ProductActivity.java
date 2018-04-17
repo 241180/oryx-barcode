@@ -37,6 +37,8 @@ public class ProductActivity extends AbstractActivity {
     @BindView(R.id.categoryField)
     Spinner _categoryField;
 
+    String xformat = null;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,7 @@ public class ProductActivity extends AbstractActivity {
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
                 _codeField.setText(intent.getStringExtra("SCAN_RESULT"));
+                xformat = intent.getStringExtra("SCAN_RESULT_FORMAT");
                 //this.finish();
             }
         }
@@ -77,10 +80,10 @@ public class ProductActivity extends AbstractActivity {
             public void run() {
                 try {
                     ProductVO productVO = new ProductVO();
-                    productVO.setProductCode(_codeField.getText().toString());
-                    productVO.setProductName(_nameField.getText().toString());
+                    productVO.setCode(_codeField.getText().toString());
+                    productVO.setName(_nameField.getText().toString());
                     productVO.setDescription(_descriptionField.getText().toString());
-                    ProductService.createProduct(IServer.host, productVO);
+                    ProductService.createProduct(IServer.host, xformat!=null?xformat:"ETA", productVO);
                 }catch (Exception e){
                     e.printStackTrace();
                 }
