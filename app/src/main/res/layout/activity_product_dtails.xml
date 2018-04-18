@@ -3,170 +3,187 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="vertical">
-    <LinearLayout
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.oryx.activity.bu.ProductDetailsActivity">
+
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="fill_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:width="100dp"
-            android:text="Code : "
-            android:textColor="#FF0000"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/codeField"
+        <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Code"
-            android:inputType="numberDecimal"
-            android:layout_weight="1"/>
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:paddingBottom="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="30dp">
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/scanBtn"
-            android:text="Scan"
-            android:onClick="scanBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:padding="12dp"
-            android:textSize="18dp"/>
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name : "
-            android:textStyle="bold"
-            android:textColor="#FF0000"
-            android:gravity="right"
-            android:width="100dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:gravity="right"
+                    android:text="Code : "
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/nameField"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Name"
-            android:inputType="text"
-            android:layout_weight="1"/>
-    </LinearLayout>
+                <EditText
+                    android:id="@+id/codeField"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Code"
+                    android:inputType="numberDecimal" />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/scanBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:onClick="scanBar"
+                    android:padding="12dp"
+                    android:text="Scan"
+                    android:textSize="18dp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:width="100dp"
-            android:text="Description : "
-            android:textColor="#FF0000"
-            android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/descriptionField"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Description"
-            android:inputType="text"
-            android:layout_weight="1"/>
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:gravity="right"
+                    android:text="Name : "
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Marque : "
-            android:textStyle="bold"
-            android:textColor="#FF0000"
-            android:gravity="right"
-            android:width="100dp"/>
+                <EditText
+                    android:id="@+id/nameField"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Name"
+                    android:inputType="text" />
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/brandField"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Marque"
-            android:inputType="text"
-            android:layout_weight="1"/>
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:gravity="right"
+                    android:text="Description : "
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Catégorie : "
-            android:textStyle="bold"
-            android:textColor="#FF0000"
-            android:gravity="right"
-            android:width="100dp"/>
+                <EditText
+                    android:id="@+id/descriptionField"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Description"
+                    android:inputType="text" />
+            </LinearLayout>
 
-        <Spinner
-            android:id="@+id/categoryField"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#FF0000"
-            android:textStyle="bold" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@android:color/darker_gray"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:gravity="right"
+                    android:text="Marque : "
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right"
-        android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/brandField"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Marque"
+                    android:inputType="text" />
+            </LinearLayout>
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/cancelBtn"
-            android:text="Cancel"
-            android:onClick="cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:padding="12dp"
-            android:textSize="18dp"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/addProductBtn"
-            android:text="Add"
-            android:onClick="addProduct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:padding="12dp"
-            android:textSize="18dp"/>
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100dp"
+                    android:gravity="right"
+                    android:text="Catégorie : "
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/categoryField"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:onClick="cancel"
+                    android:padding="12dp"
+                    android:text="Cancel"
+                    android:textSize="18dp" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/addProductBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:onClick="addProduct"
+                    android:padding="12dp"
+                    android:text="Add"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

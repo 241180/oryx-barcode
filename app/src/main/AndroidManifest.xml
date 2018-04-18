@@ -24,7 +24,7 @@
             android:value="AIzaSyBGuB68qGB5XvoepqO8O2lJ7gX1JVc3Z54"/>
 
         <activity
-            android:name="com.oryx.activity.main.OryxBarcodeReader"
+            android:name="com.oryx.activity.main.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -36,6 +36,7 @@
         <activity android:name="com.oryx.activity.login.LoginActivity" android:theme="@style/AppTheme.Dark" />
         <activity android:name="com.oryx.activity.login.SignupActivity" android:theme="@style/AppTheme.Dark" />
         <activity android:name="com.oryx.activity.bu.ProductDetailsActivity" android:theme="@style/AppTheme.Dark" />
+        <activity android:name="com.oryx.activity.map.MapViewActivity" android:theme="@style/AppTheme.Dark" />
     </application>
 
 </manifest>

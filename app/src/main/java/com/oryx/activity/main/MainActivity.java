@@ -48,7 +48,7 @@ import com.oryx.utils.GuiUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class OryxBarcodeReader extends AbstractActivity {
+public class MainActivity extends AbstractActivity {
 
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
 
@@ -57,22 +57,15 @@ public class OryxBarcodeReader extends AbstractActivity {
     public static String description;
     public static byte[] rawBytes;
 
-    @BindView(R.id.mapView)
-    MapView mMapView;
-
-    private GoogleMap googleMap;
-
-    /*@BindView(R.id.barCodeField)
+    @BindView(R.id.barCodeField)
     TextView _barCodeField;
     @BindView(R.id.formatField)
     TextView _formatField;
     @BindView(R.id.descriptionField)
     TextView _descriptionField;
-    @BindView(R.id.hostField)*/
+    @BindView(R.id.hostField)
 
     EditText _hostField;
-    @BindView(R.id.configBtn)
-    AppCompatButton configBtn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -81,56 +74,6 @@ public class OryxBarcodeReader extends AbstractActivity {
         ButterKnife.bind(this);
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
-
-        initComponenet();
-        GuiUtils.configure_gps(this);
-
-        mMapView.onCreate(savedInstanceState);
-
-        mMapView.onResume(); // needed to get the map to display immediately
-
-        try {
-            MapsInitializer.initialize(this.getApplicationContext());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        mMapView.getMapAsync(new OnMapReadyCallback() {
-            @SuppressLint("MissingPermission")
-            @Override
-            public void onMapReady(GoogleMap mMap) {
-                googleMap = mMap;
-
-                // For showing a move to my location button
-                googleMap.setMyLocationEnabled(true);
-
-                // For dropping a marker at a point on the Map
-                LatLng sydney = new LatLng(-34, 151);
-                googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker Title").snippet("Marker Description"));
-
-                // For zooming automatically to the location of the marker
-                CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(12).build();
-                googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-            }
-        });
-    }
-
-    public void requestLocationUpdates(View v) {
-        GuiUtils.configure_gps(this);
-        super.requestLocationUpdates();
-    }
-
-    @Override
-    protected void onLocationChange(Location location){
-        IServer.location = location;
-        // For dropping a marker at a point on the Map
-        LatLng sydney = new LatLng(IServer.location.getLatitude(), IServer.location.getLongitude());
-        googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker Title").snippet("Marker Description"));
-
-        // For zooming automatically to the location of the marker
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(12).build();
-        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-        //_descriptionField.setText("GPS: " + location.getLongitude() + " " + location.getLatitude());
     }
 
     @Override
@@ -141,62 +84,21 @@ public class OryxBarcodeReader extends AbstractActivity {
     @Override
     protected void onResume() {
         if (barCode != null) {
-            //_barCodeField.setText(barCode);
+            _barCodeField.setText(barCode);
         }
 
         if (format != null) {
-            //_formatField.setText(format);
+            _formatField.setText(format);
         }
 
         if (description != null) {
-            //_descriptionField.setText(description);
+            _descriptionField.setText(description);
         }
 
         super.onResume();
-        mMapView.onResume();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        return super.onPrepareOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_item1) {
-            return true;
-        } else if (id == R.id.action_new_product) {
-            Intent intent = new Intent(this, ProductDetailsActivity.class);
-            startActivity(intent);
-            return true;
-        }else if (id == R.id.action_settings) {
-            return true;
-        } else if (id == R.id.action_logout) {
-            if(IServer.currentUser != null && IServer.currentUser.getId() != null) {
-                AuthService.disConnect(IServer.host, IServer.currentUser.getId());
-            }
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    public void scanBar(View v) {
+     public void scanBar(View v) {
         IServer.host = _hostField.getText().toString();
 
         /*Thread thread = new Thread(new Runnable() {
@@ -233,7 +135,7 @@ public class OryxBarcodeReader extends AbstractActivity {
             //intent.putExtra("SCAN_MODE", "PRODUCT_MODE");
             startActivityForResult(intent, 0);
         } catch (ActivityNotFoundException anfe) {
-            showDialog(OryxBarcodeReader.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
+            showDialog(MainActivity.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
         }*/
     }
 
@@ -267,9 +169,9 @@ public class OryxBarcodeReader extends AbstractActivity {
                 format = intent.getStringExtra("SCAN_RESULT_FORMAT");
                 rawBytes = intent.getByteArrayExtra("SCAN_RESULT_BYTES");
 
-                //_barCodeField.setText(barCode);
+                _barCodeField.setText(barCode);
 
-                //_formatField.setText(format);
+                _formatField.setText(format);
 
 				/*int intentOrientation = intent.getIntExtra("SCAN_RESULT_ORIENTATION", Integer.MIN_VALUE);
 				Integer orientation = intentOrientation == Integer.MIN_VALUE ? null : intentOrientation;
@@ -282,7 +184,7 @@ public class OryxBarcodeReader extends AbstractActivity {
                     @Override
                     public void run() {
                         try {
-                            //ProductService.getProduct(IServer.host, barCode, format, _descriptionField);
+                            ProductService.getProduct(IServer.host, barCode, format, _descriptionField);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -291,21 +193,5 @@ public class OryxBarcodeReader extends AbstractActivity {
                 getProduct.run();
             }
         }
-    }
-
-    @Override
-    protected void onPause() {
-        mMapView.onPause();
-        super.onPause();
-    }
-    @Override
-    protected void onDestroy() {
-        mMapView.onDestroy();
-        super.onDestroy();
-    }
-    @Override
-    public void onLowMemory() {
-        super.onLowMemory();
-        mMapView.onLowMemory();
     }
 }
