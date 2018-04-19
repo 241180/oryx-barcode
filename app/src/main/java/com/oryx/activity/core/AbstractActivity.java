@@ -81,7 +81,6 @@ public abstract class AbstractActivity extends AppCompatActivity {
 
     }
 
-    @SuppressLint("MissingPermission")
     public void requestLocationUpdates() {
         GuiUtils.showWorker(
                 new Runnable() {

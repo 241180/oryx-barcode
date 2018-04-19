@@ -36,6 +36,9 @@
         <activity android:name="com.oryx.activity.login.LoginActivity" android:theme="@style/AppTheme.Dark" />
         <activity android:name="com.oryx.activity.login.SignupActivity" android:theme="@style/AppTheme.Dark" />
         <activity android:name="com.oryx.activity.bu.ProductDetailsActivity" android:theme="@style/AppTheme.Dark" />
+        <activity android:name="com.oryx.activity.bu.ProductListActivity" android:theme="@style/AppTheme.Dark" />
+        <activity android:name="com.oryx.activity.bu.MarketDetailsActivity" android:theme="@style/AppTheme.Dark" />
+        <activity android:name="com.oryx.activity.bu.MarketListActivity" android:theme="@style/AppTheme.Dark" />
         <activity android:name="com.oryx.activity.map.MapViewActivity" android:theme="@style/AppTheme.Dark" />
     </application>
 
