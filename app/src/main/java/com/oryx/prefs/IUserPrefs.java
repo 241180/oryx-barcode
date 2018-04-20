@@ -1,7 +1,5 @@
 package com.oryx.prefs;
 
-import java.util.UUID;
-
 public class IUserPrefs {
     public static String PREF_SETTINGS = "PREF_SETTINGS";
 

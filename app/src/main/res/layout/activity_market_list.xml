@@ -21,131 +21,78 @@
             android:paddingRight="30dp"
             android:paddingTop="30dp">
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:width="100dp"
-                    android:gravity="right"
-                    android:text="Code : "
-                    android:textColor="#FF0000"
-                    android:textStyle="bold" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/codeField"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:hint="Code"
-                    android:inputType="numberDecimal" />
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
 
-                <android.support.v7.widget.AppCompatButton
-                    android:id="@+id/scanBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:onClick="scanBar"
-                    android:padding="12dp"
-                    android:text="Scan"
-                    android:textSize="18dp" />
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:width="100dp"
-                    android:gravity="right"
-                    android:text="Name : "
-                    android:textColor="#FF0000"
-                    android:textStyle="bold" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
 
                 <EditText
                     android:id="@+id/nameField"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:hint="Name"
-                    android:inputType="text" />
-            </LinearLayout>
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:width="100dp"
-                    android:gravity="right"
-                    android:text="Description : "
-                    android:textColor="#FF0000"
-                    android:textStyle="bold" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
 
                 <EditText
                     android:id="@+id/descriptionField"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:hint="Description"
-                    android:inputType="text" />
-            </LinearLayout>
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:width="100dp"
-                    android:gravity="right"
-                    android:text="Marque : "
-                    android:textColor="#FF0000"
-                    android:textStyle="bold" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
 
                 <EditText
                     android:id="@+id/brandField"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:hint="Marque"
-                    android:inputType="text" />
-            </LinearLayout>
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:width="100dp"
-                    android:gravity="right"
-                    android:text="Catégorie : "
-                    android:textColor="#FF0000"
-                    android:textStyle="bold" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
 
                 <Spinner
                     android:id="@+id/categoryField"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#FF0000"
-                    android:textStyle="bold" />
-            </LinearLayout>
+                    android:hint="Catégorie"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
 
             <View
                 android:layout_width="match_parent"
@@ -159,6 +106,18 @@
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/scanBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:onClick="scanBar"
+                    android:padding="12dp"
+                    android:text="Scan"
+                    android:textSize="18dp" />
 
                 <android.support.v7.widget.AppCompatButton
                     android:id="@+id/cancelBtn"

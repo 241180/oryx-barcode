@@ -18,7 +18,7 @@ import java.util.UUID;
 import cz.msebera.android.httpclient.Header;
 
 public class AuthService {
-    public static IUser connect(String host, String login, String password){
+    public static IUser connect(String host, String login, String password) {
         RequestParams rp = new RequestParams();
         rp.add("login", login);
         rp.add("password", password);
@@ -54,7 +54,7 @@ public class AuthService {
         return null;
     }
 
-    public static boolean isConnected(String host, UUID userId){
+    public static boolean isConnected(String host, UUID userId) {
         RequestParams rp = new RequestParams();
         rp.add("userId", userId.toString());
 
@@ -86,7 +86,7 @@ public class AuthService {
         return true;
     }
 
-    public static boolean disConnect(String host, UUID userId){
+    public static boolean disConnect(String host, UUID userId) {
         RequestParams rp = new RequestParams();
         rp.add("userId", userId.toString());
 
@@ -117,5 +117,51 @@ public class AuthService {
         });
 
         return true;
+    }
+
+    public static IUser signup(String host,
+                               String firstName,
+                               String lastName,
+                               String email,
+                               String phone,
+                               String address,
+                               String password) {
+        RequestParams rp = new RequestParams();
+        rp.add("firstName", firstName);
+        rp.add("lastName", lastName);
+        rp.add("email", email);
+        rp.add("phone", phone);
+        rp.add("address", address);
+        rp.add("password", password);
+
+        String targetUrl = IServer.AUTH_SIGNUP_URL.replace("localhost", host);
+
+        HttpUtils.post(targetUrl, rp, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                // If the response is JSONObject instead of expected JSONArray
+                Log.d("asd", "---------------- this is response : " + response);
+                Gson gson = new Gson();
+                IServer.currentUser = gson.fromJson(response.toString(), IUser.class);
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
+                // Pull out the first event on the public timeline
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                super.onFailure(statusCode, headers, throwable, errorResponse);
+                IServer.currentUser = null;
+            }
+
+            @Override
+            protected Object parseResponse(byte[] responseBody) throws JSONException {
+                return super.parseResponse(responseBody);
+            }
+        });
+
+        return null;
     }
 }

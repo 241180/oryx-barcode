@@ -2,8 +2,7 @@ package com.oryx.model;
 
 import java.util.Date;
 
-public class TracableCancelableEntityVO extends CancelableEntityVO
-{
+public class TracableCancelableEntityVO extends CancelableEntityVO {
     protected Date createDate;
     protected String createdBy;
     protected Date updateDate;
@@ -11,11 +10,9 @@ public class TracableCancelableEntityVO extends CancelableEntityVO
 
     /**
      * Obtient la valeur de la propriété createDate.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Date }
-     *     
+     *
+     * @return possible object is
+     * {@link Date }
      */
     public Date getCreateDate() {
         return createDate;
@@ -23,11 +20,9 @@ public class TracableCancelableEntityVO extends CancelableEntityVO
 
     /**
      * Définit la valeur de la propriété createDate.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Date }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Date }
      */
     public void setCreateDate(Date value) {
         this.createDate = value;
@@ -35,11 +30,9 @@ public class TracableCancelableEntityVO extends CancelableEntityVO
 
     /**
      * Obtient la valeur de la propriété createdBy.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCreatedBy() {
         return createdBy;
@@ -47,11 +40,9 @@ public class TracableCancelableEntityVO extends CancelableEntityVO
 
     /**
      * Définit la valeur de la propriété createdBy.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCreatedBy(String value) {
         this.createdBy = value;
@@ -59,11 +50,9 @@ public class TracableCancelableEntityVO extends CancelableEntityVO
 
     /**
      * Obtient la valeur de la propriété updateDate.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Date }
-     *     
+     *
+     * @return possible object is
+     * {@link Date }
      */
     public Date getUpdateDate() {
         return updateDate;
@@ -71,11 +60,9 @@ public class TracableCancelableEntityVO extends CancelableEntityVO
 
     /**
      * Définit la valeur de la propriété updateDate.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Date }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Date }
      */
     public void setUpdateDate(Date value) {
         this.updateDate = value;
@@ -83,11 +70,9 @@ public class TracableCancelableEntityVO extends CancelableEntityVO
 
     /**
      * Obtient la valeur de la propriété updatedBy.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getUpdatedBy() {
         return updatedBy;
@@ -95,11 +80,9 @@ public class TracableCancelableEntityVO extends CancelableEntityVO
 
     /**
      * Définit la valeur de la propriété updatedBy.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setUpdatedBy(String value) {
         this.updatedBy = value;

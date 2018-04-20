@@ -2,19 +2,16 @@ package com.oryx.model;
 
 import java.util.Date;
 
-public class CancelableEntityVO extends EntityVO
-{
+public class CancelableEntityVO extends EntityVO {
     protected Date cancelDate;
     protected String canceledBy;
     protected boolean checkCancel;
 
     /**
      * Obtient la valeur de la propriété cancelDate.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Date }
-     *     
+     *
+     * @return possible object is
+     * {@link Date }
      */
     public Date getCancelDate() {
         return cancelDate;
@@ -22,11 +19,9 @@ public class CancelableEntityVO extends EntityVO
 
     /**
      * Définit la valeur de la propriété cancelDate.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Date }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Date }
      */
     public void setCancelDate(Date value) {
         this.cancelDate = value;
@@ -34,11 +29,9 @@ public class CancelableEntityVO extends EntityVO
 
     /**
      * Obtient la valeur de la propriété canceledBy.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCanceledBy() {
         return canceledBy;
@@ -46,11 +39,9 @@ public class CancelableEntityVO extends EntityVO
 
     /**
      * Définit la valeur de la propriété canceledBy.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCanceledBy(String value) {
         this.canceledBy = value;
@@ -58,7 +49,6 @@ public class CancelableEntityVO extends EntityVO
 
     /**
      * Obtient la valeur de la propriété checkCancel.
-     * 
      */
     public boolean isCheckCancel() {
         return checkCancel;
@@ -66,7 +56,6 @@ public class CancelableEntityVO extends EntityVO
 
     /**
      * Définit la valeur de la propriété checkCancel.
-     * 
      */
     public void setCheckCancel(boolean value) {
         this.checkCancel = value;

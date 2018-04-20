@@ -15,6 +15,7 @@
         android:paddingBottom="30dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,11 +45,40 @@
                 android:layout_marginTop="8dp">
 
                 <EditText
-                    android:id="@+id/input_name"
+                    android:id="@+id/firstNameField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Name"
+                    android:hint="First name"
                     android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/lastNameField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last name"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--  Email Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/emailField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
             </android.support.design.widget.TextInputLayout>
 
             <!-- Address Label -->
@@ -59,27 +89,11 @@
                 android:layout_marginTop="8dp">
 
                 <EditText
-                    android:id="@+id/input_address"
+                    android:id="@+id/addressField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Address"
                     android:inputType="textPostalAddress" />
-            </android.support.design.widget.TextInputLayout>
-
-
-            <!--  Email Label -->
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp">
-
-                <EditText
-                    android:id="@+id/input_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -91,7 +105,7 @@
                 android:layout_marginTop="8dp">
 
                 <EditText
-                    android:id="@+id/input_mobile"
+                    android:id="@+id/phoneField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Mobile Number"
@@ -106,7 +120,7 @@
                 android:layout_marginTop="8dp">
 
                 <EditText
-                    android:id="@+id/input_password"
+                    android:id="@+id/passwordField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password"
@@ -121,7 +135,7 @@
                 android:layout_marginTop="8dp">
 
                 <EditText
-                    android:id="@+id/input_reEnterPassword"
+                    android:id="@+id/reEnterPasswordField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Re-enter Password"
@@ -130,7 +144,7 @@
 
             <!-- Signup Button -->
             <android.support.v7.widget.AppCompatButton
-                android:id="@+id/btn_signup"
+                android:id="@+id/signupBtn"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
@@ -139,7 +153,7 @@
                 android:text="Create Account" />
 
             <TextView
-                android:id="@+id/link_login"
+                android:id="@+id/loginLink"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"

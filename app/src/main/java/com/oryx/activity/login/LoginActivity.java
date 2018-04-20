@@ -1,12 +1,11 @@
 package com.oryx.activity.login;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
-
-import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -16,10 +15,7 @@ import android.widget.Toast;
 
 import com.oryx.R;
 import com.oryx.activity.core.AbstractActivity;
-import com.oryx.context.IServer;
-import com.oryx.context.IUser;
 import com.oryx.prefs.IUserPrefs;
-import com.oryx.service.AuthService;
 import com.oryx.utils.GuiUtils;
 import com.oryx.utils.PrefUtils;
 
@@ -34,11 +30,11 @@ public class LoginActivity extends AbstractActivity {
     EditText _emailField;
     @BindView(R.id.passwordField)
     EditText _passwordField;
-    @BindView(R.id.btn_login)
+    @BindView(R.id.loginBtn)
     Button _loginButton;
     @BindView(R.id.rememberMeField)
     CheckBox _remember_me;
-    @BindView(R.id.link_signup)
+    @BindView(R.id.signupLink)
     TextView _signupLink;
 
     @Override
@@ -97,7 +93,7 @@ public class LoginActivity extends AbstractActivity {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
                         //if(IServer.currentUser != null) {
-                            onLoginSuccess();
+                        onLoginSuccess();
                         //} else {
                         //    onLoginFailed();
                         //}
@@ -161,7 +157,7 @@ public class LoginActivity extends AbstractActivity {
 
     @Override
     protected void savePreferences() {
-        if(_remember_me.isChecked()) {
+        if (_remember_me.isChecked()) {
             SharedPreferences settings = PrefUtils.loadSettingsPreferences(this);
             SharedPreferences.Editor editor = settings.edit();
             editor.putString(IUserPrefs.PREF_EMAIL, _emailField.getText().toString());

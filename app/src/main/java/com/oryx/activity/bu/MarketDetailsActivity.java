@@ -41,6 +41,27 @@ public class MarketDetailsActivity extends AbstractActivity {
 
     String xformat = null;
 
+    private static AlertDialog showDialog(final Activity act, CharSequence title, CharSequence message, CharSequence buttonYes, CharSequence buttonNo) {
+        AlertDialog.Builder downloadDialog = new AlertDialog.Builder(act);
+        downloadDialog.setTitle(title);
+        downloadDialog.setMessage(message);
+        downloadDialog.setPositiveButton(buttonYes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Uri uri = Uri.parse("market://search?q=pname:" + "com.google.zxing.client.android");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                try {
+                    act.startActivity(intent);
+                } catch (ActivityNotFoundException anfe) {
+
+                }
+            }
+        });
+        downloadDialog.setNegativeButton(buttonNo, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        return downloadDialog.show();
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,7 +69,6 @@ public class MarketDetailsActivity extends AbstractActivity {
         setContentView(R.layout.activity_market_dtails);
         ButterKnife.bind(this);
     }
-
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
@@ -77,7 +97,7 @@ public class MarketDetailsActivity extends AbstractActivity {
     }
 
     public void addProduct(View v) {
-        if(!_codeField.getText().toString().isEmpty()) {
+        if (!_codeField.getText().toString().isEmpty()) {
             final ProgressDialog progressDialog = new ProgressDialog(MarketDetailsActivity.this,
                     R.style.AppTheme_Dark_Dialog);
             progressDialog.setIndeterminate(true);
@@ -112,27 +132,5 @@ public class MarketDetailsActivity extends AbstractActivity {
 
     public void cancel(View v) {
         this.finish();
-    }
-
-    private static AlertDialog showDialog(final Activity act, CharSequence title, CharSequence message, CharSequence buttonYes, CharSequence buttonNo) {
-        AlertDialog.Builder downloadDialog = new AlertDialog.Builder(act);
-        downloadDialog.setTitle(title);
-        downloadDialog.setMessage(message);
-        downloadDialog.setPositiveButton(buttonYes, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialogInterface, int i) {
-                Uri uri = Uri.parse("market://search?q=pname:" + "com.google.zxing.client.android");
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                try {
-                    act.startActivity(intent);
-                } catch (ActivityNotFoundException anfe) {
-
-                }
-            }
-        });
-        downloadDialog.setNegativeButton(buttonNo, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialogInterface, int i) {
-            }
-        });
-        return downloadDialog.show();
     }
 }

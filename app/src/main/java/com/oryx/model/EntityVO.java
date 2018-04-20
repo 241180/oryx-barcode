@@ -7,11 +7,9 @@ public class EntityVO {
 
     /**
      * Obtient la valeur de la propriété id.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getId() {
         return id;
@@ -19,11 +17,9 @@ public class EntityVO {
 
     /**
      * Définit la valeur de la propriété id.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setId(String value) {
         this.id = value;
@@ -31,11 +27,9 @@ public class EntityVO {
 
     /**
      * Obtient la valeur de la propriété version.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getVersion() {
         return version;
@@ -43,11 +37,9 @@ public class EntityVO {
 
     /**
      * Définit la valeur de la propriété version.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setVersion(Integer value) {
         this.version = value;

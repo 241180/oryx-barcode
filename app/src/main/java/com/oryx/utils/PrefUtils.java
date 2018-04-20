@@ -11,8 +11,8 @@ public class PrefUtils {
 
     public static SharedPreferences settings = null;
 
-    public static SharedPreferences loadSettingsPreferences(AbstractActivity activity){
-        if(settings == null){
+    public static SharedPreferences loadSettingsPreferences(AbstractActivity activity) {
+        if (settings == null) {
             settings = activity.getSharedPreferences(IUserPrefs.PREF_SETTINGS,
                     Context.MODE_PRIVATE);
         }
@@ -20,7 +20,7 @@ public class PrefUtils {
         return settings;
     }
 
-    public static void saveSettingsPreferences(){
+    public static void saveSettingsPreferences() {
         SharedPreferences.Editor editor = settings.edit();
         editor.commit();
     }

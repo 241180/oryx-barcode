@@ -1,8 +1,7 @@
 package com.oryx.model;
 
 public class BrandVO
-    extends TracableCancelableEntityVO
-{
+        extends TracableCancelableEntityVO {
 
     protected String brandCode;
     protected String brandName;
@@ -10,11 +9,9 @@ public class BrandVO
 
     /**
      * Obtient la valeur de la propriété brandCode.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBrandCode() {
         return brandCode;
@@ -22,11 +19,9 @@ public class BrandVO
 
     /**
      * Définit la valeur de la propriété brandCode.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBrandCode(String value) {
         this.brandCode = value;
@@ -34,11 +29,9 @@ public class BrandVO
 
     /**
      * Obtient la valeur de la propriété brandName.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getBrandName() {
         return brandName;
@@ -46,11 +39,9 @@ public class BrandVO
 
     /**
      * Définit la valeur de la propriété brandName.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setBrandName(String value) {
         this.brandName = value;
@@ -58,11 +49,9 @@ public class BrandVO
 
     /**
      * Obtient la valeur de la propriété description.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDescription() {
         return description;
@@ -70,11 +59,9 @@ public class BrandVO
 
     /**
      * Définit la valeur de la propriété description.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDescription(String value) {
         this.description = value;

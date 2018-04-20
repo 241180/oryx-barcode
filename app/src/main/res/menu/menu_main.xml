@@ -1,17 +1,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.oryx.activity.main.MainActivity">
-    <item
-        android:id="@+id/action_item1"
-        android:icon="@drawable/ic_launcher"
-        android:title="@string/action_item1"
-        app:showAsAction="always" />
+    xmlns:tools="http://schemas.android.com/tools">
 
     <item
         android:id="@+id/action_new_product"
         android:icon="@drawable/settings"
         android:title="@string/action_new_product"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_new_markrt"
+        android:icon="@drawable/settings"
+        android:title="@string/action_new_market"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_find_product"
+        android:icon="@drawable/settings"
+        android:title="@string/action_find_product"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_find_market"
+        android:icon="@drawable/settings"
+        android:title="@string/action_find_market"
         app:showAsAction="never" />
 
     <item
@@ -19,16 +29,9 @@
         android:icon="@drawable/settings"
         android:title="@string/action_settings"
         app:showAsAction="never" />
-
-    <item
-        android:id="@+id/action_map"
-        android:icon="@drawable/settings"
-        android:title="Map"
-        app:showAsAction="never" />
-
     <item
         android:id="@+id/action_logout"
-        android:icon="@drawable/logout"
+        android:icon="@drawable/settings"
         android:title="@string/action_logout"
         app:showAsAction="never" />
 </menu>

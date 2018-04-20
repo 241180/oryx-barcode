@@ -15,12 +15,13 @@
         android:paddingBottom="30dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="24dp"
-        android:src="@drawable/logo" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/logo" />
     </LinearLayout>
 
     <ScrollView
@@ -67,7 +68,7 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.v7.widget.AppCompatButton
-                android:id="@+id/btn_login"
+                android:id="@+id/loginBtn"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -89,7 +90,7 @@
                 android:background="@android:color/darker_gray" />
 
             <Button
-                android:id="@+id/btnGplus"
+                android:id="@+id/GPlusBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
@@ -99,7 +100,7 @@
                 android:textColor="#FFFFFF" />
 
             <Button
-                android:id="@+id/btnFb"
+                android:id="@+id/FcbkBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
@@ -109,7 +110,7 @@
                 android:textColor="#FFFFFF" />
 
             <Button
-                android:id="@+id/btnTwitter"
+                android:id="@+id/TwitBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
@@ -125,7 +126,7 @@
                 android:background="@android:color/darker_gray" />
 
             <TextView
-                android:id="@+id/link_signup"
+                android:id="@+id/signupLink"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
