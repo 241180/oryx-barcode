@@ -38,6 +38,7 @@ public class MapViewActivity extends AbstractActivity implements IMapViewActivit
     MapView mMapView;
 
     private GoogleMap googleMap;
+    private GpsTrackerService gpsTrackerService;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,7 +77,8 @@ public class MapViewActivity extends AbstractActivity implements IMapViewActivit
                 // For zooming automatically to the location of the marker
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(12).build();
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-                GpsTrackerService gpsTrackerService = new GpsTrackerService(MapViewActivity.this);
+                gpsTrackerService = new GpsTrackerService(MapViewActivity.this);
+                gpsTrackerService.onCreate();
             }
         });
     }
@@ -105,12 +107,14 @@ public class MapViewActivity extends AbstractActivity implements IMapViewActivit
     @Override
     protected void onDestroy() {
         mMapView.onDestroy();
+        gpsTrackerService.onDestroy();
         super.onDestroy();
     }
 
     @Override
     public void onLowMemory() {
         super.onLowMemory();
+        gpsTrackerService.onLowMemory();
         mMapView.onLowMemory();
     }
 

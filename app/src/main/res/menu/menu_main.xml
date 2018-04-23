@@ -27,7 +27,7 @@
     <item
         android:id="@+id/action_gps_trucker"
         android:icon="@drawable/settings"
-        android:title="@string/action_find_market"
+        android:title="@string/action_gps_trucker"
         app:showAsAction="never" />
 
     <item

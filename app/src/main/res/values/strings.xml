@@ -7,6 +7,8 @@
     <string name="action_find_product">Find product</string>
     <string name="action_find_market">Find market</string>
 
+    <string name="action_gps_trucker">Gps Trucker</string>
+
     <string name="action_settings">Settings</string>
     <string name="action_logout">Logout</string>
 </resources>

@@ -18,7 +18,7 @@ public abstract class AbstractLocationService extends Service implements ILocati
     private static final String TAG = "AbstractLocationService";
     private LocationManager mLocationManager = null;
     private static final int LOCATION_INTERVAL = 1000;
-    private static final float LOCATION_DISTANCE = 10f;
+    private static final float LOCATION_DISTANCE = 100f;
 
     private IMapViewActivity mapViewActivity;
     private LocationListener[] mLocationListeners;
@@ -84,6 +84,7 @@ public abstract class AbstractLocationService extends Service implements ILocati
 
         initializeLocationManager();
 
+        boolean gpsProviderFail = false;
         try {
             mLocationManager.requestLocationUpdates(
                     LocationManager.GPS_PROVIDER,
@@ -93,22 +94,26 @@ public abstract class AbstractLocationService extends Service implements ILocati
             );
         } catch (java.lang.SecurityException ex) {
             Log.i(TAG, "fail to request location update, ignore", ex);
+            gpsProviderFail = true;
         } catch (IllegalArgumentException ex) {
-            Log.d(TAG, "network provider does not exist, " + ex.getMessage());
+            Log.d(TAG, "gps provider does not exist, " + ex.getMessage());
+            gpsProviderFail = true;
         }
 
-        /*try {
-            mLocationManager.requestLocationUpdates(
-                    LocationManager.GPS_PROVIDER,
-                    LOCATION_INTERVAL,
-                    LOCATION_DISTANCE,
-                    mLocationListeners[1]
-            );
-        } catch (java.lang.SecurityException ex) {
-            Log.i(TAG, "fail to request location update, ignore", ex);
-        } catch (IllegalArgumentException ex) {
-            Log.d(TAG, "gps provider does not exist " + ex.getMessage());
-        }*/
+        if(gpsProviderFail){
+            try {
+                mLocationManager.requestLocationUpdates(
+                        LocationManager.NETWORK_PROVIDER,
+                        LOCATION_INTERVAL,
+                        LOCATION_DISTANCE,
+                        mLocationListeners[1]
+                );
+            } catch (java.lang.SecurityException ex) {
+                Log.i(TAG, "fail to request location update, ignore", ex);
+            } catch (IllegalArgumentException ex) {
+                Log.d(TAG, "network provider does not exist " + ex.getMessage());
+            }
+        }
     }
 
     @Override
@@ -131,8 +136,8 @@ public abstract class AbstractLocationService extends Service implements ILocati
 
     private void initializeLocationManager() {
         Log.e(TAG, "initializeLocationManager - LOCATION_INTERVAL: "+ LOCATION_INTERVAL + " LOCATION_DISTANCE: " + LOCATION_DISTANCE);
-        if (mLocationManager == null) {
-            mLocationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
+        if (mLocationManager == null && this.mapViewActivity != null) {
+            mLocationManager = (LocationManager) this.mapViewActivity.getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
         }
     }
 
