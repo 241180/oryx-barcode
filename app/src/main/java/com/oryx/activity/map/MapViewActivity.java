@@ -154,7 +154,16 @@ public class MapViewActivity extends AbstractActivity implements IMapViewActivit
 
     @Override
     public void removeAllLocations() {
-        googleMap.mark
+        When you add a marker on Map, you can store it into HashMap like this:
+
+        HashMap<YourUniqueKey,Marker> hashMapMarker = new HashMap<>();
+        Marker marker = googleMap.addMarker(markerOptions);
+        hashMapMarker.put(YourUniqueKey,marker);
+        At the time you want to delete particular marker just get your Maker by YourUniqueKey for that marker like this:
+
+        Marker marker = hashMapMarker.get(YourUniqueKey);
+        marker.remove();
+        hashMapMarker.remove(YourUniqueKey);
     }
 
     @Override
