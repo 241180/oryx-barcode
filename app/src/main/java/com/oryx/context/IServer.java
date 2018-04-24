@@ -2,8 +2,10 @@ package com.oryx.context;
 
 import android.location.Location;
 
+import com.oryx.activity.map.IMapLocation;
+
 public class IServer {
-    public static Location location;
+    public static IMapLocation location;
     public static IUser currentUser;
     public static String host = "10.0.2.2";
 

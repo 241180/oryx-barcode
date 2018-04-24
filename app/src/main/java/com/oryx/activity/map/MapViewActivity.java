@@ -29,6 +29,7 @@ import com.oryx.utils.GuiUtils;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Calendar;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -121,22 +122,44 @@ public class MapViewActivity extends AbstractActivity implements IMapViewActivit
     @Override
     public void onLocationChanged(Location location) {
         if(IServer.location == null){
-            IServer.location = new Location(location);
+            IServer.location = new IMapLocation(location);
         } else {
             IServer.location.set(location);
         }
-        // For dropping a marker at a point on the Map
-        LatLng sydney = new LatLng(IServer.location.getLatitude(), IServer.location.getLongitude());
-        googleMap.addMarker(new MarkerOptions().position(sydney).title(Calendar.getInstance().getTime().toString()).snippet("Marker Description"));
 
-        // For zooming automatically to the location of the marker
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(12).build();
-        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-        //_descriptionField.setText("GPS: " + location.getLongitude() + " " + location.getLatitude());
+        IServer.location.setTitle("Location");
+        IServer.location.setDescription(Calendar.getInstance().getTime().toString());
+        zoomOn(setLocation(IServer.location), 12f);
     }
 
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
 
+    }
+
+    @Override
+    public LatLng setLocation(IMapLocation location) {
+        // For dropping a marker at a point on the Map
+        LatLng latLng = new LatLng(IServer.location.getLatitude(), IServer.location.getLongitude());
+        googleMap.addMarker(new MarkerOptions().position(latLng).title(location.getTitle()).snippet(location.getDescription()));
+        return latLng;
+    }
+
+    @Override
+    public void setLocations(List<IMapLocation> locations) {
+        for(IMapLocation mapLocation: locations){
+            setLocation(mapLocation);
+        }
+    }
+
+    @Override
+    public void removeAllLocations() {
+        googleMap.mark
+    }
+
+    @Override
+    public void zoomOn(LatLng latLng, float zoom) {
+        CameraPosition cameraPosition = new CameraPosition.Builder().target(latLng).zoom(zoom).build();
+        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));;
     }
 }
