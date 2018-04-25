@@ -119,13 +119,7 @@ public class AuthService {
         return true;
     }
 
-    public static IUser signup(String host,
-                               String firstName,
-                               String lastName,
-                               String email,
-                               String phone,
-                               String address,
-                               String password) {
+    public static IUser signup(String host, String firstName, String lastName, String email, String phone, String address, String password) {
         RequestParams rp = new RequestParams();
         rp.add("firstName", firstName);
         rp.add("lastName", lastName);

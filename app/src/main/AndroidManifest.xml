@@ -53,7 +53,7 @@
             android:name="com.oryx.activity.bu.MarketListActivity"
             android:theme="@style/AppTheme.Dark" />
         <activity
-            android:name="com.oryx.activity.map.MapViewActivity"
+            android:name="com.oryx.activity.map.TruckerViewActivity"
             android:theme="@style/AppTheme.Dark" />
 
         <activity

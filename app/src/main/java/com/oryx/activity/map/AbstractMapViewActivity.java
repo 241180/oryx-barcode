@@ -1,16 +1,12 @@
 package com.oryx.activity.map;
 
 import android.Manifest;
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
-import android.util.Log;
-import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -19,6 +15,7 @@ import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.oryx.R;
 import com.oryx.activity.core.AbstractActivity;
@@ -26,19 +23,20 @@ import com.oryx.context.IServer;
 import com.oryx.service.GpsTrackerService;
 import com.oryx.utils.GuiUtils;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MapViewActivity extends AbstractActivity implements IMapViewActivity{
+public class AbstractMapViewActivity extends AbstractActivity implements IMapViewActivity {
+    public static String MY_LOCATION = "MY_LOCATION";
     @BindView(R.id.mapView)
     MapView mMapView;
-
     private GoogleMap googleMap;
+    private Map<String, Marker> markerMap = new HashMap<>();
     private GpsTrackerService gpsTrackerService;
 
     @Override
@@ -60,25 +58,31 @@ public class MapViewActivity extends AbstractActivity implements IMapViewActivit
             e.printStackTrace();
         }
 
+        if (ActivityCompat.checkSelfPermission(AbstractMapViewActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(AbstractMapViewActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            GuiUtils.configure_gps(AbstractMapViewActivity.this);
+        }
+
         mMapView.getMapAsync(new OnMapReadyCallback() {
+            @SuppressLint("MissingPermission")
             @Override
             public void onMapReady(GoogleMap mMap) {
                 googleMap = mMap;
                 // For showing a move to my location button
-                if (ActivityCompat.checkSelfPermission(MapViewActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                        && ActivityCompat.checkSelfPermission(MapViewActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                    GuiUtils.configure_gps(MapViewActivity.this);
-                }
                 googleMap.setMyLocationEnabled(true);
 
-                // For dropping a marker at a point on the Map
-                LatLng sydney = new LatLng(-34, 151);
-                googleMap.addMarker(new MarkerOptions().position(sydney).title("Marker Title").snippet("Marker Description"));
-
-                // For zooming automatically to the location of the marker
-                CameraPosition cameraPosition = new CameraPosition.Builder().target(sydney).zoom(12).build();
-                googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-                gpsTrackerService = new GpsTrackerService(MapViewActivity.this);
+                Location location = new Location(LocationManager.GPS_PROVIDER);
+                location.setLatitude(-34);
+                location.setLongitude(151);
+                if (IServer.location == null) {
+                    IServer.location = new IMapLocation(location);
+                } else {
+                    IServer.location.set(location);
+                }
+                IServer.location.setTitle(MY_LOCATION);
+                IServer.location.setDescription(Calendar.getInstance().getTime().toString());
+                zoomOn(setLocation(IServer.location), 12f);
+                gpsTrackerService = new GpsTrackerService(AbstractMapViewActivity.this);
                 gpsTrackerService.onCreate();
             }
         });
@@ -88,15 +92,6 @@ public class MapViewActivity extends AbstractActivity implements IMapViewActivit
     protected void onResume() {
         super.onResume();
         mMapView.onResume();
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        if (requestCode == 0) {
-            if (resultCode == RESULT_OK) {
-
-            }
-        }
     }
 
     @Override
@@ -121,15 +116,13 @@ public class MapViewActivity extends AbstractActivity implements IMapViewActivit
 
     @Override
     public void onLocationChanged(Location location) {
-        if(IServer.location == null){
+        if (IServer.location == null) {
             IServer.location = new IMapLocation(location);
         } else {
             IServer.location.set(location);
         }
-
-        IServer.location.setTitle("Location");
+        IServer.location.setTitle(MY_LOCATION);
         IServer.location.setDescription(Calendar.getInstance().getTime().toString());
-        zoomOn(setLocation(IServer.location), 12f);
     }
 
     @Override
@@ -141,34 +134,40 @@ public class MapViewActivity extends AbstractActivity implements IMapViewActivit
     public LatLng setLocation(IMapLocation location) {
         // For dropping a marker at a point on the Map
         LatLng latLng = new LatLng(IServer.location.getLatitude(), IServer.location.getLongitude());
-        googleMap.addMarker(new MarkerOptions().position(latLng).title(location.getTitle()).snippet(location.getDescription()));
+        Marker marker = addMarker(latLng, location.getTitle(), location.getDescription());
+        markerMap.put(location.getUniqueId(), marker);
         return latLng;
     }
 
     @Override
     public void setLocations(List<IMapLocation> locations) {
-        for(IMapLocation mapLocation: locations){
+        for (IMapLocation mapLocation : locations) {
             setLocation(mapLocation);
         }
     }
 
     @Override
+    public void removeLocation(String uniqueId) {
+        if (markerMap.containsKey(uniqueId)) {
+            markerMap.remove(uniqueId).remove();
+        }
+    }
+
+    @Override
     public void removeAllLocations() {
-        When you add a marker on Map, you can store it into HashMap like this:
-
-        HashMap<YourUniqueKey,Marker> hashMapMarker = new HashMap<>();
-        Marker marker = googleMap.addMarker(markerOptions);
-        hashMapMarker.put(YourUniqueKey,marker);
-        At the time you want to delete particular marker just get your Maker by YourUniqueKey for that marker like this:
-
-        Marker marker = hashMapMarker.get(YourUniqueKey);
-        marker.remove();
-        hashMapMarker.remove(YourUniqueKey);
+        for (String uniqueId : markerMap.keySet()) {
+            markerMap.remove(uniqueId).remove();
+        }
     }
 
     @Override
     public void zoomOn(LatLng latLng, float zoom) {
         CameraPosition cameraPosition = new CameraPosition.Builder().target(latLng).zoom(zoom).build();
-        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));;
+        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+        ;
+    }
+
+    private Marker addMarker(LatLng latLng, String title, String description) {
+        return googleMap.addMarker(new MarkerOptions().position(latLng).title(title).snippet(description));
     }
 }

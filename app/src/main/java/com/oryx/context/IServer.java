@@ -1,7 +1,5 @@
 package com.oryx.context;
 
-import android.location.Location;
-
 import com.oryx.activity.map.IMapLocation;
 
 public class IServer {

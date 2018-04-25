@@ -7,5 +7,7 @@ public class IUserPrefs {
     public static String PREF_PASSWORD = "PREF_PASSWORD";
     public static String PREF_REMEMBER = "PREF_REMEMBER";
 
+    public static String PREF_HOST = "PREF_HOST";
+
     public static String SERVER_URL = "SERVER_URL";
 }

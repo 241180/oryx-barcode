@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.oryx.R;
 import com.oryx.activity.core.AbstractActivity;
+import com.oryx.context.IServer;
 import com.oryx.prefs.IUserPrefs;
 import com.oryx.utils.GuiUtils;
 import com.oryx.utils.PrefUtils;
@@ -173,5 +174,6 @@ public class LoginActivity extends AbstractActivity {
         _emailField.setText(settings.getString(IUserPrefs.PREF_EMAIL, ""));
         _passwordField.setText(settings.getString(IUserPrefs.PREF_PASSWORD, ""));
         _remember_me.setChecked(settings.getBoolean(IUserPrefs.PREF_REMEMBER, false));
+        IServer.host = settings.getString(IUserPrefs.PREF_HOST, "10.0.2.2");
     }
 }

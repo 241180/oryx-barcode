@@ -2,7 +2,8 @@ package com.oryx.activity.map;
 
 import android.location.Location;
 
-public class IMapLocation extends Location{
+public class IMapLocation extends Location {
+    private String uniqueId;
     private String title;
     private String description;
 
@@ -28,5 +29,16 @@ public class IMapLocation extends Location{
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getUniqueId() {
+        if (uniqueId == null) {
+            return title;
+        }
+        return uniqueId;
+    }
+
+    public void setUniqueId(String uniqueId) {
+        this.uniqueId = uniqueId;
     }
 }

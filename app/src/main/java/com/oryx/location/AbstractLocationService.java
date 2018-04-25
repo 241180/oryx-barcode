@@ -14,12 +14,11 @@ import android.util.Log;
 import com.oryx.activity.map.IMapViewActivity;
 
 
-public abstract class AbstractLocationService extends Service implements ILocationService{
+public abstract class AbstractLocationService extends Service implements ILocationService {
     private static final String TAG = "AbstractLocationService";
-    private LocationManager mLocationManager = null;
     private static final int LOCATION_INTERVAL = 1000;
     private static final float LOCATION_DISTANCE = 100f;
-
+    private LocationManager mLocationManager = null;
     private IMapViewActivity mapViewActivity;
     private LocationListener[] mLocationListeners;
 
@@ -30,39 +29,6 @@ public abstract class AbstractLocationService extends Service implements ILocati
                 new LocationListener(LocationManager.GPS_PROVIDER)
                 //, new LocationListener(LocationManager.NETWORK_PROVIDER)
         };
-    }
-
-    private class LocationListener implements android.location.LocationListener {
-        Location mLastLocation;
-
-        public LocationListener(String provider) {
-            Log.e(TAG, "LocationListener " + provider);
-            mLastLocation = new Location(provider);
-            AbstractLocationService.this.onLocationChanged(mLastLocation);
-        }
-
-        @Override
-        public void onLocationChanged(Location location) {
-            Log.e(TAG, "onLocationChanged: " + location);
-            mLastLocation.set(location);
-            AbstractLocationService.this.onLocationChanged(mLastLocation);
-        }
-
-        @Override
-        public void onProviderDisabled(String provider) {
-            Log.e(TAG, "onProviderDisabled: " + provider);
-        }
-
-        @Override
-        public void onProviderEnabled(String provider) {
-            Log.e(TAG, "onProviderEnabled: " + provider);
-        }
-
-        @Override
-        public void onStatusChanged(String provider, int status, Bundle extras) {
-            Log.e(TAG, "onStatusChanged: " + provider);
-            AbstractLocationService.this.onStatusChanged(provider, status, extras);
-        }
     }
 
     @Override
@@ -100,7 +66,7 @@ public abstract class AbstractLocationService extends Service implements ILocati
             gpsProviderFail = true;
         }
 
-        if(gpsProviderFail){
+        if (gpsProviderFail) {
             try {
                 mLocationManager.requestLocationUpdates(
                         LocationManager.NETWORK_PROVIDER,
@@ -135,20 +101,54 @@ public abstract class AbstractLocationService extends Service implements ILocati
     }
 
     private void initializeLocationManager() {
-        Log.e(TAG, "initializeLocationManager - LOCATION_INTERVAL: "+ LOCATION_INTERVAL + " LOCATION_DISTANCE: " + LOCATION_DISTANCE);
+        Log.e(TAG, "initializeLocationManager - LOCATION_INTERVAL: " + LOCATION_INTERVAL + " LOCATION_DISTANCE: " + LOCATION_DISTANCE);
         if (mLocationManager == null && this.mapViewActivity != null) {
             mLocationManager = (LocationManager) this.mapViewActivity.getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
         }
     }
 
-    public void onLocationChanged(Location location){
-        if(mapViewActivity != null){
+    public void onLocationChanged(Location location) {
+        if (mapViewActivity != null) {
             mapViewActivity.onLocationChanged(location);
         }
     }
-    public void onStatusChanged(String provider, int status, Bundle extras){
-        if(mapViewActivity != null){
+
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+        if (mapViewActivity != null) {
             mapViewActivity.onStatusChanged(provider, status, extras);
+        }
+    }
+
+    private class LocationListener implements android.location.LocationListener {
+        Location mLastLocation;
+
+        public LocationListener(String provider) {
+            Log.e(TAG, "LocationListener " + provider);
+            mLastLocation = new Location(provider);
+            AbstractLocationService.this.onLocationChanged(mLastLocation);
+        }
+
+        @Override
+        public void onLocationChanged(Location location) {
+            Log.e(TAG, "onLocationChanged: " + location);
+            mLastLocation.set(location);
+            AbstractLocationService.this.onLocationChanged(mLastLocation);
+        }
+
+        @Override
+        public void onProviderDisabled(String provider) {
+            Log.e(TAG, "onProviderDisabled: " + provider);
+        }
+
+        @Override
+        public void onProviderEnabled(String provider) {
+            Log.e(TAG, "onProviderEnabled: " + provider);
+        }
+
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras) {
+            Log.e(TAG, "onStatusChanged: " + provider);
+            AbstractLocationService.this.onStatusChanged(provider, status, extras);
         }
     }
 }
