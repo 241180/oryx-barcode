@@ -4,41 +4,64 @@
     tools:context="com.oryx.activity.main.MainActivity">
 
     <item
-        android:id="@+id/action_new_product"
+        android:id="@+id/action_find"
         android:icon="@drawable/settings"
-        android:title="@string/action_new_product"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_new_markrt"
-        android:icon="@drawable/settings"
-        android:title="@string/action_new_market"
-        app:showAsAction="never" />
+        android:title="@string/action_find"
+        app:showAsAction="withText" >
+
+        <menu>
+            <group android:id="@+id/group1">
+                <item
+                    android:id="@+id/action_find_product"
+                    android:icon="@drawable/settings"
+                    android:title="@string/action_find_product"
+                    app:showAsAction="withText" />
+                <item
+                    android:id="@+id/action_find_market"
+                    android:icon="@drawable/settings"
+                    android:title="@string/action_find_market"
+                    app:showAsAction="withText" />
+            </group>
+        </menu>
+    </item>
 
     <item
-        android:id="@+id/action_find_product"
+        android:id="@+id/action_new"
         android:icon="@drawable/settings"
-        android:title="@string/action_find_product"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_find_market"
-        android:icon="@drawable/settings"
-        android:title="@string/action_find_market"
-        app:showAsAction="never" />
+        android:title="@string/action_find"
+        app:showAsAction="withText" >
+
+        <menu>
+            <group android:id="@+id/group2">
+                <item
+                    android:id="@+id/action_new_product"
+                    android:icon="@drawable/settings"
+                    android:title="@string/action_new_product"
+                    app:showAsAction="withText" />
+                <item
+                    android:id="@+id/action_new_markrt"
+                    android:icon="@drawable/settings"
+                    android:title="@string/action_new_market"
+                    app:showAsAction="withText" />
+            </group>
+        </menu>
+    </item>
 
     <item
         android:id="@+id/action_gps_trucker"
         android:icon="@drawable/settings"
         android:title="@string/action_gps_trucker"
-        app:showAsAction="never" />
+        app:showAsAction="withText" />
 
     <item
         android:id="@+id/action_settings"
         android:icon="@drawable/settings"
         android:title="@string/action_settings"
-        app:showAsAction="never" />
+        app:showAsAction="withText" />
+
     <item
         android:id="@+id/action_logout"
-        android:icon="@drawable/settings"
+        android:icon="@drawable/logout"
         android:title="@string/action_logout"
-        app:showAsAction="never" />
+        app:showAsAction="withText" />
 </menu>

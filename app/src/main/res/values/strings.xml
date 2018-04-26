@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">Oryx Barcode Scanner</string>
 
-    <string name="action_new_product">New product</string>
-    <string name="action_new_market">New market</string>
+    <string name="action_new">New</string>
+    <string name="action_new_product">Product</string>
+    <string name="action_new_market">Market</string>
 
-    <string name="action_find_product">Find product</string>
-    <string name="action_find_market">Find market</string>
+    <string name="action_find">Find</string>
+    <string name="action_find_product">Product</string>
+    <string name="action_find_market">Market</string>
 
     <string name="action_gps_trucker">Gps Trucker</string>
 

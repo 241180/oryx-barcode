@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.oryx.R;
-import com.oryx.activity.core.AbstractActivity;
+import com.oryx.activity.core.ActionBarActivity;
 import com.oryx.context.IServer;
 import com.oryx.service.AuthService;
 import com.oryx.utils.GuiUtils;
@@ -19,7 +19,7 @@ import com.oryx.utils.GuiUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SignupActivity extends AbstractActivity {
+public class SignupActivity extends ActionBarActivity {
     private static final String TAG = "SignupActivity";
 
     @BindView(R.id.firstNameField)
@@ -78,7 +78,7 @@ public class SignupActivity extends AbstractActivity {
         _signupButton.setEnabled(false);
 
         final ProgressDialog progressDialog = new ProgressDialog(SignupActivity.this,
-                R.style.AppTheme_Dark_Dialog);
+                R.style.AppTheme_Dialog);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Creating Account...");
         progressDialog.show();

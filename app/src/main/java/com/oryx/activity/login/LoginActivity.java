@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.oryx.R;
-import com.oryx.activity.core.AbstractActivity;
+import com.oryx.activity.core.ActionBarActivity;
 import com.oryx.context.IServer;
 import com.oryx.prefs.IUserPrefs;
 import com.oryx.utils.GuiUtils;
@@ -23,7 +23,7 @@ import com.oryx.utils.PrefUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class LoginActivity extends AbstractActivity {
+public class LoginActivity extends ActionBarActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
 
@@ -80,7 +80,7 @@ public class LoginActivity extends AbstractActivity {
         _loginButton.setEnabled(false);
 
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
-                R.style.AppTheme_Dark_Dialog);
+                R.style.AppTheme_Dialog);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();

@@ -3,7 +3,7 @@ package com.oryx.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.oryx.activity.core.AbstractActivity;
+import com.oryx.activity.core.ActionBarActivity;
 import com.oryx.prefs.IUserPrefs;
 
 public class PrefUtils {
@@ -11,7 +11,7 @@ public class PrefUtils {
 
     public static SharedPreferences settings = null;
 
-    public static SharedPreferences loadSettingsPreferences(AbstractActivity activity) {
+    public static SharedPreferences loadSettingsPreferences(ActionBarActivity activity) {
         if (settings == null) {
             settings = activity.getSharedPreferences(IUserPrefs.PREF_SETTINGS,
                     Context.MODE_PRIVATE);

@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.oryx.R;
-import com.oryx.activity.core.AbstractActivity;
+import com.oryx.activity.core.ActionBarActivity;
 import com.oryx.context.IServer;
 import com.oryx.prefs.IUserPrefs;
 import com.oryx.utils.PrefUtils;
@@ -14,7 +14,7 @@ import com.oryx.utils.PrefUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SettingsActivity extends AbstractActivity {
+public class SettingsActivity extends ActionBarActivity {
     private static final String TAG = "SettingsActivity";
 
     @BindView(R.id.hostField)

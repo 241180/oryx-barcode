@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.oryx.R;
-import com.oryx.activity.core.AbstractActivity;
+import com.oryx.activity.core.ActionBarActivity;
 import com.oryx.context.IServer;
 import com.oryx.model.ProductVO;
 import com.oryx.service.ProductService;
@@ -22,15 +22,15 @@ import com.oryx.utils.GuiUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MarketDetailsActivity extends AbstractActivity {
+public class MarketDetailsActivity extends ActionBarActivity {
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
 
     private static final String TAG = "MarketDetailsActivity";
     private static final int REQUEST_SIGNUP = 0;
 
-    @BindView(R.id.codeField)
-    EditText _codeField;
     @BindView(R.id.nameField)
+    EditText _codeField;
+    @BindView(R.id.)
     EditText _nameField;
     @BindView(R.id.descriptionField)
     EditText _descriptionField;
@@ -99,7 +99,7 @@ public class MarketDetailsActivity extends AbstractActivity {
     public void addProduct(View v) {
         if (!_codeField.getText().toString().isEmpty()) {
             final ProgressDialog progressDialog = new ProgressDialog(MarketDetailsActivity.this,
-                    R.style.AppTheme_Dark_Dialog);
+                    R.style.AppTheme_Dialog);
             progressDialog.setIndeterminate(true);
             progressDialog.setMessage("Saving...");
             progressDialog.show();

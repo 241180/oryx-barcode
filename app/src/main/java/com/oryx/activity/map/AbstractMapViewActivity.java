@@ -18,7 +18,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.oryx.R;
-import com.oryx.activity.core.AbstractActivity;
+import com.oryx.activity.core.ActionBarActivity;
 import com.oryx.context.IServer;
 import com.oryx.service.GpsTrackerService;
 import com.oryx.utils.GuiUtils;
@@ -31,7 +31,7 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AbstractMapViewActivity extends AbstractActivity implements IMapViewActivity {
+public class AbstractMapViewActivity extends ActionBarActivity implements IMapViewActivity {
     public static String MY_LOCATION = "MY_LOCATION";
     @BindView(R.id.mapView)
     MapView mMapView;
