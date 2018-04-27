@@ -157,7 +157,7 @@ public class LoginActivity extends ActionBarActivity {
     }
 
     @Override
-    protected void savePreferences() {
+    public void savePreferences() {
         if (_remember_me.isChecked()) {
             SharedPreferences settings = PrefUtils.loadSettingsPreferences(this);
             SharedPreferences.Editor editor = settings.edit();
@@ -169,7 +169,7 @@ public class LoginActivity extends ActionBarActivity {
     }
 
     @Override
-    protected void loadPreferences() {
+    public void loadPreferences() {
         SharedPreferences settings = PrefUtils.loadSettingsPreferences(this);
         _emailField.setText(settings.getString(IUserPrefs.PREF_EMAIL, ""));
         _passwordField.setText(settings.getString(IUserPrefs.PREF_PASSWORD, ""));

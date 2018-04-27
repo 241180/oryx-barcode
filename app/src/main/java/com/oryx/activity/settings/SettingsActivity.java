@@ -38,7 +38,7 @@ public class SettingsActivity extends ActionBarActivity {
     }
 
     @Override
-    protected void loadPreferences() {
+    public void loadPreferences() {
         SharedPreferences settings = PrefUtils.loadSettingsPreferences(this);
         _hostField.setText(settings.getString(IUserPrefs.PREF_HOST, "10.0.2.2"));
         IServer.host = _hostField.getText().toString();

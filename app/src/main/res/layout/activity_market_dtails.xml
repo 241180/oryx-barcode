@@ -33,8 +33,8 @@
                     android:id="@+id/nameField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Name"
-                    android:inputType="textPersonName" />
+                    android:hint="@string/name"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -48,8 +48,8 @@
                     android:id="@+id/sectorField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Sector"
-                    android:inputType="textPersonName" />
+                    android:hint="@string/sector"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
@@ -62,16 +62,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="Country"
-                    android:inputType="textPersonName" />
+                    android:hint="@string/country"
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/cityField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="City"
-                    android:inputType="textPersonName" />
+                    android:hint="@string/city"
+                    android:inputType="text" />
 
             </LinearLayout>
 
@@ -87,53 +87,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="Adress"
-                    android:inputType="textPersonName" />
+                    android:hint="@string/adress"
+                    android:inputType="text" />
             </android.support.design.widget.TextInputLayout>
 
             <CheckBox
                 android:id="@+id/imThereCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="I'm there." />
+                android:text="@string/imthere" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="20dp"
-                android:background="@android:color/darker_gray" />
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:orientation="horizontal">
-
-                <android.support.v7.widget.AppCompatButton
-                    android:id="@+id/cancelBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:onClick="cancel"
-                    android:padding="12dp"
-                    android:text="Cancel"
-                    android:textSize="18dp" />
-
-                <android.support.v7.widget.AppCompatButton
-                    android:id="@+id/addProductBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:onClick="addProduct"
-                    android:padding="12dp"
-                    android:text="Add"
-                    android:textSize="18dp" />
-            </LinearLayout>
+            <include layout="@layout/crud_dialog_footer_layout"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

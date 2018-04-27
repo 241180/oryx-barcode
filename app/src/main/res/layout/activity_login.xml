@@ -48,7 +48,7 @@
                     android:id="@+id/emailField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email"
+                    android:hint="@string/email"
                     android:inputType="textEmailAddress" />
             </android.support.design.widget.TextInputLayout>
 
@@ -63,7 +63,7 @@
                     android:id="@+id/passwordField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Password"
+                    android:hint="@string/password"
                     android:inputType="textPassword" />
             </android.support.design.widget.TextInputLayout>
 
@@ -75,13 +75,13 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:padding="12dp"
-                android:text="Login" />
+                android:text="@string/login" />
 
             <CheckBox
                 android:id="@+id/rememberMeField"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Remember me." />
+                android:text="@string/rememberMe" />
 
             <View
                 android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                 android:layout_margin="4dp"
                 android:background="#DD4B39"
                 android:padding="10dp"
-                android:text="Sign in with Google+"
+                android:text="@string/sinGooglePlus"
                 android:textColor="#FFFFFF" />
 
             <Button
@@ -106,7 +106,7 @@
                 android:layout_margin="4dp"
                 android:background="#39A6CE"
                 android:padding="10dp"
-                android:text="Sign in with Twitter"
+                android:text="@string/sinTwiter"
                 android:textColor="#FFFFFF" />
 
             <Button
@@ -116,7 +116,7 @@
                 android:layout_margin="4dp"
                 android:background="#46629E"
                 android:padding="10dp"
-                android:text="Sign in with Faceboook"
+                android:text="@string/sinFacebook"
                 android:textColor="#FFFFFF" />
 
             <View
@@ -131,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 android:gravity="center"
-                android:text="No account yet? Create one"
+                android:text="@string/noAccountYet"
                 android:textSize="16dip" />
         </LinearLayout>
     </ScrollView>

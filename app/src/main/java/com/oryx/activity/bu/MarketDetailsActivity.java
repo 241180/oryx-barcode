@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -29,15 +30,17 @@ public class MarketDetailsActivity extends ActionBarActivity {
     private static final int REQUEST_SIGNUP = 0;
 
     @BindView(R.id.nameField)
-    EditText _codeField;
-    @BindView(R.id.)
     EditText _nameField;
-    @BindView(R.id.descriptionField)
-    EditText _descriptionField;
-    @BindView(R.id.brandField)
-    EditText _brandField;
-    @BindView(R.id.categoryField)
-    Spinner _categoryField;
+    @BindView(R.id.sectorField)
+    EditText _sectorField;
+    @BindView(R.id.countryField)
+    EditText _countryField;
+    @BindView(R.id.cityField)
+    EditText _cityField;
+    @BindView(R.id.addressField)
+    EditText _addressField;
+    @BindView(R.id.imThereCheckBox)
+    CheckBox _imThereCheckBox;
 
     String xformat = null;
 
@@ -74,9 +77,7 @@ public class MarketDetailsActivity extends ActionBarActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
-                _codeField.setText(intent.getStringExtra("SCAN_RESULT"));
-                xformat = intent.getStringExtra("SCAN_RESULT_FORMAT");
-                //this.finish();
+
             }
         }
     }
@@ -93,40 +94,6 @@ public class MarketDetailsActivity extends ActionBarActivity {
             startActivityForResult(intent, 0);
         } catch (ActivityNotFoundException anfe) {
             showDialog(MarketDetailsActivity.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
-        }
-    }
-
-    public void addProduct(View v) {
-        if (!_codeField.getText().toString().isEmpty()) {
-            final ProgressDialog progressDialog = new ProgressDialog(MarketDetailsActivity.this,
-                    R.style.AppTheme_Dialog);
-            progressDialog.setIndeterminate(true);
-            progressDialog.setMessage("Saving...");
-            progressDialog.show();
-            GuiUtils.showWorker(
-                    new Runnable() {
-                        public void run() {
-                            // On complete call either onLoginSuccess or onLoginFailed
-                            progressDialog.dismiss();
-                            MarketDetailsActivity.this.finish();
-                        }
-                    }, 3000);
-
-            Runnable addProduct = new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        ProductVO productVO = new ProductVO();
-                        productVO.setCode(_codeField.getText().toString());
-                        productVO.setName(_nameField.getText().toString());
-                        productVO.setDescription(_descriptionField.getText().toString());
-                        ProductService.createProduct(IServer.host, xformat != null ? xformat : "ETA", productVO);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            };
-            addProduct.run();
         }
     }
 

@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.oryx.R;
-import com.oryx.activity.core.ActionBarActivity;
+import com.oryx.activity.core.AbstractCrudDialogActivity;
 import com.oryx.context.IServer;
 import com.oryx.model.ProductVO;
 import com.oryx.service.ProductService;
@@ -22,11 +22,9 @@ import com.oryx.utils.GuiUtils;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ProductDetailsActivity extends ActionBarActivity {
+public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO> {
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
-
     private static final String TAG = "ProductDetailsActivity";
-    private static final int REQUEST_SIGNUP = 0;
 
     @BindView(R.id.codeField)
     EditText _codeField;
@@ -66,19 +64,13 @@ public class ProductDetailsActivity extends ActionBarActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_dtails);
         ButterKnife.bind(this);
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        if (requestCode == REQUEST_SIGNUP) {
-            if (resultCode == RESULT_OK) {
-                _codeField.setText(intent.getStringExtra("SCAN_RESULT"));
-                xformat = intent.getStringExtra("SCAN_RESULT_FORMAT");
-                //this.finish();
-            }
-        }
+        _codeField.setText(intent.getStringExtra("SCAN_RESULT"));
+        xformat = intent.getStringExtra("SCAN_RESULT_FORMAT");
     }
 
     @Override
@@ -96,41 +88,36 @@ public class ProductDetailsActivity extends ActionBarActivity {
         }
     }
 
-    public void addProduct(View v) {
-        if (!_codeField.getText().toString().isEmpty()) {
-            final ProgressDialog progressDialog = new ProgressDialog(ProductDetailsActivity.this,
-                    R.style.AppTheme_Dialog);
-            progressDialog.setIndeterminate(true);
-            progressDialog.setMessage("Saving...");
-            progressDialog.show();
-            GuiUtils.showWorker(
-                    new Runnable() {
-                        public void run() {
-                            // On complete call either onLoginSuccess or onLoginFailed
-                            progressDialog.dismiss();
-                            ProductDetailsActivity.this.finish();
-                        }
-                    }, 3000);
-
-            Runnable addProduct = new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        ProductVO productVO = new ProductVO();
-                        productVO.setCode(_codeField.getText().toString());
-                        productVO.setName(_nameField.getText().toString());
-                        productVO.setDescription(_descriptionField.getText().toString());
-                        ProductService.createProduct(IServer.host, xformat != null ? xformat : "ETA", productVO);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            };
-            addProduct.run();
-        }
+    @Override
+    protected int getLayoutResID() {
+        return R.layout.activity_product_dtails;
     }
 
-    public void cancel(View v) {
-        this.finish();
+    @Override
+    protected void open(ProductVO bean) {
+
+    }
+
+    @Override
+    protected void commit(ProductVO bean) {
+        ProductVO productVO = new ProductVO();
+        productVO.setCode(_codeField.getText().toString());
+        productVO.setName(_nameField.getText().toString());
+        productVO.setDescription(_descriptionField.getText().toString());
+    }
+
+    @Override
+    protected void save(ProductVO bean) {
+        ProductService.createProduct(IServer.host, xformat != null ? xformat : "ETA", bean);
+    }
+
+    @Override
+    protected void delete(ProductVO bean) {
+
+    }
+
+    @Override
+    protected void clear() {
+
     }
 }
