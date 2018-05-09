@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.oryx.activity.bu.MarketDetailsActivity">
+    tools:context="com.oryx.barcode.activity.bu.MarketDetailsActivity">
 
     <ScrollView
         android:layout_width="fill_parent"

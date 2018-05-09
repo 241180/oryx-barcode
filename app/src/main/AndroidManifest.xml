@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.oryx"
+    package="com.oryx.barcode"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -25,8 +25,21 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBGuB68qGB5XvoepqO8O2lJ7gX1JVc3Z54" />
 
+        <service
+            android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service android:name=".FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
         <activity
-            android:name="com.oryx.activity.main.MainActivity"
+            android:name=".activity.main.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.ActionBar">
             <intent-filter>
@@ -35,28 +48,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.oryx.activity.login.LoginActivity"
+            android:name=".activity.login.LoginActivity"
             android:theme="@style/AppTheme.No.ActionBar" />
         <activity
-            android:name="com.oryx.activity.login.SignupActivity"
+            android:name=".activity.login.SignupActivity"
             android:theme="@style/AppTheme.No.ActionBar" />
         <activity
-            android:name="com.oryx.activity.bu.ProductDetailsActivity"
+            android:name=".activity.bu.ProductDetailsActivity"
             android:theme="@style/AppTheme.No.ActionBar" />
         <activity
-            android:name="com.oryx.activity.bu.ProductListActivity"
+            android:name=".activity.bu.ProductListActivity"
             android:theme="@style/AppTheme.No.ActionBar" />
         <activity
-            android:name="com.oryx.activity.bu.MarketDetailsActivity"
+            android:name=".activity.bu.MarketDetailsActivity"
             android:theme="@style/AppTheme.No.ActionBar" />
         <activity
-            android:name="com.oryx.activity.bu.MarketListActivity"
+            android:name=".activity.bu.MarketListActivity"
             android:theme="@style/AppTheme.No.ActionBar" />
         <activity
-            android:name="com.oryx.activity.map.TruckerViewActivity"
+            android:name=".activity.map.TruckerViewActivity"
             android:theme="@style/AppTheme.No.ActionBar" />
         <activity
-            android:name="com.oryx.activity.settings.SettingsActivity"
+            android:name=".activity.settings.SettingsActivity"
             android:theme="@style/AppTheme.No.ActionBar" />
     </application>
 

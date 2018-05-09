@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "2833238249",
+    "firebase_url": "https://oryx-barcode-51b50.firebaseio.com",
+    "project_id": "oryx-barcode-51b50",
+    "storage_bucket": "oryx-barcode-51b50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2833238249:android:fec9879c4702fd5b",
+        "android_client_info": {
+          "package_name": "com.oryx.barcode"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2833238249-89kf7gml3lrrfkropqvq988bvu6p9k2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN_lfJzFsqVUGizXg4g6PngKFDFsVocnc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
