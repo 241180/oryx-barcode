@@ -41,6 +41,7 @@
     <string name="signUp">SignUp</string>
 
     <string name="rememberMe">Remember me.</string>
+    <string name="keepConnected">Keep connected.</string>
     <string name="noAccountYet">No account yet? Create one</string>
 
     <string name="sinGooglePlus">Sign in with Google+</string>

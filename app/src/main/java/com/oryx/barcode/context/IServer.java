@@ -3,6 +3,9 @@ package com.oryx.barcode.context;
 import com.oryx.barcode.activity.map.IMapLocation;
 
 public class IServer {
+    public static boolean logOut = false;
+    public static String token;
+
     public static IMapLocation location;
     public static IUser currentUser;
     public static String host = "10.0.2.2";
@@ -17,6 +20,8 @@ public class IServer {
     public static String AUTH_IS_CONNECTED_URL = AUTH_URL + "/isconnected";
     public static String AUTH_DISCONNECT_URL = AUTH_URL + "/disconnect";
     public static String AUTH_SIGNUP_URL = AUTH_URL + "/signup";
+    public static String SEND_REGISTRATION_T0_SERVER = AUTH_URL + "/registerToken";
+
     //products
     public static String PRODUCT_BASE_URL = IServer.BASE_URL + "protected/products";
     public static String PRODUCT_GET_URL = IServer.PRODUCT_BASE_URL + "/fetch";

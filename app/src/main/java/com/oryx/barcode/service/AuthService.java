@@ -32,6 +32,7 @@ public class AuthService {
                 Log.d("asd", "---------------- this is response : " + response);
                 Gson gson = new Gson();
                 IServer.currentUser = gson.fromJson(response.toString(), IUser.class);
+                IServer.logOut = false;
             }
 
             @Override
@@ -98,6 +99,7 @@ public class AuthService {
                 // If the response is JSONObject instead of expected JSONArray
                 Log.d("asd", "---------------- this is response : " + response);
                 IServer.currentUser = null;
+                IServer.logOut = true;
             }
 
             @Override
@@ -137,6 +139,42 @@ public class AuthService {
                 Log.d("asd", "---------------- this is response : " + response);
                 Gson gson = new Gson();
                 IServer.currentUser = gson.fromJson(response.toString(), IUser.class);
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
+                // Pull out the first event on the public timeline
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                super.onFailure(statusCode, headers, throwable, errorResponse);
+                IServer.currentUser = null;
+            }
+
+            @Override
+            protected Object parseResponse(byte[] responseBody) throws JSONException {
+                return super.parseResponse(responseBody);
+            }
+        });
+
+        return null;
+    }
+
+    public static IUser sendRegistrationToServer(String host, String email, String token) {
+        RequestParams rp = new RequestParams();
+        rp.add("email", email);
+        rp.add("token", token);
+
+        String targetUrl = IServer.SEND_REGISTRATION_T0_SERVER.replace("localhost", host);
+
+        HttpUtils.post(targetUrl, rp, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                // If the response is JSONObject instead of expected JSONArray
+                Log.d("asd", "---------------- this is response : " + response);
+                Gson gson = new Gson();
+                //IServer.currentUser = gson.fromJson(response.toString(), IUser.class);
             }
 
             @Override
