@@ -1,12 +1,14 @@
-package com.oryx.barcode;
+package com.oryx.barcode.firebase.notification;
 
 import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
+import com.oryx.barcode.context.IServer;
+import com.oryx.barcode.service.AuthService;
 
-public class FirebaseIDService extends FirebaseInstanceIdService {
-    private static final String TAG = "FirebaseIDService";
+public class InstanceIdService extends FirebaseInstanceIdService {
+    private static final String TAG = "InstanceIdService";
 
     @Override
     public void onTokenRefresh() {
@@ -27,6 +29,9 @@ public class FirebaseIDService extends FirebaseInstanceIdService {
      * @param token The new token.
      */
     private void sendRegistrationToServer(String token) {
-        // Add custom implementation, as needed.
+        IServer.token = token;
+        if(IServer.currentUser != null) {
+            AuthService.sendRegistrationToServer(IServer.host, IServer.currentUser.getEmail(), token);
+        }
     }
 }
