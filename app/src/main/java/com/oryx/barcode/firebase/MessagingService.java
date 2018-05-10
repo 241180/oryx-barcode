@@ -1,4 +1,4 @@
-package com.oryx.barcode.firebase.notification;
+package com.oryx.barcode.firebase;
 
 import android.app.Notification;
 import android.app.PendingIntent;
