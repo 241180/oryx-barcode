@@ -24,8 +24,8 @@ public class MessagingService extends FirebaseMessagingService {
     @Override
     public void onCreate() {
         super.onCreate();
-        INotification.initNotificationManager(this);
-        INotification.initChannels();
+        NotificationContext.initNotificationManager(this);
+        NotificationContext.initChannels();
     }
 
     @Override
@@ -71,8 +71,8 @@ public class MessagingService extends FirebaseMessagingService {
                     .setLights(Color.YELLOW, 1000, 300);
         }
 
-        if (INotification.notificationManager != null) {
-            INotification.notificationManager.notify(id, notificationBuilder.build());
+        if (NotificationContext.notificationManager != null) {
+            NotificationContext.notificationManager.notify(id, notificationBuilder.build());
         }
     }
 }

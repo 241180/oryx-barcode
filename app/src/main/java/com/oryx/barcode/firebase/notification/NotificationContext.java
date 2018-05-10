@@ -7,7 +7,7 @@ import android.os.Build;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 
-public class INotification {
+public class NotificationContext {
     public static NotificationManager notificationManager;
 
     public static void initChannels() {
@@ -15,15 +15,15 @@ public class INotification {
             NotificationChannel channel = new NotificationChannel("default", "firebase", NotificationManager.IMPORTANCE_DEFAULT);
             channel.setDescription("firebase msgs");
 
-            if (INotification.notificationManager != null) {
-                INotification.notificationManager.createNotificationChannel(channel);
+            if (NotificationContext.notificationManager != null) {
+                NotificationContext.notificationManager.createNotificationChannel(channel);
             }
         }
     }
 
     public static void initNotificationManager(FirebaseMessagingService firebaseMessagingService) {
-        if (INotification.notificationManager == null) {
-            INotification.notificationManager = (NotificationManager) firebaseMessagingService.getSystemService(Context.NOTIFICATION_SERVICE);
+        if (NotificationContext.notificationManager == null) {
+            NotificationContext.notificationManager = (NotificationManager) firebaseMessagingService.getSystemService(Context.NOTIFICATION_SERVICE);
         }
     }
 }
