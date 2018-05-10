@@ -1,6 +1,7 @@
 package com.oryx.barcode;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -9,17 +10,27 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.oryx.barcode.activity.main.MainActivity;
+import com.oryx.barcode.context.INotification;
 
 import java.util.Map;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private static final String TAG = "FCM Service";
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        INotification.initNotificationManager(this);
+        INotification.initChannels();
+    }
+
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
@@ -42,23 +53,29 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
         Uri sound = Uri.parse("android.resource://" + getApplicationContext().getPackageName() + "/raw/notification");
 
+        NotificationCompat.Builder notificationBuilder = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notificationBuilder = new NotificationCompat.Builder(this, "default");
+        } else {
+            notificationBuilder = new NotificationCompat.Builder(this);
+        }
 
-        android.support.v4.app.NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-                .setContentTitle(notification.getTitle())
-                .setContentText(notification.getBody())
-                .setAutoCancel(true)
-                .setSound(sound)
-                .setContentIntent(pendingIntent)
-                .setContentInfo("ANY")
-                .setLargeIcon(icon)
-                .setColor(Color.BLUE)
-                .setSmallIcon(R.drawable.ic_launcher);
+        if (notificationBuilder != null) {
+            notificationBuilder.setContentTitle(notification.getTitle())
+                    .setContentText(notification.getBody())
+                    .setAutoCancel(true)
+                    .setSound(sound)
+                    .setContentIntent(pendingIntent)
+                    .setContentInfo("ANY")
+                    .setLargeIcon(icon)
+                    .setColor(Color.BLUE)
+                    .setSmallIcon(R.drawable.ic_launcher)
+                    .setDefaults(Notification.DEFAULT_VIBRATE)
+                    .setLights(Color.YELLOW, 1000, 300);
+        }
 
-
-        notificationBuilder.setDefaults(Notification.DEFAULT_VIBRATE);
-        notificationBuilder.setLights(Color.YELLOW, 1000, 300);
-
-        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.notify(id, notificationBuilder.build());
+        if (INotification.notificationManager != null) {
+            INotification.notificationManager.notify(id, notificationBuilder.build());
+        }
     }
 }

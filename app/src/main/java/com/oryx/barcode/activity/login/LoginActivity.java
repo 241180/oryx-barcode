@@ -90,17 +90,17 @@ public class LoginActivity extends ActionBarActivity {
 
         // TODO: Implement your own authentication logic here.
         IUser user = new IUser();
-        AuthService.connect(IServer.host, _emailField.getText().toString(), _passwordField.getText().toString());
+        //AuthService.connect(IServer.host, _emailField.getText().toString(), _passwordField.getText().toString());
 
         GuiUtils.showWorker(
                 new Runnable() {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
-                        if(IServer.currentUser != null) {
+                        //if(IServer.currentUser != null) {
                             onLoginSuccess();
-                        } else {
-                            onLoginFailed();
-                        }
+                        //} else {
+                        //    onLoginFailed();
+                        //}
                         progressDialog.dismiss();
                     }
                 }, 3000);
@@ -128,7 +128,7 @@ public class LoginActivity extends ActionBarActivity {
 
     public void onLoginSuccess() {
         savePreferences();
-        AuthService.sendRegistrationToServer(IServer.host, IServer.currentUser.getEmail(), IServer.token);
+        //AuthService.sendRegistrationToServer(IServer.host, IServer.currentUser.getEmail(), IServer.token);
         finish();
     }
 
