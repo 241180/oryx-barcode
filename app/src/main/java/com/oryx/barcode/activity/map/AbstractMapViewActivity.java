@@ -19,9 +19,9 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.ActionBarActivity;
-import com.oryx.barcode.context.IServer;
+import com.oryx.barcode.context.StaticServer;
 import com.oryx.barcode.service.GpsTrackerService;
-import com.oryx.barcode.utils.GuiUtils;
+import com.oryx.barcode.helper.GuiHelper;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -60,7 +60,7 @@ public class AbstractMapViewActivity extends ActionBarActivity implements IMapVi
 
         if (ActivityCompat.checkSelfPermission(AbstractMapViewActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(AbstractMapViewActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            GuiUtils.configure_gps(AbstractMapViewActivity.this);
+            GuiHelper.configure_gps(AbstractMapViewActivity.this);
         }
 
         mMapView.getMapAsync(new OnMapReadyCallback() {
@@ -74,14 +74,14 @@ public class AbstractMapViewActivity extends ActionBarActivity implements IMapVi
                 Location location = new Location(LocationManager.GPS_PROVIDER);
                 location.setLatitude(-34);
                 location.setLongitude(151);
-                if (IServer.location == null) {
-                    IServer.location = new IMapLocation(location);
+                if (StaticServer.location == null) {
+                    StaticServer.location = new IMapLocation(location);
                 } else {
-                    IServer.location.set(location);
+                    StaticServer.location.set(location);
                 }
-                IServer.location.setTitle(MY_LOCATION);
-                IServer.location.setDescription(Calendar.getInstance().getTime().toString());
-                zoomOn(setLocation(IServer.location), 12f);
+                StaticServer.location.setTitle(MY_LOCATION);
+                StaticServer.location.setDescription(Calendar.getInstance().getTime().toString());
+                zoomOn(setLocation(StaticServer.location), 12f);
                 gpsTrackerService = new GpsTrackerService(AbstractMapViewActivity.this);
                 gpsTrackerService.onCreate();
             }
@@ -116,13 +116,13 @@ public class AbstractMapViewActivity extends ActionBarActivity implements IMapVi
 
     @Override
     public void onLocationChanged(Location location) {
-        if (IServer.location == null) {
-            IServer.location = new IMapLocation(location);
+        if (StaticServer.location == null) {
+            StaticServer.location = new IMapLocation(location);
         } else {
-            IServer.location.set(location);
+            StaticServer.location.set(location);
         }
-        IServer.location.setTitle(MY_LOCATION);
-        IServer.location.setDescription(Calendar.getInstance().getTime().toString());
+        StaticServer.location.setTitle(MY_LOCATION);
+        StaticServer.location.setDescription(Calendar.getInstance().getTime().toString());
     }
 
     @Override
@@ -133,7 +133,7 @@ public class AbstractMapViewActivity extends ActionBarActivity implements IMapVi
     @Override
     public LatLng setLocation(IMapLocation location) {
         // For dropping a marker at a point on the Map
-        LatLng latLng = new LatLng(IServer.location.getLatitude(), IServer.location.getLongitude());
+        LatLng latLng = new LatLng(StaticServer.location.getLatitude(), StaticServer.location.getLongitude());
         Marker marker = addMarker(latLng, location.getTitle(), location.getDescription());
         markerMap.put(location.getUniqueId(), marker);
         return latLng;

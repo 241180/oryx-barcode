@@ -4,8 +4,9 @@ import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
-import com.oryx.barcode.context.IServer;
-import com.oryx.barcode.service.AuthService;
+import com.oryx.barcode.context.StaticServer;
+import com.oryx.barcode.helper.ServiceHelper;
+import com.oryx.barcode.service.AuthorizationService;
 
 public class InstanceIdService extends FirebaseInstanceIdService {
     private static final String TAG = "InstanceIdService";
@@ -29,9 +30,9 @@ public class InstanceIdService extends FirebaseInstanceIdService {
      * @param token The new token.
      */
     private void sendRegistrationToServer(String token) {
-        IServer.token = token;
-        if(IServer.currentUser != null) {
-            AuthService.sendRegistrationToServer(IServer.host, IServer.currentUser.getEmail(), token);
+        StaticServer.token = token;
+        if(StaticServer.currentUser != null) {
+            ServiceHelper.authorizationService.sendRegistrationToServer(this,StaticServer.host, StaticServer.currentUser.getEmail(), token);
         }
     }
 }

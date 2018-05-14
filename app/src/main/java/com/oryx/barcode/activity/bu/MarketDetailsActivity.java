@@ -2,7 +2,6 @@ package com.oryx.barcode.activity.bu;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,14 +10,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Spinner;
 
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.ActionBarActivity;
-import com.oryx.barcode.context.IServer;
-import com.oryx.barcode.model.ProductVO;
-import com.oryx.barcode.service.ProductService;
-import com.oryx.barcode.utils.GuiUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,11 +1,11 @@
-package com.oryx.barcode.utils;
+package com.oryx.barcode.helper;
 
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.SyncHttpClient;
-import com.oryx.barcode.context.IServer;
+import com.oryx.barcode.context.StaticServer;
 
-public class HttpUtils {
+public class HttpHelper {
 
     private static SyncHttpClient client = new SyncHttpClient();
 
@@ -26,6 +26,6 @@ public class HttpUtils {
     }
 
     public static String getAbsoluteUrl(String relativeUrl) {
-        return IServer.BASE_URL + relativeUrl;
+        return StaticServer.BASE_URL + relativeUrl;
     }
 }

@@ -7,9 +7,9 @@ import android.widget.EditText;
 
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.ActionBarActivity;
-import com.oryx.barcode.context.IServer;
+import com.oryx.barcode.context.StaticServer;
 import com.oryx.barcode.prefs.IUserPrefs;
-import com.oryx.barcode.utils.PrefUtils;
+import com.oryx.barcode.helper.PreferenceHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,10 +28,10 @@ public class SettingsActivity extends ActionBarActivity {
     }
 
     public void save(View v) {
-        IServer.host = _hostField.getText().toString();
-        SharedPreferences settings = PrefUtils.loadSettingsPreferences(this);
+        StaticServer.host = _hostField.getText().toString();
+        SharedPreferences settings = PreferenceHelper.loadSettingsPreferences(this);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putString(IUserPrefs.PREF_HOST, IServer.host);
+        editor.putString(IUserPrefs.PREF_HOST, StaticServer.host);
         editor.commit();
 
         finish();
@@ -39,8 +39,8 @@ public class SettingsActivity extends ActionBarActivity {
 
     @Override
     public void loadPreferences() {
-        SharedPreferences settings = PrefUtils.loadSettingsPreferences(this);
+        SharedPreferences settings = PreferenceHelper.loadSettingsPreferences(this);
         _hostField.setText(settings.getString(IUserPrefs.PREF_HOST, "10.0.2.2"));
-        IServer.host = _hostField.getText().toString();
+        StaticServer.host = _hostField.getText().toString();
     }
 }

@@ -1,10 +1,10 @@
-package com.oryx.barcode.utils;
+package com.oryx.barcode.helper;
 
 import android.Manifest;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 
-public class GuiUtils {
+public class GuiHelper {
     public static void showWorker(Runnable r, long delayMillis) {
         new android.os.Handler().postDelayed(r, delayMillis);
     }

@@ -14,12 +14,11 @@ import android.widget.Toast;
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.ActionBarActivity;
 import com.oryx.barcode.activity.login.LoginActivity;
-import com.oryx.barcode.context.IServer;
+import com.oryx.barcode.context.StaticServer;
 import com.oryx.barcode.service.ProductService;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -124,7 +123,7 @@ public class MainActivity extends ActionBarActivity {
                     @Override
                     public void run() {
                         try {
-                            ProductService.getProduct(IServer.host, barCode, format, _descriptionField);
+                            ProductService.findByCodeAndFormat(StaticServer.host, barCode, format, _descriptionField);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }

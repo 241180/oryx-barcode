@@ -1,8 +1,6 @@
 package com.oryx.barcode.activity.core;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -14,11 +12,10 @@ import com.oryx.barcode.activity.bu.ProductListActivity;
 import com.oryx.barcode.activity.login.LoginActivity;
 import com.oryx.barcode.activity.map.TruckerViewActivity;
 import com.oryx.barcode.activity.settings.SettingsActivity;
-import com.oryx.barcode.context.IServer;
+import com.oryx.barcode.context.StaticServer;
+import com.oryx.barcode.helper.ServiceHelper;
 import com.oryx.barcode.model.ProductVO;
-import com.oryx.barcode.prefs.IUserPrefs;
-import com.oryx.barcode.service.AuthService;
-import com.oryx.barcode.utils.PrefUtils;
+import com.oryx.barcode.service.AuthorizationService;
 
 public abstract class ActionBarActivity extends AbstractActivity{
 
@@ -69,8 +66,8 @@ public abstract class ActionBarActivity extends AbstractActivity{
             startActivity(intent);
             return true;
         } else if (id == R.id.action_logout) {
-            if (IServer.currentUser != null && IServer.currentUser.getId() != null) {
-                AuthService.disConnect(IServer.host, IServer.currentUser.getId());
+            if (StaticServer.currentUser != null && StaticServer.currentUser.getId() != null) {
+                ServiceHelper.authorizationService.disConnect(this, StaticServer.host, StaticServer.currentUser.getId());
                 Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
             }

@@ -2,7 +2,6 @@ package com.oryx.barcode.activity.bu;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,10 +13,9 @@ import android.widget.Spinner;
 
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.AbstractCrudDialogActivity;
-import com.oryx.barcode.context.IServer;
+import com.oryx.barcode.context.StaticServer;
 import com.oryx.barcode.model.ProductVO;
 import com.oryx.barcode.service.ProductService;
-import com.oryx.barcode.utils.GuiUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -108,7 +106,7 @@ public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO
 
     @Override
     protected void save(ProductVO bean) {
-        ProductService.createProduct(IServer.host, xformat != null ? xformat : "ETA", bean);
+        ProductService.create(StaticServer.host, xformat != null ? xformat : "ETA", bean);
     }
 
     @Override

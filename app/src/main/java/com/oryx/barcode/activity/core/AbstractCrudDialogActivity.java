@@ -2,16 +2,12 @@ package com.oryx.barcode.activity.core;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
 import com.oryx.barcode.R;
-import com.oryx.barcode.activity.bu.ProductDetailsActivity;
-import com.oryx.barcode.context.IServer;
 import com.oryx.barcode.model.EntityVO;
-import com.oryx.barcode.service.ProductService;
-import com.oryx.barcode.utils.GuiUtils;
+import com.oryx.barcode.helper.GuiHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -55,7 +51,7 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
                     progressDialog.setIndeterminate(true);
                     progressDialog.setMessage("Saving...");
                     progressDialog.show();
-                    GuiUtils.showWorker(
+                    GuiHelper.showWorker(
                             new Runnable() {
                                 public void run() {
                                     // On complete call either onLoginSuccess or onLoginFailed

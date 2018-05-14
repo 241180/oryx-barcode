@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 
-import com.oryx.barcode.context.IServer;
+import com.oryx.barcode.context.StaticServer;
 
 public class TruckerViewActivity extends AbstractMapViewActivity implements IMapViewActivity {
     @Override
@@ -24,7 +24,7 @@ public class TruckerViewActivity extends AbstractMapViewActivity implements IMap
     @Override
     public void onLocationChanged(Location location) {
         super.onLocationChanged(location);
-        zoomOn(setLocation(IServer.location), 12f);
+        zoomOn(setLocation(StaticServer.location), 12f);
     }
 
 }

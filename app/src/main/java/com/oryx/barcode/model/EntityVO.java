@@ -3,7 +3,7 @@ package com.oryx.barcode.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class EntityVO implements Parcelable{
+public class EntityVO{
 
     protected String id;
     protected Integer version;
@@ -46,22 +46,5 @@ public class EntityVO implements Parcelable{
      */
     public void setVersion(Integer value) {
         this.version = value;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-
-        dest.writeString(id);
-        if (version == null) {
-            dest.writeByte((byte) 0);
-        } else {
-            dest.writeByte((byte) 1);
-            dest.writeInt(version);
-        }
     }
 }

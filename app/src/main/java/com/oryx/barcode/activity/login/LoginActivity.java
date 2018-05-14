@@ -15,12 +15,13 @@ import android.widget.Toast;
 
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.ActionBarActivity;
-import com.oryx.barcode.context.IServer;
-import com.oryx.barcode.context.IUser;
+import com.oryx.barcode.context.StaticServer;
+
+import com.oryx.barcode.helper.ServiceHelper;
+import com.oryx.barcode.model.UserVO;
 import com.oryx.barcode.prefs.IUserPrefs;
-import com.oryx.barcode.service.AuthService;
-import com.oryx.barcode.utils.GuiUtils;
-import com.oryx.barcode.utils.PrefUtils;
+import com.oryx.barcode.helper.GuiHelper;
+import com.oryx.barcode.helper.PreferenceHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -89,18 +90,17 @@ public class LoginActivity extends ActionBarActivity {
         progressDialog.show();
 
         // TODO: Implement your own authentication logic here.
-        IUser user = new IUser();
-        //AuthService.connect(IServer.host, _emailField.getText().toString(), _passwordField.getText().toString());
+        StaticServer.currentUser = ServiceHelper.authorizationService.connect(this, StaticServer.host, _emailField.getText().toString(), _passwordField.getText().toString());
 
-        GuiUtils.showWorker(
+        GuiHelper.showWorker(
                 new Runnable() {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
-                        //if(IServer.currentUser != null) {
-                            onLoginSuccess();
-                        //} else {
-                        //    onLoginFailed();
-                        //}
+                        if(StaticServer.currentUser != null) {
+                        onLoginSuccess();
+                        } else {
+                           onLoginFailed();
+                        }
                         progressDialog.dismiss();
                     }
                 }, 3000);
@@ -112,7 +112,7 @@ public class LoginActivity extends ActionBarActivity {
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
 
-                // TODO: Implement successful signup logic here
+                // TODO: Implement successful create logic here
                 // By default we just finish the Activity and log them in automatically
 
                 this.finish();
@@ -128,7 +128,7 @@ public class LoginActivity extends ActionBarActivity {
 
     public void onLoginSuccess() {
         savePreferences();
-        //AuthService.sendRegistrationToServer(IServer.host, IServer.currentUser.getEmail(), IServer.token);
+        //AuthorizationService.sendRegistrationToServer(StaticServer.host, StaticServer.currentUser.getEmail(), StaticServer.token);
         finish();
     }
 
@@ -162,7 +162,7 @@ public class LoginActivity extends ActionBarActivity {
 
     @Override
     public void savePreferences() {
-        SharedPreferences settings = PrefUtils.loadSettingsPreferences(this);
+        SharedPreferences settings = PreferenceHelper.loadSettingsPreferences(this);
         SharedPreferences.Editor editor = settings.edit();
         if (_remember_me.isChecked() || _keep_connected.isChecked()) {
             _remember_me.setChecked(true);
@@ -175,21 +175,21 @@ public class LoginActivity extends ActionBarActivity {
             editor.putBoolean(IUserPrefs.PREF_KEEP_CONNECTED, _keep_connected.isChecked());
         }
 
-        editor.putString(IUserPrefs.PREF_FIRE_BASE_TOKEN, IServer.token);
+        editor.putString(IUserPrefs.PREF_FIRE_BASE_TOKEN, StaticServer.token);
         editor.commit();
     }
 
     @Override
     public void loadPreferences() {
-        SharedPreferences settings = PrefUtils.loadSettingsPreferences(this);
+        SharedPreferences settings = PreferenceHelper.loadSettingsPreferences(this);
         _emailField.setText(settings.getString(IUserPrefs.PREF_EMAIL, ""));
         _passwordField.setText(settings.getString(IUserPrefs.PREF_PASSWORD, ""));
         _remember_me.setChecked(settings.getBoolean(IUserPrefs.PREF_REMEMBER, false));
         _keep_connected.setChecked(settings.getBoolean(IUserPrefs.PREF_KEEP_CONNECTED, false));
-        IServer.host = settings.getString(IUserPrefs.PREF_HOST, "10.0.2.2");
-        IServer.token = settings.getString(IUserPrefs.PREF_FIRE_BASE_TOKEN, null);
+        StaticServer.host = settings.getString(IUserPrefs.PREF_HOST, "10.0.2.2");
+        StaticServer.token = settings.getString(IUserPrefs.PREF_FIRE_BASE_TOKEN, null);
 
-        if(_keep_connected.isChecked() && !IServer.logOut){
+        if(_keep_connected.isChecked() && !StaticServer.logOut){
             login();
         }
     }

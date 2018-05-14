@@ -1,4 +1,4 @@
-package com.oryx.barcode.utils;
+package com.oryx.barcode.helper;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,8 +6,7 @@ import android.content.SharedPreferences;
 import com.oryx.barcode.activity.core.ActionBarActivity;
 import com.oryx.barcode.prefs.IUserPrefs;
 
-public class PrefUtils {
-
+public class PreferenceHelper {
 
     public static SharedPreferences settings = null;
 

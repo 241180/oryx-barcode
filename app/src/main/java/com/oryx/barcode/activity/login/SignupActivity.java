@@ -12,9 +12,10 @@ import android.widget.Toast;
 
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.ActionBarActivity;
-import com.oryx.barcode.context.IServer;
-import com.oryx.barcode.service.AuthService;
-import com.oryx.barcode.utils.GuiUtils;
+import com.oryx.barcode.context.StaticServer;
+import com.oryx.barcode.helper.ServiceHelper;
+import com.oryx.barcode.service.AuthorizationService;
+import com.oryx.barcode.helper.GuiHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -91,20 +92,20 @@ public class SignupActivity extends ActionBarActivity {
         String password = _passwordField.getText().toString();
         String reEnterPassword = _reEnterPasswordField.getText().toString();
 
-        // TODO: Implement your own signup logic here.
-        //IUser user = new IUser();
-        AuthService.signup(IServer.host, firstName.toString(),
+        // TODO: Implement your own create logic here.
+        //StaticUser user = new StaticUser();
+        ServiceHelper.authorizationService.create(this,StaticServer.host, firstName.toString(),
                 lastName.toString(),
                 email.toString(),
                 phone.toString(),
                 address.toString(),
                 password.toString());
 
-        GuiUtils.showWorker(
+        GuiHelper.showWorker(
                 new Runnable() {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
-                        //if(IServer.currentUser != null) {
+                        //if(StaticServer.currentUser != null) {
                         onSignupSuccess();
                         //} else {
                         //    onSignupFailed();
