@@ -8,7 +8,6 @@
         android:icon="@drawable/settings"
         android:title="@string/action_find"
         app:showAsAction="withText" >
-
         <menu>
             <group android:id="@+id/group1">
                 <item
@@ -30,7 +29,6 @@
         android:icon="@drawable/settings"
         android:title="@string/action_find"
         app:showAsAction="withText" >
-
         <menu>
             <group android:id="@+id/group2">
                 <item

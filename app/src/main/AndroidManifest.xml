@@ -48,6 +48,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".activity.main.ScanActivity"
+            android:theme="@style/AppTheme.No.ActionBar" />
+        <activity
             android:name=".activity.login.LoginActivity"
             android:theme="@style/AppTheme.No.ActionBar" />
         <activity

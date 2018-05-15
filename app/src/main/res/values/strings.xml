@@ -14,8 +14,8 @@
     <string name="action_settings">Settings</string>
     <string name="action_logout">Logout</string>
 
-    <string name="barCode">Bar code</string>
-    <string name="codeFormat">Code format</string>
+    <string name="barCode">Code</string>
+    <string name="codeFormat">Format</string>
     <string name="name">Name</string>
     <string name="firstName">First name</string>
     <string name="lastName">Last name</string>
