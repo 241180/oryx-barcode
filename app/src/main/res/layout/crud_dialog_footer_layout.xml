@@ -4,13 +4,6 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="2dp"
-        android:background="@android:color/darker_gray" />
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -21,51 +14,29 @@
             android:id="@+id/cancelBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:padding="12dp"
-            android:text="@string/cancel"
-            android:textSize="18dp" />
+            android:text="@string/cancel"/>
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/clearBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:padding="12dp"
-            android:text="@string/clear"
-            android:textSize="18dp" />
+            android:text="@string/clear"/>
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/saveBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:padding="12dp"
-            android:text="@string/save"
-            android:textSize="18dp" />
+            android:text="@string/save"/>
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/deleteBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:padding="12dp"
-            android:text="@string/delete"
-            android:textSize="18dp" />
+            android:text="@string/delete"/>
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="2dp"
-        android:background="@android:color/darker_gray" />
 </LinearLayout>

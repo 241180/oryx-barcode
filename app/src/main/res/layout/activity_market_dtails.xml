@@ -97,7 +97,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/imthere" />
 
-            <include layout="@layout/crud_dialog_footer_layout"/>
+            <include
+                layout="@layout/crud_dialog_footer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

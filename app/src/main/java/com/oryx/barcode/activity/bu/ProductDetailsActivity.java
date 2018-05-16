@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -33,7 +34,10 @@ public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO
     @BindView(R.id.brandField)
     EditText _brandField;
     @BindView(R.id.categoryField)
-    Spinner _categoryField;
+    EditText _categoryField;
+
+    @BindView(R.id.scanBtn)
+    Button _scanBtn;
 
     String xformat = null;
 
@@ -63,6 +67,13 @@ public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ButterKnife.bind(this);
+
+        _scanBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scanBar(v);
+            }
+        });
     }
 
     @Override
@@ -77,15 +88,6 @@ public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO
         moveTaskToBack(true);
     }
 
-    public void scanBar(View v) {
-        try {
-            Intent intent = new Intent(ACTION_SCAN);
-            startActivityForResult(intent, 0);
-        } catch (ActivityNotFoundException anfe) {
-            showDialog(ProductDetailsActivity.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
-        }
-    }
-
     @Override
     protected int getLayoutResID() {
         return R.layout.activity_product_dtails;
@@ -96,12 +98,33 @@ public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO
 
     }
 
+    public void scanBar(View v) {
+        try {
+            Intent intent = new Intent(ACTION_SCAN);
+            startActivityForResult(intent, 0);
+        } catch (ActivityNotFoundException anfe) {
+            showDialog(ProductDetailsActivity.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
+        }
+    }
+
+    @Override
+    protected void clear(View v) {
+        _codeField.getText().clear();
+        _nameField.getText().clear();
+        _descriptionField.getText().clear();
+        _brandField.getText().clear();
+        _categoryField.getText().clear();
+    }
+
     @Override
     protected void commit(ProductVO bean) {
-        ProductVO productVO = new ProductVO();
-        productVO.setCode(_codeField.getText().toString());
-        productVO.setName(_nameField.getText().toString());
-        productVO.setDescription(_descriptionField.getText().toString());
+        if(bean == null) {
+            bean = new ProductVO();
+        }
+
+        bean.setCode(_codeField.getText().toString());
+        bean.setName(_nameField.getText().toString());
+        bean.setDescription(_descriptionField.getText().toString());
     }
 
     @Override
@@ -111,11 +134,6 @@ public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO
 
     @Override
     protected void delete(ProductVO bean) {
-
-    }
-
-    @Override
-    protected void clear() {
-
+        ProductService.delete(StaticServer.host, bean.getId());
     }
 }

@@ -25,14 +25,6 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
 
     private E bean;
 
-    public AbstractCrudDialogActivity() {
-        super();
-        Object object = getIntent().getExtras().get("BEAN");
-        if(object != null) {
-            this.bean = (E) object;
-        }
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +78,7 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
 
             @Override
             public void onClick(View v) {
-                clear();
+                clear(v);
             }
         });
 
@@ -94,8 +86,7 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
 
             @Override
             public void onClick(View v) {
-                cancel();
-                finish();
+                cancel(v);
             }
         });
     }
@@ -104,12 +95,18 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
 
     abstract protected void open(E bean);
     abstract protected void commit(E bean);
+    protected void cancel(View v){
+        finish();
+    }
+    abstract protected void clear(View v);
     abstract protected void save(E bean);
     abstract protected void delete(E bean);
 
-    protected void cancel(){
-        finish();
+    public E getBean() {
+        return bean;
     }
 
-    abstract protected void clear();
+    public void setBean(E bean) {
+        this.bean = bean;
+    }
 }

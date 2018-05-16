@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +37,9 @@ public class MainActivity extends ActionBarActivity {
     @BindView(R.id.descriptionField)
     TextView _descriptionField;
 
+    @BindView(R.id.scanBtn)
+    Button _scanBtn;
+
     private static AlertDialog showDialog(final Activity act, CharSequence title, CharSequence message, CharSequence buttonYes, CharSequence buttonNo) {
         AlertDialog.Builder downloadDialog = new AlertDialog.Builder(act);
         downloadDialog.setTitle(title);
@@ -63,8 +67,15 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        Intent intent = new Intent(this, LoginActivity.class);
 
+        _scanBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scanBar(v);
+            }
+        });
+
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 

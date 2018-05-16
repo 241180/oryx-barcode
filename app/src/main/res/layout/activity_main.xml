@@ -21,7 +21,6 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:onClick="scanBar"
             android:text="@string/scan"
             android:textSize="18dp" />
     </LinearLayout>

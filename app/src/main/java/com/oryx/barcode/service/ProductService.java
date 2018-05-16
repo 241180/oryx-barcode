@@ -20,7 +20,7 @@ import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
 
-public class ProductService extends Service {
+public class ProductService{
     public static void findByCodeAndFormat(String host, String code, String format, final TextView descriptionField) {
         RequestParams rp = new RequestParams();
         rp.add("xcode", code);
@@ -75,9 +75,26 @@ public class ProductService extends Service {
         });
     }
 
-    @Nullable
-    @Override
-    public IBinder onBind(Intent intent) {
-        return null;
+    public static void delete(String host, String productId) {
+        RequestParams rp = new RequestParams();
+        rp.add("productId", productId);
+
+        String targetUrl = StaticServer.PRODUCT_DELETE_URL.replace("localhost", host);
+
+        HttpHelper.post(targetUrl, rp, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                try {
+                    JSONObject serverResp = new JSONObject(response.toString());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
+                // Pull out the first event on the public timeline
+            }
+        });
     }
 }
