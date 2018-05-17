@@ -12,7 +12,9 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.oryx.barcode.context.StaticServer;
 import com.oryx.barcode.helper.HttpHelper;
+import com.oryx.barcode.http.JsonHttpResponseHandlerExt;
 import com.oryx.barcode.model.ProductVO;
+import com.oryx.barcode.model.UserVO;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,34 +23,20 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 public class ProductService{
-    public static void findByCodeAndFormat(String host, String code, String format, final TextView descriptionField) {
+    public static ProductVO findByCodeAndFormat(String host, String code, String format, final TextView descriptionField) {
         RequestParams rp = new RequestParams();
         rp.add("xcode", code);
         rp.add("xformat", format);
 
         String targetUrl = StaticServer.PRODUCT_GET_URL.replace("localhost", host);
 
-        HttpHelper.post(targetUrl, rp, new JsonHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                // If the response is JSONObject instead of expected JSONArray
-                Log.d("asd", "---------------- this is response : " + response);
-                try {
-                    JSONObject serverResp = new JSONObject(response.toString());
-                    descriptionField.setText(serverResp.getString("description"));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
+        JsonHttpResponseHandlerExt<ProductVO> jsonHttpResponseHandlerExt = new JsonHttpResponseHandlerExt(ProductVO.class);
+        HttpHelper.post(targetUrl, rp, jsonHttpResponseHandlerExt);
 
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
-                // Pull out the first event on the public timeline
-            }
-        });
+        return jsonHttpResponseHandlerExt.getObject();
     }
 
-    public static void create(String host, String format, ProductVO productVO) {
+    public static ProductVO create(String host, String format, ProductVO productVO) {
         Gson gson = new Gson();
         String jsonStringProduct = gson.toJson(productVO);
 
@@ -57,44 +45,21 @@ public class ProductService{
         rp.add("product", jsonStringProduct);
 
         String targetUrl = StaticServer.PRODUCT_CREATE_URL.replace("localhost", host);
+        JsonHttpResponseHandlerExt<ProductVO> jsonHttpResponseHandlerExt = new JsonHttpResponseHandlerExt(ProductVO.class);
+        HttpHelper.post(targetUrl, rp, jsonHttpResponseHandlerExt);
 
-        HttpHelper.post(targetUrl, rp, new JsonHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                try {
-                    JSONObject serverResp = new JSONObject(response.toString());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
-                // Pull out the first event on the public timeline
-            }
-        });
+        return jsonHttpResponseHandlerExt.getObject();
     }
 
-    public static void delete(String host, String productId) {
+    public static boolean delete(String host, String productId) {
         RequestParams rp = new RequestParams();
         rp.add("productId", productId);
 
         String targetUrl = StaticServer.PRODUCT_DELETE_URL.replace("localhost", host);
 
-        HttpHelper.post(targetUrl, rp, new JsonHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                try {
-                    JSONObject serverResp = new JSONObject(response.toString());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
+        JsonHttpResponseHandlerExt<Boolean> jsonHttpResponseHandlerExt = new JsonHttpResponseHandlerExt(Boolean.class);
+        HttpHelper.post(targetUrl, rp, new JsonHttpResponseHandlerExt(ProductVO.class));
 
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONArray timeline) {
-                // Pull out the first event on the public timeline
-            }
-        });
+        return jsonHttpResponseHandlerExt.getObject();
     }
 }

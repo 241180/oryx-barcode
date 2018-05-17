@@ -1,5 +1,8 @@
 package com.oryx.barcode.http;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.loopj.android.http.JsonHttpResponseHandler;

@@ -8,6 +8,7 @@ import android.widget.Button;
 import com.oryx.barcode.R;
 import com.oryx.barcode.model.EntityVO;
 import com.oryx.barcode.helper.GuiHelper;
+import com.oryx.barcode.model.ProductVO;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,6 +31,8 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResID());
         ButterKnife.bind(this);
+
+        this.bean = open(this.bean);
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -93,14 +96,15 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
 
     abstract protected int getLayoutResID();
 
-    abstract protected void open(E bean);
-    abstract protected void commit(E bean);
+    abstract protected E open(E bean);
+    abstract protected void commit(final E bean);
+    abstract protected void save(final E bean);
+    abstract protected void delete(final E bean);
+
     protected void cancel(View v){
         finish();
     }
     abstract protected void clear(View v);
-    abstract protected void save(E bean);
-    abstract protected void delete(E bean);
 
     public E getBean() {
         return bean;

@@ -66,7 +66,6 @@ public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ButterKnife.bind(this);
 
         _scanBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,20 +93,6 @@ public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO
     }
 
     @Override
-    protected void open(ProductVO bean) {
-
-    }
-
-    public void scanBar(View v) {
-        try {
-            Intent intent = new Intent(ACTION_SCAN);
-            startActivityForResult(intent, 0);
-        } catch (ActivityNotFoundException anfe) {
-            showDialog(ProductDetailsActivity.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
-        }
-    }
-
-    @Override
     protected void clear(View v) {
         _codeField.getText().clear();
         _nameField.getText().clear();
@@ -117,23 +102,37 @@ public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO
     }
 
     @Override
-    protected void commit(ProductVO bean) {
+    protected ProductVO open(ProductVO bean) {
         if(bean == null) {
             bean = new ProductVO();
         }
 
+        return bean;
+    }
+
+    @Override
+    protected void commit(final ProductVO bean) {
         bean.setCode(_codeField.getText().toString());
         bean.setName(_nameField.getText().toString());
         bean.setDescription(_descriptionField.getText().toString());
     }
 
     @Override
-    protected void save(ProductVO bean) {
-        ProductService.create(StaticServer.host, xformat != null ? xformat : "ETA", bean);
+    protected void save(final ProductVO bean) {
+        ProductService.create(StaticServer.host, xformat != null ? xformat : "NOF", bean);
     }
 
     @Override
-    protected void delete(ProductVO bean) {
+    protected void delete(final ProductVO bean) {
         ProductService.delete(StaticServer.host, bean.getId());
+    }
+
+    public void scanBar(View v) {
+        try {
+            Intent intent = new Intent(ACTION_SCAN);
+            startActivityForResult(intent, 0);
+        } catch (ActivityNotFoundException anfe) {
+            showDialog(ProductDetailsActivity.this, "No Scanner Found", "Download a scanner code activity?", "Yes", "No").show();
+        }
     }
 }
