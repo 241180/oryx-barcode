@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.oryx.barcode.R;
+import com.oryx.barcode.gson.GsonResponse;
 import com.oryx.barcode.model.EntityVO;
 import com.oryx.barcode.helper.GuiHelper;
 import com.oryx.barcode.model.ProductVO;
@@ -61,11 +62,11 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
                         public void run() {
                             try {
                                 commit(bean);
-                                E saved = save(bean);
-                                if(saved != null && saved.getId()!=null){
+                                GsonResponse<E> res = save(bean);
+                                if(res.getErrorCode() == 0){
                                     Toast.makeText(getBaseContext(), "Create success", Toast.LENGTH_LONG).show();
                                 } else {
-                                    Toast.makeText(getBaseContext(), "Create failed", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getBaseContext(), res.getMessage(), Toast.LENGTH_LONG).show();
                                 }
                             } catch (Exception e) {
                                 e.printStackTrace();
@@ -98,10 +99,11 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
                     public void run() {
                         try {
                             commit(bean);
-                            if(delete(bean)){
+                            GsonResponse<E> res = delete(bean);
+                            if(res.getErrorCode() == 0){
                                 Toast.makeText(getBaseContext(), "Delete success", Toast.LENGTH_LONG).show();
                             } else{
-                                Toast.makeText(getBaseContext(), "Delete failed", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getBaseContext(), res.getMessage(), Toast.LENGTH_LONG).show();
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -133,8 +135,8 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
 
     abstract protected E open(E bean);
     abstract protected void commit(final E bean);
-    abstract protected E save(final E bean);
-    abstract protected Boolean delete(final E bean);
+    abstract protected GsonResponse<E> save(final E bean);
+    abstract protected GsonResponse<E> delete(final E bean);
 
     protected void cancel(View v){
         finish();

@@ -128,7 +128,7 @@ public class LoginActivity extends ActionBarActivity {
 
     public void onLoginSuccess() {
         savePreferences();
-        //AuthorizationService.sendRegistrationToServer(StaticServer.host, StaticServer.currentUser.getEmail(), StaticServer.token);
+        //UserService.register(StaticServer.host, StaticServer.currentUser.getEmail(), StaticServer.token);
         finish();
     }
 

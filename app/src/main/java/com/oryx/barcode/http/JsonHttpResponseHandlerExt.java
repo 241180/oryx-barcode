@@ -10,6 +10,7 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.google.gson.stream.JsonReader;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -109,7 +110,11 @@ public class JsonHttpResponseHandlerExt<E> extends JsonHttpResponseHandler {
     @Override
     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
         super.onSuccess(statusCode, headers, response);
-        this.object = (E) fromJson(response.toString(), clazz);
+        try {
+            this.object = (E) fromJson(response.get("object").toString(), clazz);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         isFinished = true;
     }
 

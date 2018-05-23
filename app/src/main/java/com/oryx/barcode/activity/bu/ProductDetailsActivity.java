@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.AbstractCrudDialogActivity;
 import com.oryx.barcode.context.StaticServer;
+import com.oryx.barcode.gson.GsonResponse;
 import com.oryx.barcode.model.ProductVO;
 import com.oryx.barcode.service.ProductService;
 
@@ -118,12 +119,12 @@ public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO
     }
 
     @Override
-    protected ProductVO save(final ProductVO bean) {
+    protected GsonResponse<ProductVO> save(final ProductVO bean) {
         return ProductService.create(StaticServer.host, xformat != null ? xformat : "NOF", bean);
     }
 
     @Override
-    protected Boolean delete(final ProductVO bean) {
+    protected GsonResponse<ProductVO> delete(final ProductVO bean) {
         return ProductService.delete(StaticServer.host, xformat != null ? xformat : "NOF", bean.getCode());
     }
 

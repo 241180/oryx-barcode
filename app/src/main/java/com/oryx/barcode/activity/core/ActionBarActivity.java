@@ -15,7 +15,6 @@ import com.oryx.barcode.activity.settings.SettingsActivity;
 import com.oryx.barcode.context.StaticServer;
 import com.oryx.barcode.helper.ServiceHelper;
 import com.oryx.barcode.model.ProductVO;
-import com.oryx.barcode.service.AuthorizationService;
 
 public abstract class ActionBarActivity extends AbstractActivity{
 

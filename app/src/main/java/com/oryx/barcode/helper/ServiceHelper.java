@@ -1,7 +1,7 @@
 package com.oryx.barcode.helper;
 
-import com.oryx.barcode.service.AuthorizationService;
+import com.oryx.barcode.service.UserService;
 
 public class ServiceHelper {
-    public static AuthorizationService authorizationService = new AuthorizationService();
+    public static UserService authorizationService = new UserService();
 }

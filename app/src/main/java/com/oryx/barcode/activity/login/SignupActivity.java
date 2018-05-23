@@ -14,7 +14,6 @@ import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.ActionBarActivity;
 import com.oryx.barcode.context.StaticServer;
 import com.oryx.barcode.helper.ServiceHelper;
-import com.oryx.barcode.service.AuthorizationService;
 import com.oryx.barcode.helper.GuiHelper;
 
 import butterknife.BindView;
