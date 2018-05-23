@@ -118,13 +118,13 @@ public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO
     }
 
     @Override
-    protected void save(final ProductVO bean) {
-        ProductService.create(StaticServer.host, xformat != null ? xformat : "NOF", bean);
+    protected ProductVO save(final ProductVO bean) {
+        return ProductService.create(StaticServer.host, xformat != null ? xformat : "NOF", bean);
     }
 
     @Override
-    protected void delete(final ProductVO bean) {
-        ProductService.delete(StaticServer.host, bean.getId());
+    protected Boolean delete(final ProductVO bean) {
+        return ProductService.delete(StaticServer.host, xformat != null ? xformat : "NOF", bean.getCode());
     }
 
     public void scanBar(View v) {

@@ -98,7 +98,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:enabled="false"
-                        android:hint="@string/description" />
+                        android:hint="@string/description"
+                        android:inputType="textMultiLine"
+                        android:gravity="left|top"/>
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout

@@ -51,14 +51,15 @@ public class ProductService{
         return jsonHttpResponseHandlerExt.getObject();
     }
 
-    public static boolean delete(String host, String productId) {
+    public static Boolean delete(String host, String format, String xcode) {
         RequestParams rp = new RequestParams();
-        rp.add("productId", productId);
+        rp.add("xformat", format);
+        rp.add("xcode", xcode);
 
         String targetUrl = StaticServer.PRODUCT_DELETE_URL.replace("localhost", host);
 
         JsonHttpResponseHandlerExt<Boolean> jsonHttpResponseHandlerExt = new JsonHttpResponseHandlerExt(Boolean.class);
-        HttpHelper.post(targetUrl, rp, new JsonHttpResponseHandlerExt(ProductVO.class));
+        HttpHelper.post(targetUrl, rp, jsonHttpResponseHandlerExt);
 
         return jsonHttpResponseHandlerExt.getObject();
     }

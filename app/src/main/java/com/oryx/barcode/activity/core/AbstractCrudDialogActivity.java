@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
 import com.oryx.barcode.R;
 import com.oryx.barcode.model.EntityVO;
 import com.oryx.barcode.helper.GuiHelper;
@@ -54,18 +56,23 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
                                 }
                             }, 3000);
 
-                    Runnable addProduct = new Runnable() {
+                    Runnable addProcess = new Runnable() {
                         @Override
                         public void run() {
                             try {
                                 commit(bean);
-                                save(bean);
+                                E saved = save(bean);
+                                if(saved != null && saved.getId()!=null){
+                                    Toast.makeText(getBaseContext(), "Create success", Toast.LENGTH_LONG).show();
+                                } else {
+                                    Toast.makeText(getBaseContext(), "Create failed", Toast.LENGTH_LONG).show();
+                                }
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
                         }
                     };
-                    addProduct.run();
+                addProcess.run();
                 }
         });
 
@@ -73,7 +80,35 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
 
             @Override
             public void onClick(View v) {
-                delete(bean);
+                final ProgressDialog progressDialog = new ProgressDialog(AbstractCrudDialogActivity.this,
+                        R.style.AppTheme_Dialog);
+                progressDialog.setIndeterminate(true);
+                progressDialog.setMessage("Deleting...");
+                progressDialog.show();
+                GuiHelper.showWorker(
+                        new Runnable() {
+                            public void run() {
+                                // On complete call either onLoginSuccess or onLoginFailed
+                                progressDialog.dismiss();
+                            }
+                        }, 3000);
+
+                Runnable remProcess = new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            commit(bean);
+                            if(delete(bean)){
+                                Toast.makeText(getBaseContext(), "Delete success", Toast.LENGTH_LONG).show();
+                            } else{
+                                Toast.makeText(getBaseContext(), "Delete failed", Toast.LENGTH_LONG).show();
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                remProcess.run();
             }
         });
 
@@ -98,8 +133,8 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
 
     abstract protected E open(E bean);
     abstract protected void commit(final E bean);
-    abstract protected void save(final E bean);
-    abstract protected void delete(final E bean);
+    abstract protected E save(final E bean);
+    abstract protected Boolean delete(final E bean);
 
     protected void cancel(View v){
         finish();
