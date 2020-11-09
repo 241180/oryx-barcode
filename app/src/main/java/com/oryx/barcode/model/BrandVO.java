@@ -1,7 +1,5 @@
 package com.oryx.barcode.model;
 
-import android.os.Parcel;
-
 public class BrandVO
         extends TracableCancelableEntityVO {
 

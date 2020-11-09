@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.ActionBarActivity;
-import com.oryx.barcode.activity.login.LoginActivity;
 import com.oryx.barcode.context.StaticServer;
 import com.oryx.barcode.service.ProductService;
 

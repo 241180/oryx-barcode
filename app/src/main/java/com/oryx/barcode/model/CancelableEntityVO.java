@@ -1,7 +1,5 @@
 package com.oryx.barcode.model;
 
-import android.os.Parcel;
-
 import java.util.Date;
 
 public class CancelableEntityVO extends EntityVO {

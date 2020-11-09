@@ -1,6 +1,6 @@
 package com.oryx.barcode.activity.core;
 
-public abstract class NoActionBarActivity extends AbstractActivity{
+public abstract class NoActionBarActivity extends AbstractActivity {
 
 
     @Override

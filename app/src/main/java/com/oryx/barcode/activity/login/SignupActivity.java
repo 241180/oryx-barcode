@@ -13,8 +13,8 @@ import android.widget.Toast;
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.ActionBarActivity;
 import com.oryx.barcode.context.StaticServer;
-import com.oryx.barcode.helper.ServiceHelper;
 import com.oryx.barcode.helper.GuiHelper;
+import com.oryx.barcode.helper.ServiceHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -93,7 +93,7 @@ public class SignupActivity extends ActionBarActivity {
 
         // TODO: Implement your own create logic here.
         //StaticUser user = new StaticUser();
-        ServiceHelper.authorizationService.create(this,StaticServer.host, firstName.toString(),
+        ServiceHelper.authorizationService.create(this, StaticServer.host, firstName.toString(),
                 lastName.toString(),
                 email.toString(),
                 phone.toString(),

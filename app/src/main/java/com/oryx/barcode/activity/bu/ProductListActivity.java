@@ -1,6 +1,5 @@
 package com.oryx.barcode.activity.bu;
 
-import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
@@ -11,11 +10,9 @@ import com.oryx.barcode.adapters.ProductListAdapter;
 
 public class ProductListActivity extends AbstractListActivity {
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
-
-    private static final String TAG = "ProductListActivity";
-
     static final String[] MOBILE_OS =
-            new String[] { "Android", "iOS", "WindowsMobile", "Blackberry"};
+            new String[]{"Android", "iOS", "WindowsMobile", "Blackberry"};
+    private static final String TAG = "ProductListActivity";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

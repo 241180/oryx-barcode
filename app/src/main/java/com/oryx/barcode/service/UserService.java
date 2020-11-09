@@ -7,7 +7,6 @@ import com.oryx.barcode.context.StaticServer;
 import com.oryx.barcode.gson.GsonResponse;
 import com.oryx.barcode.helper.HttpHelper;
 import com.oryx.barcode.http.JsonHttpResponseHandlerExt;
-import com.oryx.barcode.model.ProductVO;
 import com.oryx.barcode.model.UserVO;
 
 import org.json.JSONObject;

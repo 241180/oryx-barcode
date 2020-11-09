@@ -16,17 +16,17 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="30dp"
-            android:paddingBottom="30dp"
             android:paddingLeft="30dp"
+            android:paddingTop="30dp"
             android:paddingRight="30dp"
-            android:paddingTop="30dp">
+            android:paddingBottom="30dp">
 
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
 
                 <EditText
@@ -35,24 +35,24 @@
                     android:layout_height="match_parent"
                     android:hint="@string/barCode"
                     android:inputType="text" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.v7.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/scanBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:padding="12dp"
                 android:text="@string/scan"
                 android:textSize="18dp" />
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
 
                 <EditText
                     android:id="@+id/nameField"
@@ -60,28 +60,28 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/name"
                     android:inputType="text" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
 
                 <EditText
                     android:id="@+id/descriptionField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="left|top"
                     android:hint="@string/description"
-                    android:inputType="textMultiLine"
-                    android:gravity="left|top"/>
-            </android.support.design.widget.TextInputLayout>
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
 
                 <EditText
                     android:id="@+id/brandField"
@@ -89,13 +89,13 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/brand"
                     android:inputType="text" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
 
                 <EditText
                     android:id="@+id/categoryField"
@@ -103,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/category"
                     android:inputType="text" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <include
                 layout="@layout/crud_dialog_footer_layout"

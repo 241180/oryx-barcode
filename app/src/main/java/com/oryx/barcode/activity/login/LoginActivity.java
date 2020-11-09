@@ -16,12 +16,10 @@ import android.widget.Toast;
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.ActionBarActivity;
 import com.oryx.barcode.context.StaticServer;
-
-import com.oryx.barcode.helper.ServiceHelper;
-import com.oryx.barcode.model.UserVO;
-import com.oryx.barcode.prefs.IUserPrefs;
 import com.oryx.barcode.helper.GuiHelper;
 import com.oryx.barcode.helper.PreferenceHelper;
+import com.oryx.barcode.helper.ServiceHelper;
+import com.oryx.barcode.prefs.IUserPrefs;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -90,16 +88,17 @@ public class LoginActivity extends ActionBarActivity {
         progressDialog.show();
 
         // TODO: Implement your own authentication logic here.
-        StaticServer.currentUser = ServiceHelper.authorizationService.connect(this, StaticServer.host, _emailField.getText().toString(), _passwordField.getText().toString());
+        StaticServer.currentUser = ServiceHelper.authorizationService.connect(this, StaticServer.host
+                , _emailField.getText().toString(), _passwordField.getText().toString()).getObject();
 
         GuiHelper.showWorker(
                 new Runnable() {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
-                        if(StaticServer.currentUser != null) {
-                        onLoginSuccess();
+                        if (StaticServer.currentUser != null) {
+                            onLoginSuccess();
                         } else {
-                           onLoginFailed();
+                            onLoginFailed();
                         }
                         progressDialog.dismiss();
                     }
@@ -189,7 +188,7 @@ public class LoginActivity extends ActionBarActivity {
         StaticServer.host = settings.getString(IUserPrefs.PREF_HOST, "10.0.2.2");
         StaticServer.token = settings.getString(IUserPrefs.PREF_FIRE_BASE_TOKEN, null);
 
-        if(_keep_connected.isChecked() && !StaticServer.logOut){
+        if (_keep_connected.isChecked() && !StaticServer.logOut) {
             login();
         }
     }

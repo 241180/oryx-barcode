@@ -2,7 +2,8 @@ package com.oryx.barcode.helper;
 
 import android.Manifest;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class GuiHelper {
     public static void showWorker(Runnable r, long delayMillis) {

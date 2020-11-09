@@ -1,9 +1,6 @@
 package com.oryx.barcode.model;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
-public class EntityVO{
+public class EntityVO {
 
     protected String id;
     protected Integer version;

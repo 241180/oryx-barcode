@@ -6,7 +6,8 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
+
+import androidx.core.app.ActivityCompat;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -20,8 +21,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.ActionBarActivity;
 import com.oryx.barcode.context.StaticServer;
-import com.oryx.barcode.service.GpsTrackerService;
 import com.oryx.barcode.helper.GuiHelper;
+import com.oryx.barcode.service.GpsTrackerService;
 
 import java.util.Calendar;
 import java.util.HashMap;

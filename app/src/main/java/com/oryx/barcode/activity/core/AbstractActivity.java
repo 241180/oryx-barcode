@@ -1,12 +1,13 @@
 package com.oryx.barcode.activity.core;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
-public abstract class AbstractActivity extends AppCompatActivity implements IActivity{
-    public void savePreferences(){
+public abstract class AbstractActivity extends AppCompatActivity implements IActivity {
+    public void savePreferences() {
 
     }
-    public void loadPreferences(){
+
+    public void loadPreferences() {
 
     }
 }

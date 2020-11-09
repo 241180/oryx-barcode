@@ -16,7 +16,7 @@ import com.oryx.barcode.context.StaticServer;
 import com.oryx.barcode.helper.ServiceHelper;
 import com.oryx.barcode.model.ProductVO;
 
-public abstract class ActionBarActivity extends AbstractActivity{
+public abstract class ActionBarActivity extends AbstractActivity {
 
 
     @Override

@@ -8,8 +8,8 @@ import android.widget.EditText;
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.ActionBarActivity;
 import com.oryx.barcode.context.StaticServer;
-import com.oryx.barcode.prefs.IUserPrefs;
 import com.oryx.barcode.helper.PreferenceHelper;
+import com.oryx.barcode.prefs.IUserPrefs;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

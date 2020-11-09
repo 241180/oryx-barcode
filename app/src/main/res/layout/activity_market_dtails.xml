@@ -16,17 +16,17 @@
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:padding="30dp"
-            android:paddingBottom="30dp"
             android:paddingLeft="30dp"
+            android:paddingTop="30dp"
             android:paddingRight="30dp"
-            android:paddingTop="30dp">
+            android:paddingBottom="30dp">
 
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
 
                 <EditText
@@ -35,13 +35,13 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/name"
                     android:inputType="text" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
 
                 <EditText
@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/sector"
                     android:inputType="text" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -75,11 +75,11 @@
 
             </LinearLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
 
                 <EditText
@@ -89,7 +89,7 @@
                     android:layout_weight="1"
                     android:hint="@string/adress"
                     android:inputType="text" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <CheckBox
                 android:id="@+id/imThereCheckBox"

@@ -1,7 +1,5 @@
 package com.oryx.barcode.adapters;
 
-import com.oryx.barcode.R;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.oryx.barcode.R;
 
 public class ProductListAdapter extends ArrayAdapter<String> {
     private final Context context;

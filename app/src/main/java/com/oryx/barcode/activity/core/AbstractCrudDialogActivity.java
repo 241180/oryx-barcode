@@ -9,14 +9,13 @@ import android.widget.Toast;
 
 import com.oryx.barcode.R;
 import com.oryx.barcode.gson.GsonResponse;
-import com.oryx.barcode.model.EntityVO;
 import com.oryx.barcode.helper.GuiHelper;
-import com.oryx.barcode.model.ProductVO;
+import com.oryx.barcode.model.EntityVO;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoActionBarActivity{
+public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoActionBarActivity {
 
     @BindView(R.id.saveBtn)
     Button _saveBtn;
@@ -44,37 +43,37 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
 
             @Override
             public void onClick(View v) {
-                    final ProgressDialog progressDialog = new ProgressDialog(AbstractCrudDialogActivity.this,
-                            R.style.AppTheme_Dialog);
-                    progressDialog.setIndeterminate(true);
-                    progressDialog.setMessage("Saving...");
-                    progressDialog.show();
-                    GuiHelper.showWorker(
-                            new Runnable() {
-                                public void run() {
-                                    // On complete call either onLoginSuccess or onLoginFailed
-                                    progressDialog.dismiss();
-                                }
-                            }, 3000);
-
-                    Runnable addProcess = new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                commit(bean);
-                                GsonResponse<E> res = save(bean);
-                                if(res.getErrorCode() == 0){
-                                    Toast.makeText(getBaseContext(), "Create success", Toast.LENGTH_LONG).show();
-                                } else {
-                                    Toast.makeText(getBaseContext(), res.getMessage(), Toast.LENGTH_LONG).show();
-                                }
-                            } catch (Exception e) {
-                                e.printStackTrace();
+                final ProgressDialog progressDialog = new ProgressDialog(AbstractCrudDialogActivity.this,
+                        R.style.AppTheme_Dialog);
+                progressDialog.setIndeterminate(true);
+                progressDialog.setMessage("Saving...");
+                progressDialog.show();
+                GuiHelper.showWorker(
+                        new Runnable() {
+                            public void run() {
+                                // On complete call either onLoginSuccess or onLoginFailed
+                                progressDialog.dismiss();
                             }
+                        }, 3000);
+
+                Runnable addProcess = new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            commit(bean);
+                            GsonResponse<E> res = save(bean);
+                            if (res.getErrorCode() == 0) {
+                                Toast.makeText(getBaseContext(), "Create success", Toast.LENGTH_LONG).show();
+                            } else {
+                                Toast.makeText(getBaseContext(), res.getMessage(), Toast.LENGTH_LONG).show();
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
-                    };
+                    }
+                };
                 addProcess.run();
-                }
+            }
         });
 
         _deleteBtn.setOnClickListener(new View.OnClickListener() {
@@ -100,9 +99,9 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
                         try {
                             commit(bean);
                             GsonResponse<E> res = delete(bean);
-                            if(res.getErrorCode() == 0){
+                            if (res.getErrorCode() == 0) {
                                 Toast.makeText(getBaseContext(), "Delete success", Toast.LENGTH_LONG).show();
-                            } else{
+                            } else {
                                 Toast.makeText(getBaseContext(), res.getMessage(), Toast.LENGTH_LONG).show();
                             }
                         } catch (Exception e) {
@@ -134,13 +133,17 @@ public abstract class AbstractCrudDialogActivity<E extends EntityVO> extends NoA
     abstract protected int getLayoutResID();
 
     abstract protected E open(E bean);
+
     abstract protected void commit(final E bean);
+
     abstract protected GsonResponse<E> save(final E bean);
+
     abstract protected GsonResponse<E> delete(final E bean);
 
-    protected void cancel(View v){
+    protected void cancel(View v) {
         finish();
     }
+
     abstract protected void clear(View v);
 
     public E getBean() {

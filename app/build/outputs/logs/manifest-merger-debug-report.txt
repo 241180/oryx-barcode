@@ -1,136 +1,522 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
-MERGED from [com.android.support:design:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\7f3c47f70f7f71dd07628997dee577ca\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\bcd3836024fbb08412401ba4dddd148d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\6f2ea45ff138593fe9978549034a52bc\AndroidManifest.xml:2:1-7:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\4c15ceed3a5445d0adf51be8d1a204f0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\bcb950b8eba83242b06bcebbbc8e5e3a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\8c1ea3718a1e49f10d4aca7614cf1855\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\99d41e45bfffad13423979f605dce9bd\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\da66da03d165cdc6aeac721ac96cf888\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\82d8e86ade590f92544317878b45e98e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\3bb6737f0263920b92a3ee6e89881b1d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\b1750701776195c1f01f240e618a108b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\5a5bf916b7eb13930445f9ee0f8692ff\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\93a208e3bdb6b3271562eddde2e16931\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\67bc0c40ba52115cee7cff3dbb961d49\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\c1838b8175b97ce6f230821a7a863567\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b8358fa6a9753d0fa1f8d161ae4c193d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1739a980e5d388ff5de7f82a4d89a41c\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-78:12
+MERGED from [androidx.core:core-ktx:1.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\bf855a201b95c66a672611819a97bdf6\jetified-core-ktx-1.2.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\53d2a7447dd2dca63dfd9a93222b709d\jetified-lifecycle-livedata-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0e888426572a89697f671489623c0f40\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\120aac42664f7802e75cc1db133ccf49\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\e384bf6580860a38b194ae77aa3fbfd7\material-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d56b547ba0a39ec124154c760efe7d34\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0e2daabeef5a315a3ffbd8362da66a88\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-places:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\971dcd4eb0d2baa735733fbeac1b4f1a\jetified-play-services-places-11.0.4\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\05464dd6f6975c49329700cf088bb7a1\jetified-play-services-maps-11.0.4\AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1b067086bd2092c2df425ecb098fca14\jetified-play-services-location-11.0.4\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d02af9e0e686165cf7f70a6d7532d92d\jetified-firebase-messaging-11.0.4\AndroidManifest.xml:16:1-30:12
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\633645f609f2b513d3feafb02b93726a\jetified-play-services-base-11.0.4\AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1e6c7858a8b758888772348424b2040d\jetified-firebase-core-11.0.4\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:16:1-35:12
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:16:1-29:12
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:16:1-50:12
+MERGED from [com.google.firebase:firebase-common:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d572b0e71b94827fffe7d591955f2b88\jetified-firebase-common-11.0.4\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\4a4ad2cb7854ab2ead2f01e2076b93bf\jetified-play-services-tasks-11.0.4\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c9f303cbd8db56096ef40dd9151acdb5\jetified-play-services-basement-11.0.4\AndroidManifest.xml:16:1-23:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\816122283c32e5f1b9130e236274e4b4\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\fab7e5dbd73fec576fdfb00115e8f52f\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\919bb31c04a2890144492f26db6ec34f\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\ac5ef0dd2ea9e9fc0d37caec0b41685b\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\728ee46f721db6c9ef3b9b1f559e7cac\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\e1b1b375e052e85221b7a4b3c8b12e6e\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\32ff426c63b9c109db20590dcf934e4d\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c5b3e2466260255aa521604206c50ae9\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\e6247819d72e13f42304acf6ba3312ca\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\7922673533ceefc51cd9d1e1e94c23dd\jetified-butterknife-10.2.3\AndroidManifest.xml:2:1-7:12
+MERGED from [com.jakewharton:butterknife-runtime:10.2.3] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\9632e58439ff65ab48d6899eb9ccd887\jetified-butterknife-runtime-10.2.3\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\5737a15cf189586314c8f0c0018abbd8\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\a3056e9d375dcf132b75b4d6462a4600\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\8d6fe3339db0bf783d2a6313c75c93d1\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\eee43310dc68d737fb373a4390e8aecd\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\8df487e4928c56bf5f81c1495ece00af\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\7a8fd11edffcd6526b2c872cad796d0b\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\921dbf2e6014e952f42cb7702026b609\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c7fd1948ffafcc65fb3b23f9786ab7ff\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\62941f2c365a0488c4b15f31832fb09a\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\80a50724c7c8bf5953775bae4621eba4\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c2756f8bce6aefcee335533469a6c071\core-1.2.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\62a91f25b348591cc15acc99c60df661\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\930a89c8dc62c8ad9fb5309b2bcf54e5\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\eebf391fca65251329e05262594bcbb5\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\34fb924ef230ace9a77101a5f0eb4e8d\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\11b3e5b5e1beed29c403764772d17b7b\lifecycle-livedata-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\f7cee7dd8b7e70d7b7ebdc5833f64703\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\ee163a923db7e7893a440ece432ec242\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1f485d83e6902045c7554998becf36b3\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\729b94392575afa626f22b9098f2b277\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\a01e2fff2aadb18c0a70f529ad1dd9cc\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\b237374c28e05de58e882772b3231f1d\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\9e8113cd675119259d6b932a6fd69295\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\095bcf875e623e60b12deeb2f0570b5f\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\25f86517c522823cfce2695a45d566d7\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:2:1-78:12
 	package
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:3:5-23
-		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
-		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:3:5-31
+		INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml
+		INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:5:5-30
-		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
-		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml
+		INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:4:5-28
-		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
-		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml
+		INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:7:5-8:54
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\05464dd6f6975c49329700cf088bb7a1\jetified-play-services-maps-11.0.4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\05464dd6f6975c49329700cf088bb7a1\jetified-play-services-maps-11.0.4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:8:9-51
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:7:22-64
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:8:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:9:22-76
+meta-data#com.google.android.geo.API_KEY
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:11:5-13:67
+	android:value
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:13:9-64
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:12:9-54
 uses-sdk
-ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
-INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
-INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
-MERGED from [com.android.support:design:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\7f3c47f70f7f71dd07628997dee577ca\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\7f3c47f70f7f71dd07628997dee577ca\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\bcd3836024fbb08412401ba4dddd148d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\bcd3836024fbb08412401ba4dddd148d\AndroidManifest.xml:20:5-44
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\6f2ea45ff138593fe9978549034a52bc\AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\6f2ea45ff138593fe9978549034a52bc\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\4c15ceed3a5445d0adf51be8d1a204f0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\4c15ceed3a5445d0adf51be8d1a204f0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\bcb950b8eba83242b06bcebbbc8e5e3a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\bcb950b8eba83242b06bcebbbc8e5e3a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\8c1ea3718a1e49f10d4aca7614cf1855\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\8c1ea3718a1e49f10d4aca7614cf1855\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\99d41e45bfffad13423979f605dce9bd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\99d41e45bfffad13423979f605dce9bd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\da66da03d165cdc6aeac721ac96cf888\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\da66da03d165cdc6aeac721ac96cf888\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\82d8e86ade590f92544317878b45e98e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\82d8e86ade590f92544317878b45e98e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\3bb6737f0263920b92a3ee6e89881b1d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\3bb6737f0263920b92a3ee6e89881b1d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\b1750701776195c1f01f240e618a108b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\b1750701776195c1f01f240e618a108b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\5a5bf916b7eb13930445f9ee0f8692ff\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\5a5bf916b7eb13930445f9ee0f8692ff\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\93a208e3bdb6b3271562eddde2e16931\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\93a208e3bdb6b3271562eddde2e16931\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\67bc0c40ba52115cee7cff3dbb961d49\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\67bc0c40ba52115cee7cff3dbb961d49\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\c1838b8175b97ce6f230821a7a863567\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\c1838b8175b97ce6f230821a7a863567\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b8358fa6a9753d0fa1f8d161ae4c193d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b8358fa6a9753d0fa1f8d161ae4c193d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1739a980e5d388ff5de7f82a4d89a41c\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Mbarkis\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1739a980e5d388ff5de7f82a4d89a41c\AndroidManifest.xml:20:5-44
-INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
-INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:10:5-12:41
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:15:5-17:41
+INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:15:5-17:41
+INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:15:5-17:41
+MERGED from [androidx.core:core-ktx:1.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\bf855a201b95c66a672611819a97bdf6\jetified-core-ktx-1.2.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\bf855a201b95c66a672611819a97bdf6\jetified-core-ktx-1.2.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\53d2a7447dd2dca63dfd9a93222b709d\jetified-lifecycle-livedata-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\53d2a7447dd2dca63dfd9a93222b709d\jetified-lifecycle-livedata-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0e888426572a89697f671489623c0f40\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0e888426572a89697f671489623c0f40\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\120aac42664f7802e75cc1db133ccf49\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\120aac42664f7802e75cc1db133ccf49\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\e384bf6580860a38b194ae77aa3fbfd7\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\e384bf6580860a38b194ae77aa3fbfd7\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d56b547ba0a39ec124154c760efe7d34\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d56b547ba0a39ec124154c760efe7d34\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0e2daabeef5a315a3ffbd8362da66a88\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0e2daabeef5a315a3ffbd8362da66a88\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-places:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\971dcd4eb0d2baa735733fbeac1b4f1a\jetified-play-services-places-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-places:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\971dcd4eb0d2baa735733fbeac1b4f1a\jetified-play-services-places-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\05464dd6f6975c49329700cf088bb7a1\jetified-play-services-maps-11.0.4\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\05464dd6f6975c49329700cf088bb7a1\jetified-play-services-maps-11.0.4\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1b067086bd2092c2df425ecb098fca14\jetified-play-services-location-11.0.4\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1b067086bd2092c2df425ecb098fca14\jetified-play-services-location-11.0.4\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d02af9e0e686165cf7f70a6d7532d92d\jetified-firebase-messaging-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d02af9e0e686165cf7f70a6d7532d92d\jetified-firebase-messaging-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\633645f609f2b513d3feafb02b93726a\jetified-play-services-base-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\633645f609f2b513d3feafb02b93726a\jetified-play-services-base-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1e6c7858a8b758888772348424b2040d\jetified-firebase-core-11.0.4\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1e6c7858a8b758888772348424b2040d\jetified-firebase-core-11.0.4\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-common:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d572b0e71b94827fffe7d591955f2b88\jetified-firebase-common-11.0.4\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-common:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d572b0e71b94827fffe7d591955f2b88\jetified-firebase-common-11.0.4\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\4a4ad2cb7854ab2ead2f01e2076b93bf\jetified-play-services-tasks-11.0.4\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\4a4ad2cb7854ab2ead2f01e2076b93bf\jetified-play-services-tasks-11.0.4\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c9f303cbd8db56096ef40dd9151acdb5\jetified-play-services-basement-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c9f303cbd8db56096ef40dd9151acdb5\jetified-play-services-basement-11.0.4\AndroidManifest.xml:17:5-43
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\816122283c32e5f1b9130e236274e4b4\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\816122283c32e5f1b9130e236274e4b4\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\fab7e5dbd73fec576fdfb00115e8f52f\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\fab7e5dbd73fec576fdfb00115e8f52f\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\919bb31c04a2890144492f26db6ec34f\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\919bb31c04a2890144492f26db6ec34f\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\ac5ef0dd2ea9e9fc0d37caec0b41685b\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\ac5ef0dd2ea9e9fc0d37caec0b41685b\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\728ee46f721db6c9ef3b9b1f559e7cac\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\728ee46f721db6c9ef3b9b1f559e7cac\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\e1b1b375e052e85221b7a4b3c8b12e6e\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\e1b1b375e052e85221b7a4b3c8b12e6e\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\32ff426c63b9c109db20590dcf934e4d\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\32ff426c63b9c109db20590dcf934e4d\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c5b3e2466260255aa521604206c50ae9\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c5b3e2466260255aa521604206c50ae9\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\e6247819d72e13f42304acf6ba3312ca\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\e6247819d72e13f42304acf6ba3312ca\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\7922673533ceefc51cd9d1e1e94c23dd\jetified-butterknife-10.2.3\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife:10.2.3] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\7922673533ceefc51cd9d1e1e94c23dd\jetified-butterknife-10.2.3\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.2.3] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\9632e58439ff65ab48d6899eb9ccd887\jetified-butterknife-runtime-10.2.3\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife-runtime:10.2.3] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\9632e58439ff65ab48d6899eb9ccd887\jetified-butterknife-runtime-10.2.3\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\5737a15cf189586314c8f0c0018abbd8\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\5737a15cf189586314c8f0c0018abbd8\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\a3056e9d375dcf132b75b4d6462a4600\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\a3056e9d375dcf132b75b4d6462a4600\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\8d6fe3339db0bf783d2a6313c75c93d1\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\8d6fe3339db0bf783d2a6313c75c93d1\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\eee43310dc68d737fb373a4390e8aecd\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\eee43310dc68d737fb373a4390e8aecd\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\8df487e4928c56bf5f81c1495ece00af\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\8df487e4928c56bf5f81c1495ece00af\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\7a8fd11edffcd6526b2c872cad796d0b\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\7a8fd11edffcd6526b2c872cad796d0b\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\921dbf2e6014e952f42cb7702026b609\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\921dbf2e6014e952f42cb7702026b609\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c7fd1948ffafcc65fb3b23f9786ab7ff\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c7fd1948ffafcc65fb3b23f9786ab7ff\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\62941f2c365a0488c4b15f31832fb09a\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\62941f2c365a0488c4b15f31832fb09a\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\80a50724c7c8bf5953775bae4621eba4\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\80a50724c7c8bf5953775bae4621eba4\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c2756f8bce6aefcee335533469a6c071\core-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c2756f8bce6aefcee335533469a6c071\core-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\62a91f25b348591cc15acc99c60df661\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\62a91f25b348591cc15acc99c60df661\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\930a89c8dc62c8ad9fb5309b2bcf54e5\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\930a89c8dc62c8ad9fb5309b2bcf54e5\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\eebf391fca65251329e05262594bcbb5\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\eebf391fca65251329e05262594bcbb5\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\34fb924ef230ace9a77101a5f0eb4e8d\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\34fb924ef230ace9a77101a5f0eb4e8d\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\11b3e5b5e1beed29c403764772d17b7b\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\11b3e5b5e1beed29c403764772d17b7b\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\f7cee7dd8b7e70d7b7ebdc5833f64703\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\f7cee7dd8b7e70d7b7ebdc5833f64703\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\ee163a923db7e7893a440ece432ec242\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\ee163a923db7e7893a440ece432ec242\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1f485d83e6902045c7554998becf36b3\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1f485d83e6902045c7554998becf36b3\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\729b94392575afa626f22b9098f2b277\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\729b94392575afa626f22b9098f2b277\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\a01e2fff2aadb18c0a70f529ad1dd9cc\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\a01e2fff2aadb18c0a70f529ad1dd9cc\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\b237374c28e05de58e882772b3231f1d\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\b237374c28e05de58e882772b3231f1d\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\9e8113cd675119259d6b932a6fd69295\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\9e8113cd675119259d6b932a6fd69295\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\095bcf875e623e60b12deeb2f0570b5f\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\095bcf875e623e60b12deeb2f0570b5f\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\25f86517c522823cfce2695a45d566d7\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\25f86517c522823cfce2695a45d566d7\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:15:5-17:41
+INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:15:5-17:41
 	android:targetSdkVersion
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:12:9-38
-		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
-		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:17:9-38
+		INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml
+		INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:11:9-34
-		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
-		INJECTED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:16:9-35
+		INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml
+		INJECTED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml
 application
-ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:14:5-31:19
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:19:5-76:19
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\e384bf6580860a38b194ae77aa3fbfd7\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\e384bf6580860a38b194ae77aa3fbfd7\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\971dcd4eb0d2baa735733fbeac1b4f1a\jetified-play-services-places-11.0.4\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-places:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\971dcd4eb0d2baa735733fbeac1b4f1a\jetified-play-services-places-11.0.4\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\05464dd6f6975c49329700cf088bb7a1\jetified-play-services-maps-11.0.4\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\05464dd6f6975c49329700cf088bb7a1\jetified-play-services-maps-11.0.4\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1b067086bd2092c2df425ecb098fca14\jetified-play-services-location-11.0.4\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1b067086bd2092c2df425ecb098fca14\jetified-play-services-location-11.0.4\AndroidManifest.xml:4:5-19
+MERGED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d02af9e0e686165cf7f70a6d7532d92d\jetified-firebase-messaging-11.0.4\AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d02af9e0e686165cf7f70a6d7532d92d\jetified-firebase-messaging-11.0.4\AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\633645f609f2b513d3feafb02b93726a\jetified-play-services-base-11.0.4\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\633645f609f2b513d3feafb02b93726a\jetified-play-services-base-11.0.4\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1e6c7858a8b758888772348424b2040d\jetified-firebase-core-11.0.4\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\1e6c7858a8b758888772348424b2040d\jetified-firebase-core-11.0.4\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:24:5-34:19
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:24:5-34:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:28:5-49:19
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:28:5-49:19
+MERGED from [com.google.firebase:firebase-common:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d572b0e71b94827fffe7d591955f2b88\jetified-firebase-common-11.0.4\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.firebase:firebase-common:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d572b0e71b94827fffe7d591955f2b88\jetified-firebase-common-11.0.4\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\4a4ad2cb7854ab2ead2f01e2076b93bf\jetified-play-services-tasks-11.0.4\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\4a4ad2cb7854ab2ead2f01e2076b93bf\jetified-play-services-tasks-11.0.4\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c9f303cbd8db56096ef40dd9151acdb5\jetified-play-services-basement-11.0.4\AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c9f303cbd8db56096ef40dd9151acdb5\jetified-play-services-basement-11.0.4\AndroidManifest.xml:19:5-21:19
+MERGED from [androidx.core:core:1.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c2756f8bce6aefcee335533469a6c071\core-1.2.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c2756f8bce6aefcee335533469a6c071\core-1.2.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\34fb924ef230ace9a77101a5f0eb4e8d\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\34fb924ef230ace9a77101a5f0eb4e8d\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\25f86517c522823cfce2695a45d566d7\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\25f86517c522823cfce2695a45d566d7\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.2.0] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c2756f8bce6aefcee335533469a6c071\core-1.2.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:17:9-41
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:22:9-41
 	android:icon
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:16:9-45
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:21:9-45
 	android:allowBackup
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:15:9-35
-activity#com.oryx.activity.main.OryxBarcodeReader
-ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:18:9-27:20
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:20:9-35
+service#com.oryx.barcode.firebase.MessagingService
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:28:9-32:19
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:28:18-59
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:29:13-31:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:30:17-78
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:30:25-75
+service#com.oryx.barcode.firebase.InstanceIdService
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:34:9-38:19
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:34:18-60
+intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:35:13-37:29
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:36:17-80
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:36:25-77
+activity#com.oryx.barcode.activity.main.MainActivity
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:40:9-48:20
 	android:label
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:20:13-45
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:42:13-45
 	android:theme
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:21:13-44
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:43:13-54
 	android:name
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:19:13-68
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:41:13-55
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:22:13-26:29
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:44:13-47:29
 action#android.intent.action.MAIN
-ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:23:17-69
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:45:17-69
 	android:name
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:45:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:25:17-77
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:46:17-77
 	android:name
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:25:27-74
-activity#com.oryx.activity.login.LoginActivity
-ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:28:9-111
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:46:27-74
+activity#com.oryx.barcode.activity.main.ScanActivity
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:49:9-51:60
 	android:theme
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:28:72-108
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:51:13-57
 	android:name
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:28:19-71
-activity#com.oryx.activity.login.SignupActivity
-ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:29:9-112
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:50:13-55
+activity#com.oryx.barcode.activity.login.LoginActivity
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:52:9-54:60
 	android:theme
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:29:73-109
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:54:13-57
 	android:name
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:29:19-72
-activity#com.oryx.activity.bu.ProductActivity
-ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:30:9-110
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:53:13-57
+activity#com.oryx.barcode.activity.login.SignupActivity
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:55:9-57:60
 	android:theme
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:30:71-107
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:57:13-57
 	android:name
-		ADDED from D:\start-up-box\oryx-barcode\app\src\main\AndroidManifest.xml:30:19-70
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:56:13-58
+activity#com.oryx.barcode.activity.bu.ProductDetailsActivity
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:58:9-60:60
+	android:theme
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:60:13-57
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:59:13-63
+activity#com.oryx.barcode.activity.bu.ProductListActivity
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:61:9-63:60
+	android:theme
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:63:13-57
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:62:13-60
+activity#com.oryx.barcode.activity.bu.MarketDetailsActivity
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:64:9-66:60
+	android:theme
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:66:13-57
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:65:13-62
+activity#com.oryx.barcode.activity.bu.MarketListActivity
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:67:9-69:60
+	android:theme
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:69:13-57
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:68:13-59
+activity#com.oryx.barcode.activity.map.TruckerViewActivity
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:70:9-72:60
+	android:theme
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:72:13-57
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:71:13-61
+activity#com.oryx.barcode.activity.settings.SettingsActivity
+ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:73:9-75:60
+	android:theme
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:75:13-57
+	android:name
+		ADDED from D:\DevWorks\amaris\soft\workspace\oryx-barcode\app\src\main\AndroidManifest.xml:74:13-63
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\05464dd6f6975c49329700cf088bb7a1\jetified-play-services-maps-11.0.4\AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\05464dd6f6975c49329700cf088bb7a1\jetified-play-services-maps-11.0.4\AndroidManifest.xml:19:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\05464dd6f6975c49329700cf088bb7a1\jetified-play-services-maps-11.0.4\AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\05464dd6f6975c49329700cf088bb7a1\jetified-play-services-maps-11.0.4\AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\05464dd6f6975c49329700cf088bb7a1\jetified-play-services-maps-11.0.4\AndroidManifest.xml:21:52-75
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d02af9e0e686165cf7f70a6d7532d92d\jetified-firebase-messaging-11.0.4\AndroidManifest.xml:23:9-27:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d02af9e0e686165cf7f70a6d7532d92d\jetified-firebase-messaging-11.0.4\AndroidManifest.xml:23:88-111
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d02af9e0e686165cf7f70a6d7532d92d\jetified-firebase-messaging-11.0.4\AndroidManifest.xml:23:18-87
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\633645f609f2b513d3feafb02b93726a\jetified-play-services-base-11.0.4\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\633645f609f2b513d3feafb02b93726a\jetified-play-services-base-11.0.4\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\633645f609f2b513d3feafb02b93726a\jetified-play-services-base-11.0.4\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\633645f609f2b513d3feafb02b93726a\jetified-play-services-base-11.0.4\AndroidManifest.xml:19:19-85
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:22:22-65
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:27:162-184
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:27:185-208
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:27:17-104
+intent-filter#action:name:com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:27:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\0f756f49e3d3b71bffb2b7f5d1ed12b1\jetified-firebase-analytics-impl-11.0.4\AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:32:16-87
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:33:7-197
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:33:148-170
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:33:171-195
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:33:91-147
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\692c7f82403fbc62d95ae6105bca9cc3\jetified-firebase-analytics-11.0.4\AndroidManifest.xml:33:16-90
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:22:22-79
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:24:17-71
+permission#com.oryx.barcode.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:24:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:26:22-76
+uses-permission#com.oryx.barcode.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:26:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:30:9-35:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:30:19-84
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:${applicationId}
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:31:13-34:29
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:com.oryx.barcode
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:31:13-34:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:32:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:32:25-78
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:33:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:33:27-58
+category#com.oryx.barcode
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:33:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:33:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:39:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:39:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:39:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:43:9-47:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:43:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\560e85009c033678bfc3d838f0bcd577\jetified-firebase-iid-11.0.4\AndroidManifest.xml:43:18-82
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d572b0e71b94827fffe7d591955f2b88\jetified-firebase-common-11.0.4\AndroidManifest.xml:6:9-194
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d572b0e71b94827fffe7d591955f2b88\jetified-firebase-common-11.0.4\AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d572b0e71b94827fffe7d591955f2b88\jetified-firebase-common-11.0.4\AndroidManifest.xml:6:144-168
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d572b0e71b94827fffe7d591955f2b88\jetified-firebase-common-11.0.4\AndroidManifest.xml:6:169-192
+	android:name
+		ADDED from [com.google.firebase:firebase-common:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\d572b0e71b94827fffe7d591955f2b88\jetified-firebase-common-11.0.4\AndroidManifest.xml:6:79-143
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c9f303cbd8db56096ef40dd9151acdb5\jetified-play-services-basement-11.0.4\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c9f303cbd8db56096ef40dd9151acdb5\jetified-play-services-basement-11.0.4\AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\MBARKISami\.gradle\caches\transforms-2\files-2.1\c9f303cbd8db56096ef40dd9151acdb5\jetified-play-services-basement-11.0.4\AndroidManifest.xml:20:20-65

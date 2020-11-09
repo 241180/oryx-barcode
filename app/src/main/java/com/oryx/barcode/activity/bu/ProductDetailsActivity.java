@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 
 import com.oryx.barcode.R;
 import com.oryx.barcode.activity.core.AbstractCrudDialogActivity;
@@ -20,7 +19,6 @@ import com.oryx.barcode.model.ProductVO;
 import com.oryx.barcode.service.ProductService;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO> {
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
@@ -104,7 +102,7 @@ public class ProductDetailsActivity extends AbstractCrudDialogActivity<ProductVO
 
     @Override
     protected ProductVO open(ProductVO bean) {
-        if(bean == null) {
+        if (bean == null) {
             bean = new ProductVO();
         }
 

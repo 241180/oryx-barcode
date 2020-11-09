@@ -1,7 +1,5 @@
 package com.oryx.barcode.service;
 
-import android.widget.TextView;
-
 import com.google.gson.Gson;
 import com.loopj.android.http.RequestParams;
 import com.oryx.barcode.context.StaticServer;
@@ -10,7 +8,7 @@ import com.oryx.barcode.helper.HttpHelper;
 import com.oryx.barcode.http.JsonHttpResponseHandlerExt;
 import com.oryx.barcode.model.EntityVO;
 
-public abstract class AbstractCrudService<E extends EntityVO> implements ICrudService<E>{
+public abstract class AbstractCrudService<E extends EntityVO> implements ICrudService<E> {
     public GsonResponse<E> create(String host, String format, E E) {
         Gson gson = new Gson();
         String jsonStringProduct = gson.toJson(E);

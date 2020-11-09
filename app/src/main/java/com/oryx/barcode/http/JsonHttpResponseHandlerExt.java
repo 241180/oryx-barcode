@@ -4,10 +4,10 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
 import com.loopj.android.http.JsonHttpResponseHandler;
-import com.google.gson.stream.JsonReader;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,60 +19,17 @@ import java.util.Date;
 import cz.msebera.android.httpclient.Header;
 
 public class JsonHttpResponseHandlerExt<E> extends JsonHttpResponseHandler {
-    final class DateTypeAdapter
-            extends TypeAdapter<Date> {
-
-        private DateTypeAdapter() {
-        }
-
-        @Override
-        public void write(JsonWriter out, Date value) throws IOException {
-            out.value(value != null?value.getTime():null);
-        }
-
-        @Override
-        public Date read(JsonReader in) throws IOException {
-            if(in!=null && in.peek() != JsonToken.NULL){
-                return new Date(in.nextLong());
-            }else if(in.peek() == JsonToken.NULL){
-                in.nextNull();
-            }
-
-            return null;
-        }
-    }
-
-    final class BooleanTypeAdapter
-            extends TypeAdapter<Boolean> {
-
-        private BooleanTypeAdapter() {
-        }
-
-        @Override
-        public void write(JsonWriter out, Boolean value) throws IOException {
-            out.value(value);
-        }
-
-        @Override
-        public Boolean read(JsonReader in) throws IOException {
-            if(in!=null && in.peek() != JsonToken.NULL){
-                return new Boolean(in.nextBoolean());
-            }else if(in.peek() == JsonToken.NULL){
-                in.nextNull();
-            }
-
-            return null;
-        }
-    }
-
+    private static GsonBuilder gsonBuilder;
+    private static Gson gson;
     private final Class<E> clazz;
     private boolean isFinished = false;
     private E object;
-    private static GsonBuilder gsonBuilder;
-    private static Gson gson;
+    public JsonHttpResponseHandlerExt(Class<E> clazz) {
+        this.clazz = clazz;
+    }
 
-    protected Gson getGson(){
-        if(this.gson == null){
+    protected Gson getGson() {
+        if (this.gson == null) {
             this.gsonBuilder = new GsonBuilder();
             gsonBuilder.registerTypeAdapter(Date.class, new DateTypeAdapter());
             gsonBuilder.registerTypeAdapter(Date.class, new BooleanTypeAdapter());
@@ -82,12 +39,8 @@ public class JsonHttpResponseHandlerExt<E> extends JsonHttpResponseHandler {
         return this.gson;
     }
 
-    public JsonHttpResponseHandlerExt(Class<E> clazz) {
-        this.clazz = clazz;
-    }
-
     public E getObject() {
-        while (!isFinished());
+        while (!isFinished()) ;
         return object;
     }
 
@@ -146,5 +99,51 @@ public class JsonHttpResponseHandlerExt<E> extends JsonHttpResponseHandler {
     public void onSuccess(int statusCode, Header[] headers, String responseString) {
         super.onSuccess(statusCode, headers, responseString);
         isFinished = true;
+    }
+
+    final class DateTypeAdapter
+            extends TypeAdapter<Date> {
+
+        private DateTypeAdapter() {
+        }
+
+        @Override
+        public void write(JsonWriter out, Date value) throws IOException {
+            out.value(value != null ? value.getTime() : null);
+        }
+
+        @Override
+        public Date read(JsonReader in) throws IOException {
+            if (in != null && in.peek() != JsonToken.NULL) {
+                return new Date(in.nextLong());
+            } else if (in.peek() == JsonToken.NULL) {
+                in.nextNull();
+            }
+
+            return null;
+        }
+    }
+
+    final class BooleanTypeAdapter
+            extends TypeAdapter<Boolean> {
+
+        private BooleanTypeAdapter() {
+        }
+
+        @Override
+        public void write(JsonWriter out, Boolean value) throws IOException {
+            out.value(value);
+        }
+
+        @Override
+        public Boolean read(JsonReader in) throws IOException {
+            if (in != null && in.peek() != JsonToken.NULL) {
+                return new Boolean(in.nextBoolean());
+            } else if (in.peek() == JsonToken.NULL) {
+                in.nextNull();
+            }
+
+            return null;
+        }
     }
 }
